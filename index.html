@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U.S. Climate Impact Categories</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+</head>
+
+<body>
+  <header>
+    <h1>U.S. Climate Impact Category Shifts</h1>
+    <p class="question">
+      How do U.S. states shift between low-, medium-, and high-climate-impact categories
+      over time under different greenhouse gas emissions scenarios?
+    </p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label>
+        Emissions Scenario
+        <select id="scenario-select">
+          <option value="ssp126">Low emissions</option>
+          <option value="ssp245">Medium emissions</option>
+          <option value="ssp585">High emissions</option>
+        </select>
+      </label>
+
+      <label>
+        Year: <span id="year-label">2020</span>
+        <input id="year-slider" type="range" min="2020" max="2100" step="10" value="2020" />
+      </label>
+    </section>
+
+    <section class="layout">
+      <section class="map-card">
+        <h2>Climate Impact Map</h2>
+        <p class="hint">Hover over a state for details. Click a state to inspect it.</p>
+        <svg id="map"></svg>
+      </section>
+
+      <aside class="side-panel">
+        <h2>Selected State</h2>
+        <div id="state-info">
+          <p class="placeholder">Click a state to see details.</p>
+        </div>
+
+        <h2>Category Distribution</h2>
+        <div id="summary-bars"></div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="tooltip"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>

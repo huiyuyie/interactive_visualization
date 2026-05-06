@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f6f7f9;
+  color: #222;
+}
+
+header {
+  padding: 28px 40px 16px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+.question {
+  max-width: 900px;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.controls {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  padding: 18px 40px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.controls label {
+  font-weight: 600;
+}
+
+select,
+input {
+  margin-left: 8px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  padding: 24px 40px;
+}
+
+.map-card,
+.side-panel {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+#map {
+  width: 100%;
+  height: 560px;
+}
+
+.hint {
+  color: #666;
+  font-size: 14px;
+}
+
+.state {
+  stroke: white;
+  stroke-width: 0.8;
+  cursor: pointer;
+  transition: opacity 0.15s, stroke-width 0.15s;
+}
+
+.state:hover {
+  stroke: #111;
+  stroke-width: 1.6;
+}
+
+.state.selected {
+  stroke: #111;
+  stroke-width: 2.2;
+}
+
+.low {
+  fill: #9ecae1;
+}
+
+.medium {
+  fill: #fdae6b;
+}
+
+.high {
+  fill: #de2d26;
+}
+
+.no-data {
+  fill: #ddd;
+}
+
+#tooltip {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.placeholder {
+  color: #777;
+}
+
+.info-value {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: white;
+}
+
+.badge.low {
+  background: #3182bd;
+}
+
+.badge.medium {
+  background: #e6550d;
+}
+
+.badge.high {
+  background: #de2d26;
+}
+
+.summary-row {
+  margin: 14px 0;
+}
+
+.summary-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.summary-track {
+  height: 14px;
+  background: #eee;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.summary-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.summary-fill.low {
+  background: #9ecae1;
+}
+
+.summary-fill.medium {
+  background: #fdae6b;
+}
+
+.summary-fill.high {
+  background: #de2d26;
+}

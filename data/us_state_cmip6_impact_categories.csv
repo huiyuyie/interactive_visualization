@@ -1,0 +1,1351 @@
+state,state_abbr,year,scenario,scenario_label,temp_anomaly,impact_category,impact_score
+Alabama,AL,2020,ssp126,Low emissions,0.40077797,Low impact,1
+Alaska,AK,2020,ssp126,Low emissions,0.717076,Low impact,1
+Arizona,AZ,2020,ssp126,Low emissions,-0.8406865,Low impact,1
+Arkansas,AR,2020,ssp126,Low emissions,-0.1847107,Low impact,1
+California,CA,2020,ssp126,Low emissions,0.50705314,Low impact,1
+Colorado,CO,2020,ssp126,Low emissions,-1.0304139,Low impact,1
+Connecticut,CT,2020,ssp126,Low emissions,0.7621002,Low impact,1
+Delaware,DE,2020,ssp126,Low emissions,0.64678955,Low impact,1
+Florida,FL,2020,ssp126,Low emissions,0.8335637,Low impact,1
+Georgia,GA,2020,ssp126,Low emissions,0.6147278,Low impact,1
+Hawaii,HI,2020,ssp126,Low emissions,0.2538452,Low impact,1
+Idaho,ID,2020,ssp126,Low emissions,0.61965483,Low impact,1
+Illinois,IL,2020,ssp126,Low emissions,0.072106495,Low impact,1
+Indiana,IN,2020,ssp126,Low emissions,0.18468857,Low impact,1
+Iowa,IA,2020,ssp126,Low emissions,-0.28565285,Low impact,1
+Kansas,KS,2020,ssp126,Low emissions,-1.2350549,Low impact,1
+Kentucky,KY,2020,ssp126,Low emissions,0.2949306,Low impact,1
+Louisiana,LA,2020,ssp126,Low emissions,0.12059021,Low impact,1
+Maine,ME,2020,ssp126,Low emissions,0.86606854,Low impact,1
+Maryland,MD,2020,ssp126,Low emissions,0.65270996,Low impact,1
+Massachusetts,MA,2020,ssp126,Low emissions,0.7950592,Low impact,1
+Michigan,MI,2020,ssp126,Low emissions,0.21223332,Low impact,1
+Minnesota,MN,2020,ssp126,Low emissions,-0.43794492,Low impact,1
+Mississippi,MS,2020,ssp126,Low emissions,0.12149429,Low impact,1
+Missouri,MO,2020,ssp126,Low emissions,-0.36377597,Low impact,1
+Montana,MT,2020,ssp126,Low emissions,-0.43432778,Low impact,1
+Nebraska,NE,2020,ssp126,Low emissions,-1.4392377,Low impact,1
+Nevada,NV,2020,ssp126,Low emissions,0.30324554,Low impact,1
+New Hampshire,NH,2020,ssp126,Low emissions,0.92453,Low impact,1
+New Jersey,NJ,2020,ssp126,Low emissions,0.7398987,Low impact,1
+New Mexico,NM,2020,ssp126,Low emissions,-1.1481836,Low impact,1
+New York,NY,2020,ssp126,Low emissions,0.5226169,Low impact,1
+North Carolina,NC,2020,ssp126,Low emissions,0.5617704,Low impact,1
+North Dakota,ND,2020,ssp126,Low emissions,-0.5379298,Low impact,1
+Ohio,OH,2020,ssp126,Low emissions,0.33852538,Low impact,1
+Oklahoma,OK,2020,ssp126,Low emissions,-0.7409856,Low impact,1
+Oregon,OR,2020,ssp126,Low emissions,1.408801,Medium impact,2
+Pennsylvania,PA,2020,ssp126,Low emissions,0.5851784,Low impact,1
+Rhode Island,RI,2020,ssp126,Low emissions,0.78375244,Low impact,1
+South Carolina,SC,2020,ssp126,Low emissions,0.7356829,Low impact,1
+South Dakota,SD,2020,ssp126,Low emissions,-1.1948344,Low impact,1
+Tennessee,TN,2020,ssp126,Low emissions,0.36920166,Low impact,1
+Texas,TX,2020,ssp126,Low emissions,-0.8146765,Low impact,1
+Utah,UT,2020,ssp126,Low emissions,-0.6311493,Low impact,1
+Vermont,VT,2020,ssp126,Low emissions,0.8088481,Low impact,1
+Virginia,VA,2020,ssp126,Low emissions,0.5661545,Low impact,1
+Washington,WA,2020,ssp126,Low emissions,1.2901185,Medium impact,2
+West Virginia,WV,2020,ssp126,Low emissions,0.56062096,Low impact,1
+Wisconsin,WI,2020,ssp126,Low emissions,-0.07115173,Low impact,1
+Wyoming,WY,2020,ssp126,Low emissions,-0.6389224,Low impact,1
+Alabama,AL,2030,ssp126,Low emissions,0.33481538,Low impact,1
+Alaska,AK,2030,ssp126,Low emissions,1.3472462,Medium impact,2
+Arizona,AZ,2030,ssp126,Low emissions,0.6060251,Low impact,1
+Arkansas,AR,2030,ssp126,Low emissions,0.2799347,Low impact,1
+California,CA,2030,ssp126,Low emissions,1.1160924,Low impact,1
+Colorado,CO,2030,ssp126,Low emissions,0.37466735,Low impact,1
+Connecticut,CT,2030,ssp126,Low emissions,1.1391296,Low impact,1
+Delaware,DE,2030,ssp126,Low emissions,0.68310547,Low impact,1
+Florida,FL,2030,ssp126,Low emissions,0.18414089,Low impact,1
+Georgia,GA,2030,ssp126,Low emissions,0.42268068,Low impact,1
+Hawaii,HI,2030,ssp126,Low emissions,0.78923035,Low impact,1
+Idaho,ID,2030,ssp126,Low emissions,1.8212998,Medium impact,2
+Illinois,IL,2030,ssp126,Low emissions,0.41943794,Low impact,1
+Indiana,IN,2030,ssp126,Low emissions,0.53938675,Low impact,1
+Iowa,IA,2030,ssp126,Low emissions,0.6536116,Low impact,1
+Kansas,KS,2030,ssp126,Low emissions,-0.11405267,Low impact,1
+Kentucky,KY,2030,ssp126,Low emissions,0.47526333,Low impact,1
+Louisiana,LA,2030,ssp126,Low emissions,0.5234833,Low impact,1
+Maine,ME,2030,ssp126,Low emissions,1.6874796,Medium impact,2
+Maryland,MD,2030,ssp126,Low emissions,0.76746625,Low impact,1
+Massachusetts,MA,2030,ssp126,Low emissions,1.3426056,Medium impact,2
+Michigan,MI,2030,ssp126,Low emissions,1.1481863,Low impact,1
+Minnesota,MN,2030,ssp126,Low emissions,1.6359141,Medium impact,2
+Mississippi,MS,2030,ssp126,Low emissions,0.30387115,Low impact,1
+Missouri,MO,2030,ssp126,Low emissions,0.2914814,Low impact,1
+Montana,MT,2030,ssp126,Low emissions,1.867071,Medium impact,2
+Nebraska,NE,2030,ssp126,Low emissions,0.40949744,Low impact,1
+Nevada,NV,2030,ssp126,Low emissions,0.9415741,Low impact,1
+New Hampshire,NH,2030,ssp126,Low emissions,1.5127869,Medium impact,2
+New Jersey,NJ,2030,ssp126,Low emissions,0.7623291,Low impact,1
+New Mexico,NM,2030,ssp126,Low emissions,-0.22462402,Low impact,1
+New York,NY,2030,ssp126,Low emissions,1.3660278,Medium impact,2
+North Carolina,NC,2030,ssp126,Low emissions,0.33103248,Low impact,1
+North Dakota,ND,2030,ssp126,Low emissions,1.8836759,Medium impact,2
+Ohio,OH,2030,ssp126,Low emissions,0.7593567,Low impact,1
+Oklahoma,OK,2030,ssp126,Low emissions,-0.04901827,Low impact,1
+Oregon,OR,2030,ssp126,Low emissions,1.9433843,Medium impact,2
+Pennsylvania,PA,2030,ssp126,Low emissions,0.9706459,Low impact,1
+Rhode Island,RI,2030,ssp126,Low emissions,1.1089783,Low impact,1
+South Carolina,SC,2030,ssp126,Low emissions,0.35772705,Low impact,1
+South Dakota,SD,2030,ssp126,Low emissions,0.8803711,Low impact,1
+Tennessee,TN,2030,ssp126,Low emissions,0.39417335,Low impact,1
+Texas,TX,2030,ssp126,Low emissions,0.17805481,Low impact,1
+Utah,UT,2030,ssp126,Low emissions,0.9947323,Low impact,1
+Vermont,VT,2030,ssp126,Low emissions,1.6302185,Medium impact,2
+Virginia,VA,2030,ssp126,Low emissions,0.54442596,Low impact,1
+Washington,WA,2030,ssp126,Low emissions,2.3602417,High impact,3
+West Virginia,WV,2030,ssp126,Low emissions,0.6735665,Low impact,1
+Wisconsin,WI,2030,ssp126,Low emissions,1.2849884,Medium impact,2
+Wyoming,WY,2030,ssp126,Low emissions,1.0824152,Low impact,1
+Alabama,AL,2040,ssp126,Low emissions,1.796267,Medium impact,2
+Alaska,AK,2040,ssp126,Low emissions,0.5137273,Low impact,1
+Arizona,AZ,2040,ssp126,Low emissions,1.3710703,Medium impact,2
+Arkansas,AR,2040,ssp126,Low emissions,1.6868896,Medium impact,2
+California,CA,2040,ssp126,Low emissions,0.76649386,Low impact,1
+Colorado,CO,2040,ssp126,Low emissions,1.4320526,Medium impact,2
+Connecticut,CT,2040,ssp126,Low emissions,1.1683807,Low impact,1
+Delaware,DE,2040,ssp126,Low emissions,1.3798828,Medium impact,2
+Florida,FL,2040,ssp126,Low emissions,1.7190944,Medium impact,2
+Georgia,GA,2040,ssp126,Low emissions,1.8932922,Medium impact,2
+Hawaii,HI,2040,ssp126,Low emissions,0.49705505,Low impact,1
+Idaho,ID,2040,ssp126,Low emissions,0.30199128,Low impact,1
+Illinois,IL,2040,ssp126,Low emissions,1.7217691,Medium impact,2
+Indiana,IN,2040,ssp126,Low emissions,1.713459,Medium impact,2
+Iowa,IA,2040,ssp126,Low emissions,1.7619296,Medium impact,2
+Kansas,KS,2040,ssp126,Low emissions,1.6951108,Medium impact,2
+Kentucky,KY,2040,ssp126,Low emissions,1.6111711,Medium impact,2
+Louisiana,LA,2040,ssp126,Low emissions,1.6805267,Medium impact,2
+Maine,ME,2040,ssp126,Low emissions,1.2392036,Low impact,1
+Maryland,MD,2040,ssp126,Low emissions,1.4898071,Medium impact,2
+Massachusetts,MA,2040,ssp126,Low emissions,1.225357,Low impact,1
+Michigan,MI,2040,ssp126,Low emissions,1.5959848,Medium impact,2
+Minnesota,MN,2040,ssp126,Low emissions,1.617716,Medium impact,2
+Mississippi,MS,2040,ssp126,Low emissions,1.7937164,Medium impact,2
+Missouri,MO,2040,ssp126,Low emissions,1.698851,Medium impact,2
+Montana,MT,2040,ssp126,Low emissions,0.8612326,Low impact,1
+Nebraska,NE,2040,ssp126,Low emissions,1.6151141,Medium impact,2
+Nevada,NV,2040,ssp126,Low emissions,0.8844058,Low impact,1
+New Hampshire,NH,2040,ssp126,Low emissions,1.2520447,Low impact,1
+New Jersey,NJ,2040,ssp126,Low emissions,1.1772766,Low impact,1
+New Mexico,NM,2040,ssp126,Low emissions,1.3564392,Medium impact,2
+New York,NY,2040,ssp126,Low emissions,1.3886414,Medium impact,2
+North Carolina,NC,2040,ssp126,Low emissions,1.5007768,Medium impact,2
+North Dakota,ND,2040,ssp126,Low emissions,1.2256182,Low impact,1
+Ohio,OH,2040,ssp126,Low emissions,1.6335938,Medium impact,2
+Oklahoma,OK,2040,ssp126,Low emissions,1.7917997,Medium impact,2
+Oregon,OR,2040,ssp126,Low emissions,0.59947896,Low impact,1
+Pennsylvania,PA,2040,ssp126,Low emissions,1.4036369,Medium impact,2
+Rhode Island,RI,2040,ssp126,Low emissions,1.1253357,Low impact,1
+South Carolina,SC,2040,ssp126,Low emissions,1.7125462,Medium impact,2
+South Dakota,SD,2040,ssp126,Low emissions,1.4613291,Medium impact,2
+Tennessee,TN,2040,ssp126,Low emissions,1.6627059,Medium impact,2
+Texas,TX,2040,ssp126,Low emissions,1.7526032,Medium impact,2
+Utah,UT,2040,ssp126,Low emissions,1.1429952,Low impact,1
+Vermont,VT,2040,ssp126,Low emissions,1.4044291,Medium impact,2
+Virginia,VA,2040,ssp126,Low emissions,1.4874344,Medium impact,2
+Washington,WA,2040,ssp126,Low emissions,0.9133321,Low impact,1
+West Virginia,WV,2040,ssp126,Low emissions,1.5403792,Medium impact,2
+Wisconsin,WI,2040,ssp126,Low emissions,1.7348067,Medium impact,2
+Wyoming,WY,2040,ssp126,Low emissions,1.14844,Low impact,1
+Alabama,AL,2050,ssp126,Low emissions,1.3717065,Medium impact,2
+Alaska,AK,2050,ssp126,Low emissions,0.17102443,Low impact,1
+Arizona,AZ,2050,ssp126,Low emissions,1.6534729,Medium impact,2
+Arkansas,AR,2050,ssp126,Low emissions,1.776181,Medium impact,2
+California,CA,2050,ssp126,Low emissions,2.161641,Medium impact,2
+Colorado,CO,2050,ssp126,Low emissions,1.8187835,Medium impact,2
+Connecticut,CT,2050,ssp126,Low emissions,1.6553345,Medium impact,2
+Delaware,DE,2050,ssp126,Low emissions,1.3580322,Medium impact,2
+Florida,FL,2050,ssp126,Low emissions,1.0419137,Low impact,1
+Georgia,GA,2050,ssp126,Low emissions,1.280426,Low impact,1
+Hawaii,HI,2050,ssp126,Low emissions,0.9430084,Low impact,1
+Idaho,ID,2050,ssp126,Low emissions,2.8336837,High impact,3
+Illinois,IL,2050,ssp126,Low emissions,1.8480399,Medium impact,2
+Indiana,IN,2050,ssp126,Low emissions,1.6119919,Medium impact,2
+Iowa,IA,2050,ssp126,Low emissions,2.184462,Medium impact,2
+Kansas,KS,2050,ssp126,Low emissions,2.5474837,High impact,3
+Kentucky,KY,2050,ssp126,Low emissions,1.4120396,Medium impact,2
+Louisiana,LA,2050,ssp126,Low emissions,1.296917,Medium impact,2
+Maine,ME,2050,ssp126,Low emissions,1.9022996,Medium impact,2
+Maryland,MD,2050,ssp126,Low emissions,1.3082479,Medium impact,2
+Massachusetts,MA,2050,ssp126,Low emissions,1.8268127,Medium impact,2
+Michigan,MI,2050,ssp126,Low emissions,2.0323863,Medium impact,2
+Minnesota,MN,2050,ssp126,Low emissions,2.595475,High impact,3
+Mississippi,MS,2050,ssp126,Low emissions,1.5274429,Medium impact,2
+Missouri,MO,2050,ssp126,Low emissions,2.0596008,Medium impact,2
+Montana,MT,2050,ssp126,Low emissions,3.101357,High impact,3
+Nebraska,NE,2050,ssp126,Low emissions,2.5756693,High impact,3
+Nevada,NV,2050,ssp126,Low emissions,2.5218976,High impact,3
+New Hampshire,NH,2050,ssp126,Low emissions,1.9023438,Medium impact,2
+New Jersey,NJ,2050,ssp126,Low emissions,1.4519501,Medium impact,2
+New Mexico,NM,2050,ssp126,Low emissions,1.1788428,Low impact,1
+New York,NY,2050,ssp126,Low emissions,1.8055861,Medium impact,2
+North Carolina,NC,2050,ssp126,Low emissions,1.0394176,Low impact,1
+North Dakota,ND,2050,ssp126,Low emissions,3.0101426,High impact,3
+Ohio,OH,2050,ssp126,Low emissions,1.4992676,Medium impact,2
+Oklahoma,OK,2050,ssp126,Low emissions,2.176765,Medium impact,2
+Oregon,OR,2050,ssp126,Low emissions,2.6208427,High impact,3
+Pennsylvania,PA,2050,ssp126,Low emissions,1.4848022,Medium impact,2
+Rhode Island,RI,2050,ssp126,Low emissions,1.6191101,Medium impact,2
+South Carolina,SC,2050,ssp126,Low emissions,1.1494097,Low impact,1
+South Dakota,SD,2050,ssp126,Low emissions,2.6637354,High impact,3
+Tennessee,TN,2050,ssp126,Low emissions,1.3837336,Medium impact,2
+Texas,TX,2050,ssp126,Low emissions,1.0970477,Low impact,1
+Utah,UT,2050,ssp126,Low emissions,2.205763,Medium impact,2
+Vermont,VT,2050,ssp126,Low emissions,1.946055,Medium impact,2
+Virginia,VA,2050,ssp126,Low emissions,1.1451874,Low impact,1
+Washington,WA,2050,ssp126,Low emissions,2.4416423,High impact,3
+West Virginia,WV,2050,ssp126,Low emissions,1.2462724,Low impact,1
+Wisconsin,WI,2050,ssp126,Low emissions,2.197185,Medium impact,2
+Wyoming,WY,2050,ssp126,Low emissions,2.6392136,High impact,3
+Alabama,AL,2060,ssp126,Low emissions,0.49400213,Low impact,1
+Alaska,AK,2060,ssp126,Low emissions,1.4630705,Medium impact,2
+Arizona,AZ,2060,ssp126,Low emissions,1.7525928,Medium impact,2
+Arkansas,AR,2060,ssp126,Low emissions,-0.23312378,Low impact,1
+California,CA,2060,ssp126,Low emissions,1.9868487,Medium impact,2
+Colorado,CO,2060,ssp126,Low emissions,0.8059143,Low impact,1
+Connecticut,CT,2060,ssp126,Low emissions,0.7172241,Low impact,1
+Delaware,DE,2060,ssp126,Low emissions,0.3603058,Low impact,1
+Florida,FL,2060,ssp126,Low emissions,0.76722497,Low impact,1
+Georgia,GA,2060,ssp126,Low emissions,0.51107484,Low impact,1
+Hawaii,HI,2060,ssp126,Low emissions,1.1407928,Low impact,1
+Idaho,ID,2060,ssp126,Low emissions,1.0671402,Low impact,1
+Illinois,IL,2060,ssp126,Low emissions,-0.17587934,Low impact,1
+Indiana,IN,2060,ssp126,Low emissions,-0.0743866,Low impact,1
+Iowa,IA,2060,ssp126,Low emissions,-0.3266019,Low impact,1
+Kansas,KS,2060,ssp126,Low emissions,-0.3649275,Low impact,1
+Kentucky,KY,2060,ssp126,Low emissions,0.16486904,Low impact,1
+Louisiana,LA,2060,ssp126,Low emissions,0.32315445,Low impact,1
+Maine,ME,2060,ssp126,Low emissions,1.0395745,Low impact,1
+Maryland,MD,2060,ssp126,Low emissions,0.26427206,Low impact,1
+Massachusetts,MA,2060,ssp126,Low emissions,0.7947693,Low impact,1
+Michigan,MI,2060,ssp126,Low emissions,-0.0014014611,Low impact,1
+Minnesota,MN,2060,ssp126,Low emissions,-0.42430517,Low impact,1
+Mississippi,MS,2060,ssp126,Low emissions,0.31717682,Low impact,1
+Missouri,MO,2060,ssp126,Low emissions,-0.38783023,Low impact,1
+Montana,MT,2060,ssp126,Low emissions,0.19625613,Low impact,1
+Nebraska,NE,2060,ssp126,Low emissions,0.12001486,Low impact,1
+Nevada,NV,2060,ssp126,Low emissions,1.8020973,Medium impact,2
+New Hampshire,NH,2060,ssp126,Low emissions,0.95022583,Low impact,1
+New Jersey,NJ,2060,ssp126,Low emissions,0.4373169,Low impact,1
+New Mexico,NM,2060,ssp126,Low emissions,0.47984254,Low impact,1
+New York,NY,2060,ssp126,Low emissions,0.66674465,Low impact,1
+North Carolina,NC,2060,ssp126,Low emissions,0.4267828,Low impact,1
+North Dakota,ND,2060,ssp126,Low emissions,-0.33476526,Low impact,1
+Ohio,OH,2060,ssp126,Low emissions,-0.013543701,Low impact,1
+Oklahoma,OK,2060,ssp126,Low emissions,-0.4266381,Low impact,1
+Oregon,OR,2060,ssp126,Low emissions,1.3601352,Medium impact,2
+Pennsylvania,PA,2060,ssp126,Low emissions,0.23099518,Low impact,1
+Rhode Island,RI,2060,ssp126,Low emissions,0.75982666,Low impact,1
+South Carolina,SC,2060,ssp126,Low emissions,0.5840454,Low impact,1
+South Dakota,SD,2060,ssp126,Low emissions,0.2446289,Low impact,1
+Tennessee,TN,2060,ssp126,Low emissions,0.26678467,Low impact,1
+Texas,TX,2060,ssp126,Low emissions,-0.46487427,Low impact,1
+Utah,UT,2060,ssp126,Low emissions,1.6683486,Medium impact,2
+Vermont,VT,2060,ssp126,Low emissions,1.1001078,Low impact,1
+Virginia,VA,2060,ssp126,Low emissions,0.29140472,Low impact,1
+Washington,WA,2060,ssp126,Low emissions,0.43073526,Low impact,1
+West Virginia,WV,2060,ssp126,Low emissions,0.29690552,Low impact,1
+Wisconsin,WI,2060,ssp126,Low emissions,-0.4741756,Low impact,1
+Wyoming,WY,2060,ssp126,Low emissions,0.655482,Low impact,1
+Alabama,AL,2070,ssp126,Low emissions,1.862955,Medium impact,2
+Alaska,AK,2070,ssp126,Low emissions,0.5388623,Low impact,1
+Arizona,AZ,2070,ssp126,Low emissions,1.3461175,Medium impact,2
+Arkansas,AR,2070,ssp126,Low emissions,1.5340027,Medium impact,2
+California,CA,2070,ssp126,Low emissions,1.8036993,Medium impact,2
+Colorado,CO,2070,ssp126,Low emissions,0.9882385,Low impact,1
+Connecticut,CT,2070,ssp126,Low emissions,2.370926,High impact,3
+Delaware,DE,2070,ssp126,Low emissions,2.462799,High impact,3
+Florida,FL,2070,ssp126,Low emissions,1.1718771,Low impact,1
+Georgia,GA,2070,ssp126,Low emissions,1.77565,Medium impact,2
+Hawaii,HI,2070,ssp126,Low emissions,0.6940155,Low impact,1
+Idaho,ID,2070,ssp126,Low emissions,1.814093,Medium impact,2
+Illinois,IL,2070,ssp126,Low emissions,2.1467307,Medium impact,2
+Indiana,IN,2070,ssp126,Low emissions,2.111557,Medium impact,2
+Iowa,IA,2070,ssp126,Low emissions,2.1999235,Medium impact,2
+Kansas,KS,2070,ssp126,Low emissions,0.98186916,Low impact,1
+Kentucky,KY,2070,ssp126,Low emissions,1.918457,Medium impact,2
+Louisiana,LA,2070,ssp126,Low emissions,1.5711327,Medium impact,2
+Maine,ME,2070,ssp126,Low emissions,2.4929538,High impact,3
+Maryland,MD,2070,ssp126,Low emissions,2.3137207,High impact,3
+Massachusetts,MA,2070,ssp126,Low emissions,2.4959412,High impact,3
+Michigan,MI,2070,ssp126,Low emissions,2.4219384,High impact,3
+Minnesota,MN,2070,ssp126,Low emissions,1.9239422,Medium impact,2
+Mississippi,MS,2070,ssp126,Low emissions,1.7115211,Medium impact,2
+Missouri,MO,2070,ssp126,Low emissions,1.8777947,Medium impact,2
+Montana,MT,2070,ssp126,Low emissions,1.5900943,Medium impact,2
+Nebraska,NE,2070,ssp126,Low emissions,1.2971227,Medium impact,2
+Nevada,NV,2070,ssp126,Low emissions,1.648262,Medium impact,2
+New Hampshire,NH,2070,ssp126,Low emissions,2.6169128,High impact,3
+New Jersey,NJ,2070,ssp126,Low emissions,2.4743195,High impact,3
+New Mexico,NM,2070,ssp126,Low emissions,0.7584607,Low impact,1
+New York,NY,2070,ssp126,Low emissions,2.535831,High impact,3
+North Carolina,NC,2070,ssp126,Low emissions,1.9662198,Medium impact,2
+North Dakota,ND,2070,ssp126,Low emissions,1.5513934,Medium impact,2
+Ohio,OH,2070,ssp126,Low emissions,2.2383149,Medium impact,2
+Oklahoma,OK,2070,ssp126,Low emissions,0.82762265,Low impact,1
+Oregon,OR,2070,ssp126,Low emissions,2.3187075,High impact,3
+Pennsylvania,PA,2070,ssp126,Low emissions,2.4562721,High impact,3
+Rhode Island,RI,2070,ssp126,Low emissions,2.2931213,Medium impact,2
+South Carolina,SC,2070,ssp126,Low emissions,1.8908212,Medium impact,2
+South Dakota,SD,2070,ssp126,Low emissions,1.2748464,Low impact,1
+Tennessee,TN,2070,ssp126,Low emissions,1.85356,Medium impact,2
+Texas,TX,2070,ssp126,Low emissions,0.92196655,Low impact,1
+Utah,UT,2070,ssp126,Low emissions,1.4690925,Medium impact,2
+Vermont,VT,2070,ssp126,Low emissions,2.641988,High impact,3
+Virginia,VA,2070,ssp126,Low emissions,2.0391846,Medium impact,2
+Washington,WA,2070,ssp126,Low emissions,2.392159,High impact,3
+West Virginia,WV,2070,ssp126,Low emissions,2.1426523,Medium impact,2
+Wisconsin,WI,2070,ssp126,Low emissions,2.3773434,High impact,3
+Wyoming,WY,2070,ssp126,Low emissions,1.2379621,Low impact,1
+Alabama,AL,2080,ssp126,Low emissions,2.302434,High impact,3
+Alaska,AK,2080,ssp126,Low emissions,2.7594414,High impact,3
+Arizona,AZ,2080,ssp126,Low emissions,0.92437625,Low impact,1
+Arkansas,AR,2080,ssp126,Low emissions,2.7402253,High impact,3
+California,CA,2080,ssp126,Low emissions,0.41224402,Low impact,1
+Colorado,CO,2080,ssp126,Low emissions,1.8889297,Medium impact,2
+Connecticut,CT,2080,ssp126,Low emissions,1.3923645,Medium impact,2
+Delaware,DE,2080,ssp126,Low emissions,1.7902832,Medium impact,2
+Florida,FL,2080,ssp126,Low emissions,1.5763419,Medium impact,2
+Georgia,GA,2080,ssp126,Low emissions,2.302426,High impact,3
+Hawaii,HI,2080,ssp126,Low emissions,0.32136536,Low impact,1
+Idaho,ID,2080,ssp126,Low emissions,1.3749634,Medium impact,2
+Illinois,IL,2080,ssp126,Low emissions,2.4538248,High impact,3
+Indiana,IN,2080,ssp126,Low emissions,2.3390236,High impact,3
+Iowa,IA,2080,ssp126,Low emissions,2.4975114,High impact,3
+Kansas,KS,2080,ssp126,Low emissions,2.2099202,Medium impact,2
+Kentucky,KY,2080,ssp126,Low emissions,2.3592355,High impact,3
+Louisiana,LA,2080,ssp126,Low emissions,2.207737,Medium impact,2
+Maine,ME,2080,ssp126,Low emissions,1.1055331,Low impact,1
+Maryland,MD,2080,ssp126,Low emissions,1.9581503,Medium impact,2
+Massachusetts,MA,2080,ssp126,Low emissions,1.409256,Medium impact,2
+Michigan,MI,2080,ssp126,Low emissions,2.2569745,Medium impact,2
+Minnesota,MN,2080,ssp126,Low emissions,2.5401082,High impact,3
+Mississippi,MS,2080,ssp126,Low emissions,2.2691689,Medium impact,2
+Missouri,MO,2080,ssp126,Low emissions,2.356606,High impact,3
+Montana,MT,2080,ssp126,Low emissions,1.6357069,Medium impact,2
+Nebraska,NE,2080,ssp126,Low emissions,2.1683116,Medium impact,2
+Nevada,NV,2080,ssp126,Low emissions,0.5274162,Low impact,1
+New Hampshire,NH,2080,ssp126,Low emissions,1.3566589,Medium impact,2
+New Jersey,NJ,2080,ssp126,Low emissions,1.6260376,Medium impact,2
+New Mexico,NM,2080,ssp126,Low emissions,1.4285339,Medium impact,2
+New York,NY,2080,ssp126,Low emissions,1.5295783,Medium impact,2
+North Carolina,NC,2080,ssp126,Low emissions,2.0098073,Medium impact,2
+North Dakota,ND,2080,ssp126,Low emissions,2.5387843,High impact,3
+Ohio,OH,2080,ssp126,Low emissions,2.1023498,Medium impact,2
+Oklahoma,OK,2080,ssp126,Low emissions,2.5460393,High impact,3
+Oregon,OR,2080,ssp126,Low emissions,1.0846294,Low impact,1
+Pennsylvania,PA,2080,ssp126,Low emissions,1.8195343,Medium impact,2
+Rhode Island,RI,2080,ssp126,Low emissions,1.2895813,Medium impact,2
+South Carolina,SC,2080,ssp126,Low emissions,2.170288,Medium impact,2
+South Dakota,SD,2080,ssp126,Low emissions,2.2572546,Medium impact,2
+Tennessee,TN,2080,ssp126,Low emissions,2.4341624,High impact,3
+Texas,TX,2080,ssp126,Low emissions,1.8058887,Medium impact,2
+Utah,UT,2080,ssp126,Low emissions,1.1779497,Low impact,1
+Vermont,VT,2080,ssp126,Low emissions,1.35142,Medium impact,2
+Virginia,VA,2080,ssp126,Low emissions,1.8940277,Medium impact,2
+Washington,WA,2080,ssp126,Low emissions,1.7730244,Medium impact,2
+West Virginia,WV,2080,ssp126,Low emissions,2.084067,Medium impact,2
+Wisconsin,WI,2080,ssp126,Low emissions,2.5357666,High impact,3
+Wyoming,WY,2080,ssp126,Low emissions,1.7052816,Medium impact,2
+Alabama,AL,2090,ssp126,Low emissions,1.4771752,Medium impact,2
+Alaska,AK,2090,ssp126,Low emissions,2.6895208,High impact,3
+Arizona,AZ,2090,ssp126,Low emissions,0.8830707,Low impact,1
+Arkansas,AR,2090,ssp126,Low emissions,1.5297638,Medium impact,2
+California,CA,2090,ssp126,Low emissions,1.7110838,Medium impact,2
+Colorado,CO,2090,ssp126,Low emissions,1.3590744,Medium impact,2
+Connecticut,CT,2090,ssp126,Low emissions,1.2771912,Low impact,1
+Delaware,DE,2090,ssp126,Low emissions,1.4281921,Medium impact,2
+Florida,FL,2090,ssp126,Low emissions,0.4627533,Low impact,1
+Georgia,GA,2090,ssp126,Low emissions,1.233841,Low impact,1
+Hawaii,HI,2090,ssp126,Low emissions,0.6837616,Low impact,1
+Idaho,ID,2090,ssp126,Low emissions,1.8692459,Medium impact,2
+Illinois,IL,2090,ssp126,Low emissions,1.5581774,Medium impact,2
+Indiana,IN,2090,ssp126,Low emissions,1.5750732,Medium impact,2
+Iowa,IA,2090,ssp126,Low emissions,1.835452,Medium impact,2
+Kansas,KS,2090,ssp126,Low emissions,1.8459015,Medium impact,2
+Kentucky,KY,2090,ssp126,Low emissions,1.6342337,Medium impact,2
+Louisiana,LA,2090,ssp126,Low emissions,1.6111794,Medium impact,2
+Maine,ME,2090,ssp126,Low emissions,1.3330417,Medium impact,2
+Maryland,MD,2090,ssp126,Low emissions,1.5399374,Medium impact,2
+Massachusetts,MA,2090,ssp126,Low emissions,1.353836,Medium impact,2
+Michigan,MI,2090,ssp126,Low emissions,1.572045,Medium impact,2
+Minnesota,MN,2090,ssp126,Low emissions,2.23991,Medium impact,2
+Mississippi,MS,2090,ssp126,Low emissions,1.7815132,Medium impact,2
+Missouri,MO,2090,ssp126,Low emissions,1.6836724,Medium impact,2
+Montana,MT,2090,ssp126,Low emissions,2.036772,Medium impact,2
+Nebraska,NE,2090,ssp126,Low emissions,2.312317,High impact,3
+Nevada,NV,2090,ssp126,Low emissions,1.5199178,Medium impact,2
+New Hampshire,NH,2090,ssp126,Low emissions,1.3476868,Medium impact,2
+New Jersey,NJ,2090,ssp126,Low emissions,1.4548645,Medium impact,2
+New Mexico,NM,2090,ssp126,Low emissions,0.96890014,Low impact,1
+New York,NY,2090,ssp126,Low emissions,1.5200942,Medium impact,2
+North Carolina,NC,2090,ssp126,Low emissions,1.1600398,Low impact,1
+North Dakota,ND,2090,ssp126,Low emissions,2.9477396,High impact,3
+Ohio,OH,2090,ssp126,Low emissions,1.5792786,Medium impact,2
+Oklahoma,OK,2090,ssp126,Low emissions,1.7654678,Medium impact,2
+Oregon,OR,2090,ssp126,Low emissions,1.859117,Medium impact,2
+Pennsylvania,PA,2090,ssp126,Low emissions,1.5837212,Medium impact,2
+Rhode Island,RI,2090,ssp126,Low emissions,1.2062073,Low impact,1
+South Carolina,SC,2090,ssp126,Low emissions,1.2914647,Medium impact,2
+South Dakota,SD,2090,ssp126,Low emissions,2.731903,High impact,3
+Tennessee,TN,2090,ssp126,Low emissions,1.497614,Medium impact,2
+Texas,TX,2090,ssp126,Low emissions,0.86955994,Low impact,1
+Utah,UT,2090,ssp126,Low emissions,1.4965159,Medium impact,2
+Vermont,VT,2090,ssp126,Low emissions,1.4616394,Medium impact,2
+Virginia,VA,2090,ssp126,Low emissions,1.2910767,Medium impact,2
+Washington,WA,2090,ssp126,Low emissions,2.000582,Medium impact,2
+West Virginia,WV,2090,ssp126,Low emissions,1.5777022,Medium impact,2
+Wisconsin,WI,2090,ssp126,Low emissions,1.811822,Medium impact,2
+Wyoming,WY,2090,ssp126,Low emissions,1.845632,Medium impact,2
+Alabama,AL,2100,ssp126,Low emissions,1.6378057,Medium impact,2
+Alaska,AK,2100,ssp126,Low emissions,2.5123193,High impact,3
+Arizona,AZ,2100,ssp126,Low emissions,0.91672456,Low impact,1
+Arkansas,AR,2100,ssp126,Low emissions,1.8459533,Medium impact,2
+California,CA,2100,ssp126,Low emissions,0.87196976,Low impact,1
+Colorado,CO,2100,ssp126,Low emissions,0.953862,Low impact,1
+Connecticut,CT,2100,ssp126,Low emissions,1.4873047,Medium impact,2
+Delaware,DE,2100,ssp126,Low emissions,1.7071075,Medium impact,2
+Florida,FL,2100,ssp126,Low emissions,1.0979875,Low impact,1
+Georgia,GA,2100,ssp126,Low emissions,1.623874,Medium impact,2
+Hawaii,HI,2100,ssp126,Low emissions,0.3969574,Low impact,1
+Idaho,ID,2100,ssp126,Low emissions,1.1323059,Low impact,1
+Illinois,IL,2100,ssp126,Low emissions,1.8239549,Medium impact,2
+Indiana,IN,2100,ssp126,Low emissions,1.8371391,Medium impact,2
+Iowa,IA,2100,ssp126,Low emissions,1.7390525,Medium impact,2
+Kansas,KS,2100,ssp126,Low emissions,1.7246535,Medium impact,2
+Kentucky,KY,2100,ssp126,Low emissions,1.8080357,Medium impact,2
+Louisiana,LA,2100,ssp126,Low emissions,2.0251122,Medium impact,2
+Maine,ME,2100,ssp126,Low emissions,1.756724,Medium impact,2
+Maryland,MD,2100,ssp126,Low emissions,1.8227438,Medium impact,2
+Massachusetts,MA,2100,ssp126,Low emissions,1.505249,Medium impact,2
+Michigan,MI,2100,ssp126,Low emissions,1.551786,Medium impact,2
+Minnesota,MN,2100,ssp126,Low emissions,1.5083554,Medium impact,2
+Mississippi,MS,2100,ssp126,Low emissions,1.580349,Medium impact,2
+Missouri,MO,2100,ssp126,Low emissions,1.5734943,Medium impact,2
+Montana,MT,2100,ssp126,Low emissions,0.7818925,Low impact,1
+Nebraska,NE,2100,ssp126,Low emissions,1.0293363,Low impact,1
+Nevada,NV,2100,ssp126,Low emissions,0.43096796,Low impact,1
+New Hampshire,NH,2100,ssp126,Low emissions,1.5027161,Medium impact,2
+New Jersey,NJ,2100,ssp126,Low emissions,1.627533,Medium impact,2
+New Mexico,NM,2100,ssp126,Low emissions,1.1483618,Low impact,1
+New York,NY,2100,ssp126,Low emissions,1.5059713,Medium impact,2
+North Carolina,NC,2100,ssp126,Low emissions,1.6803589,Medium impact,2
+North Dakota,ND,2100,ssp126,Low emissions,1.2236723,Low impact,1
+Ohio,OH,2100,ssp126,Low emissions,1.8443054,Medium impact,2
+Oklahoma,OK,2100,ssp126,Low emissions,2.0802424,Medium impact,2
+Oregon,OR,2100,ssp126,Low emissions,1.2349701,Low impact,1
+Pennsylvania,PA,2100,ssp126,Low emissions,1.6803627,Medium impact,2
+Rhode Island,RI,2100,ssp126,Low emissions,1.4718323,Medium impact,2
+South Carolina,SC,2100,ssp126,Low emissions,1.6600037,Medium impact,2
+South Dakota,SD,2100,ssp126,Low emissions,0.91746014,Low impact,1
+Tennessee,TN,2100,ssp126,Low emissions,1.8584651,Medium impact,2
+Texas,TX,2100,ssp126,Low emissions,1.8287799,Medium impact,2
+Utah,UT,2100,ssp126,Low emissions,0.5598229,Low impact,1
+Vermont,VT,2100,ssp126,Low emissions,1.5438538,Medium impact,2
+Virginia,VA,2100,ssp126,Low emissions,1.6957016,Medium impact,2
+Washington,WA,2100,ssp126,Low emissions,1.7049642,Medium impact,2
+West Virginia,WV,2100,ssp126,Low emissions,1.8321446,Medium impact,2
+Wisconsin,WI,2100,ssp126,Low emissions,1.6197923,Medium impact,2
+Wyoming,WY,2100,ssp126,Low emissions,0.63952637,Low impact,1
+Alabama,AL,2020,ssp245,Medium emissions,0.54922956,Low impact,1
+Alaska,AK,2020,ssp245,Medium emissions,-0.5352776,Low impact,1
+Arizona,AZ,2020,ssp245,Medium emissions,0.787742,Low impact,1
+Arkansas,AR,2020,ssp245,Medium emissions,-0.056466676,Low impact,1
+California,CA,2020,ssp245,Medium emissions,0.72918165,Low impact,1
+Colorado,CO,2020,ssp245,Medium emissions,0.50218964,Low impact,1
+Connecticut,CT,2020,ssp245,Medium emissions,0.47885132,Low impact,1
+Delaware,DE,2020,ssp245,Medium emissions,0.22015381,Low impact,1
+Florida,FL,2020,ssp245,Medium emissions,0.7120819,Low impact,1
+Georgia,GA,2020,ssp245,Medium emissions,0.58480227,Low impact,1
+Hawaii,HI,2020,ssp245,Medium emissions,-0.32972717,Low impact,1
+Idaho,ID,2020,ssp245,Medium emissions,0.767717,Low impact,1
+Illinois,IL,2020,ssp245,Medium emissions,0.2624599,Low impact,1
+Indiana,IN,2020,ssp245,Medium emissions,0.35716248,Low impact,1
+Iowa,IA,2020,ssp245,Medium emissions,0.6177507,Low impact,1
+Kansas,KS,2020,ssp245,Medium emissions,-0.2867296,Low impact,1
+Kentucky,KY,2020,ssp245,Medium emissions,0.18145752,Low impact,1
+Louisiana,LA,2020,ssp245,Medium emissions,0.18043137,Low impact,1
+Maine,ME,2020,ssp245,Medium emissions,0.76035565,Low impact,1
+Maryland,MD,2020,ssp245,Medium emissions,0.20769246,Low impact,1
+Massachusetts,MA,2020,ssp245,Medium emissions,0.61727905,Low impact,1
+Michigan,MI,2020,ssp245,Medium emissions,0.9933331,Low impact,1
+Minnesota,MN,2020,ssp245,Medium emissions,1.3802651,Medium impact,2
+Mississippi,MS,2020,ssp245,Medium emissions,0.3792801,Low impact,1
+Missouri,MO,2020,ssp245,Medium emissions,-0.030313592,Low impact,1
+Montana,MT,2020,ssp245,Medium emissions,1.0757502,Low impact,1
+Nebraska,NE,2020,ssp245,Medium emissions,0.5422166,Low impact,1
+Nevada,NV,2020,ssp245,Medium emissions,0.9034958,Low impact,1
+New Hampshire,NH,2020,ssp245,Medium emissions,0.7348938,Low impact,1
+New Jersey,NJ,2020,ssp245,Medium emissions,0.35401917,Low impact,1
+New Mexico,NM,2020,ssp245,Medium emissions,0.3045337,Low impact,1
+New York,NY,2020,ssp245,Medium emissions,0.6284688,Low impact,1
+North Carolina,NC,2020,ssp245,Medium emissions,0.08291071,Low impact,1
+North Dakota,ND,2020,ssp245,Medium emissions,1.8375657,Medium impact,2
+Ohio,OH,2020,ssp245,Medium emissions,0.42108765,Low impact,1
+Oklahoma,OK,2020,ssp245,Medium emissions,-0.30033523,Low impact,1
+Oregon,OR,2020,ssp245,Medium emissions,0.7671481,Low impact,1
+Pennsylvania,PA,2020,ssp245,Medium emissions,0.33096313,Low impact,1
+Rhode Island,RI,2020,ssp245,Medium emissions,0.53378296,Low impact,1
+South Carolina,SC,2020,ssp245,Medium emissions,0.38033184,Low impact,1
+South Dakota,SD,2020,ssp245,Medium emissions,1.4015791,Medium impact,2
+Tennessee,TN,2020,ssp245,Medium emissions,0.24598832,Low impact,1
+Texas,TX,2020,ssp245,Medium emissions,0.44994813,Low impact,1
+Utah,UT,2020,ssp245,Medium emissions,0.9609646,Low impact,1
+Vermont,VT,2020,ssp245,Medium emissions,0.8274434,Low impact,1
+Virginia,VA,2020,ssp245,Medium emissions,0.06667328,Low impact,1
+Washington,WA,2020,ssp245,Medium emissions,0.7565715,Low impact,1
+West Virginia,WV,2020,ssp245,Medium emissions,0.26159668,Low impact,1
+Wisconsin,WI,2020,ssp245,Medium emissions,0.97006005,Low impact,1
+Wyoming,WY,2020,ssp245,Medium emissions,0.78926724,Low impact,1
+Alabama,AL,2030,ssp245,Medium emissions,1.0243554,Low impact,1
+Alaska,AK,2030,ssp245,Medium emissions,1.6343409,Medium impact,2
+Arizona,AZ,2030,ssp245,Medium emissions,0.5015787,Low impact,1
+Arkansas,AR,2030,ssp245,Medium emissions,0.7175354,Low impact,1
+California,CA,2030,ssp245,Medium emissions,0.76385856,Low impact,1
+Colorado,CO,2030,ssp245,Medium emissions,0.8755829,Low impact,1
+Connecticut,CT,2030,ssp245,Medium emissions,0.6133423,Low impact,1
+Delaware,DE,2030,ssp245,Medium emissions,0.6381531,Low impact,1
+Florida,FL,2030,ssp245,Medium emissions,0.71320236,Low impact,1
+Georgia,GA,2030,ssp245,Medium emissions,1.238919,Low impact,1
+Hawaii,HI,2030,ssp245,Medium emissions,0.7008667,Low impact,1
+Idaho,ID,2030,ssp245,Medium emissions,0.9782623,Low impact,1
+Illinois,IL,2030,ssp245,Medium emissions,0.65538895,Low impact,1
+Indiana,IN,2030,ssp245,Medium emissions,0.51643753,Low impact,1
+Iowa,IA,2030,ssp245,Medium emissions,0.8942677,Low impact,1
+Kansas,KS,2030,ssp245,Medium emissions,1.018241,Low impact,1
+Kentucky,KY,2030,ssp245,Medium emissions,0.56573486,Low impact,1
+Louisiana,LA,2030,ssp245,Medium emissions,0.9271469,Low impact,1
+Maine,ME,2030,ssp245,Medium emissions,0.6103821,Low impact,1
+Maryland,MD,2030,ssp245,Medium emissions,0.5427043,Low impact,1
+Massachusetts,MA,2030,ssp245,Medium emissions,0.6642914,Low impact,1
+Michigan,MI,2030,ssp245,Medium emissions,0.24087994,Low impact,1
+Minnesota,MN,2030,ssp245,Medium emissions,0.64986056,Low impact,1
+Mississippi,MS,2030,ssp245,Medium emissions,0.93351746,Low impact,1
+Missouri,MO,2030,ssp245,Medium emissions,0.95376104,Low impact,1
+Montana,MT,2030,ssp245,Medium emissions,0.68071866,Low impact,1
+Nebraska,NE,2030,ssp245,Medium emissions,1.026965,Low impact,1
+Nevada,NV,2030,ssp245,Medium emissions,0.77440643,Low impact,1
+New Hampshire,NH,2030,ssp245,Medium emissions,0.6732483,Low impact,1
+New Jersey,NJ,2030,ssp245,Medium emissions,0.57621765,Low impact,1
+New Mexico,NM,2030,ssp245,Medium emissions,0.23588012,Low impact,1
+New York,NY,2030,ssp245,Medium emissions,0.53248763,Low impact,1
+North Carolina,NC,2030,ssp245,Medium emissions,0.89016443,Low impact,1
+North Dakota,ND,2030,ssp245,Medium emissions,0.8780913,Low impact,1
+Ohio,OH,2030,ssp245,Medium emissions,0.4262024,Low impact,1
+Oklahoma,OK,2030,ssp245,Medium emissions,0.22135104,Low impact,1
+Oregon,OR,2030,ssp245,Medium emissions,0.97428757,Low impact,1
+Pennsylvania,PA,2030,ssp245,Medium emissions,0.4526024,Low impact,1
+Rhode Island,RI,2030,ssp245,Medium emissions,0.5832825,Low impact,1
+South Carolina,SC,2030,ssp245,Medium emissions,1.0019705,Low impact,1
+South Dakota,SD,2030,ssp245,Medium emissions,0.6648,Low impact,1
+Tennessee,TN,2030,ssp245,Medium emissions,0.7229198,Low impact,1
+Texas,TX,2030,ssp245,Medium emissions,0.29429016,Low impact,1
+Utah,UT,2030,ssp245,Medium emissions,0.99561393,Low impact,1
+Vermont,VT,2030,ssp245,Medium emissions,0.6560974,Low impact,1
+Virginia,VA,2030,ssp245,Medium emissions,0.7709274,Low impact,1
+Washington,WA,2030,ssp245,Medium emissions,1.3363912,Medium impact,2
+West Virginia,WV,2030,ssp245,Medium emissions,0.44572666,Low impact,1
+Wisconsin,WI,2030,ssp245,Medium emissions,0.43958172,Low impact,1
+Wyoming,WY,2030,ssp245,Medium emissions,0.90483856,Low impact,1
+Alabama,AL,2040,ssp245,Medium emissions,1.0917945,Low impact,1
+Alaska,AK,2040,ssp245,Medium emissions,2.407734,High impact,3
+Arizona,AZ,2040,ssp245,Medium emissions,1.4268881,Medium impact,2
+Arkansas,AR,2040,ssp245,Medium emissions,0.94897765,Low impact,1
+California,CA,2040,ssp245,Medium emissions,1.6528275,Medium impact,2
+Colorado,CO,2040,ssp245,Medium emissions,1.2181412,Low impact,1
+Connecticut,CT,2040,ssp245,Medium emissions,0.89945984,Low impact,1
+Delaware,DE,2040,ssp245,Medium emissions,0.6399689,Low impact,1
+Florida,FL,2040,ssp245,Medium emissions,0.53625053,Low impact,1
+Georgia,GA,2040,ssp245,Medium emissions,1.1934296,Low impact,1
+Hawaii,HI,2040,ssp245,Medium emissions,0.38279724,Low impact,1
+Idaho,ID,2040,ssp245,Medium emissions,2.0992217,Medium impact,2
+Illinois,IL,2040,ssp245,Medium emissions,0.9826638,Low impact,1
+Indiana,IN,2040,ssp245,Medium emissions,0.94849014,Low impact,1
+Iowa,IA,2040,ssp245,Medium emissions,1.2281078,Low impact,1
+Kansas,KS,2040,ssp245,Medium emissions,0.662796,Low impact,1
+Kentucky,KY,2040,ssp245,Medium emissions,0.8070243,Low impact,1
+Louisiana,LA,2040,ssp245,Medium emissions,1.0252266,Low impact,1
+Maine,ME,2040,ssp245,Medium emissions,1.6034478,Medium impact,2
+Maryland,MD,2040,ssp245,Medium emissions,0.7621867,Low impact,1
+Massachusetts,MA,2040,ssp245,Medium emissions,1.062973,Low impact,1
+Michigan,MI,2040,ssp245,Medium emissions,1.2842243,Medium impact,2
+Minnesota,MN,2040,ssp245,Medium emissions,1.7942713,Medium impact,2
+Mississippi,MS,2040,ssp245,Medium emissions,1.0911865,Low impact,1
+Missouri,MO,2040,ssp245,Medium emissions,0.8992181,Low impact,1
+Montana,MT,2040,ssp245,Medium emissions,2.0382087,Medium impact,2
+Nebraska,NE,2040,ssp245,Medium emissions,1.0879732,Low impact,1
+Nevada,NV,2040,ssp245,Medium emissions,1.9515228,Medium impact,2
+New Hampshire,NH,2040,ssp245,Medium emissions,1.2075806,Low impact,1
+New Jersey,NJ,2040,ssp245,Medium emissions,0.64489746,Low impact,1
+New Mexico,NM,2040,ssp245,Medium emissions,1.1374927,Low impact,1
+New York,NY,2040,ssp245,Medium emissions,1.1948344,Low impact,1
+North Carolina,NC,2040,ssp245,Medium emissions,0.82482076,Low impact,1
+North Dakota,ND,2040,ssp245,Medium emissions,2.4977489,High impact,3
+Ohio,OH,2040,ssp245,Medium emissions,0.9637329,Low impact,1
+Oklahoma,OK,2040,ssp245,Medium emissions,0.79271287,Low impact,1
+Oregon,OR,2040,ssp245,Medium emissions,1.9082932,Medium impact,2
+Pennsylvania,PA,2040,ssp245,Medium emissions,0.85181427,Low impact,1
+Rhode Island,RI,2040,ssp245,Medium emissions,0.91448975,Low impact,1
+South Carolina,SC,2040,ssp245,Medium emissions,0.88853675,Low impact,1
+South Dakota,SD,2040,ssp245,Medium emissions,1.3555772,Medium impact,2
+Tennessee,TN,2040,ssp245,Medium emissions,0.90638316,Low impact,1
+Texas,TX,2040,ssp245,Medium emissions,1.1784918,Low impact,1
+Utah,UT,2040,ssp245,Medium emissions,1.8559401,Medium impact,2
+Vermont,VT,2040,ssp245,Medium emissions,1.443339,Medium impact,2
+Virginia,VA,2040,ssp245,Medium emissions,0.76916504,Low impact,1
+Washington,WA,2040,ssp245,Medium emissions,1.9026631,Medium impact,2
+West Virginia,WV,2040,ssp245,Medium emissions,0.71381485,Low impact,1
+Wisconsin,WI,2040,ssp245,Medium emissions,1.3213937,Medium impact,2
+Wyoming,WY,2040,ssp245,Medium emissions,1.5101992,Medium impact,2
+Alabama,AL,2050,ssp245,Medium emissions,1.8268244,Medium impact,2
+Alaska,AK,2050,ssp245,Medium emissions,0.43417555,Low impact,1
+Arizona,AZ,2050,ssp245,Medium emissions,1.1685145,Low impact,1
+Arkansas,AR,2050,ssp245,Medium emissions,1.7479401,Medium impact,2
+California,CA,2050,ssp245,Medium emissions,0.89283484,Low impact,1
+Colorado,CO,2050,ssp245,Medium emissions,0.80476075,Low impact,1
+Connecticut,CT,2050,ssp245,Medium emissions,1.2001343,Low impact,1
+Delaware,DE,2050,ssp245,Medium emissions,1.1047211,Low impact,1
+Florida,FL,2050,ssp245,Medium emissions,1.0820029,Low impact,1
+Georgia,GA,2050,ssp245,Medium emissions,1.5373993,Medium impact,2
+Hawaii,HI,2050,ssp245,Medium emissions,1.0679779,Low impact,1
+Idaho,ID,2050,ssp245,Medium emissions,0.8580078,Low impact,1
+Illinois,IL,2050,ssp245,Medium emissions,1.3446786,Medium impact,2
+Indiana,IN,2050,ssp245,Medium emissions,1.4156456,Medium impact,2
+Iowa,IA,2050,ssp245,Medium emissions,1.4793923,Medium impact,2
+Kansas,KS,2050,ssp245,Medium emissions,1.2771285,Low impact,1
+Kentucky,KY,2050,ssp245,Medium emissions,1.429936,Medium impact,2
+Louisiana,LA,2050,ssp245,Medium emissions,1.6694031,Medium impact,2
+Maine,ME,2050,ssp245,Medium emissions,1.8733385,Medium impact,2
+Maryland,MD,2050,ssp245,Medium emissions,1.2919718,Medium impact,2
+Massachusetts,MA,2050,ssp245,Medium emissions,1.3958893,Medium impact,2
+Michigan,MI,2050,ssp245,Medium emissions,1.6359206,Medium impact,2
+Minnesota,MN,2050,ssp245,Medium emissions,1.2842022,Medium impact,2
+Mississippi,MS,2050,ssp245,Medium emissions,2.0143776,Medium impact,2
+Missouri,MO,2050,ssp245,Medium emissions,1.283836,Low impact,1
+Montana,MT,2050,ssp245,Medium emissions,0.9162228,Low impact,1
+Nebraska,NE,2050,ssp245,Medium emissions,1.4363583,Medium impact,2
+Nevada,NV,2050,ssp245,Medium emissions,0.95151263,Low impact,1
+New Hampshire,NH,2050,ssp245,Medium emissions,1.6697693,Medium impact,2
+New Jersey,NJ,2050,ssp245,Medium emissions,1.1069489,Low impact,1
+New Mexico,NM,2050,ssp245,Medium emissions,1.0499719,Low impact,1
+New York,NY,2050,ssp245,Medium emissions,1.615648,Medium impact,2
+North Carolina,NC,2050,ssp245,Medium emissions,1.2923667,Medium impact,2
+North Dakota,ND,2050,ssp245,Medium emissions,1.0147598,Low impact,1
+Ohio,OH,2050,ssp245,Medium emissions,1.4571136,Medium impact,2
+Oklahoma,OK,2050,ssp245,Medium emissions,1.4644446,Medium impact,2
+Oregon,OR,2050,ssp245,Medium emissions,0.71663594,Low impact,1
+Pennsylvania,PA,2050,ssp245,Medium emissions,1.3948402,Medium impact,2
+Rhode Island,RI,2050,ssp245,Medium emissions,1.1597595,Low impact,1
+South Carolina,SC,2050,ssp245,Medium emissions,1.3693935,Medium impact,2
+South Dakota,SD,2050,ssp245,Medium emissions,1.0420804,Low impact,1
+Tennessee,TN,2050,ssp245,Medium emissions,1.4429932,Medium impact,2
+Texas,TX,2050,ssp245,Medium emissions,1.615766,Medium impact,2
+Utah,UT,2050,ssp245,Medium emissions,0.9305369,Low impact,1
+Vermont,VT,2050,ssp245,Medium emissions,1.8575846,Medium impact,2
+Virginia,VA,2050,ssp245,Medium emissions,1.2826233,Low impact,1
+Washington,WA,2050,ssp245,Medium emissions,1.3340698,Medium impact,2
+West Virginia,WV,2050,ssp245,Medium emissions,1.3684387,Medium impact,2
+Wisconsin,WI,2050,ssp245,Medium emissions,1.5805577,Medium impact,2
+Wyoming,WY,2050,ssp245,Medium emissions,1.0054411,Low impact,1
+Alabama,AL,2060,ssp245,Medium emissions,1.1028583,Low impact,1
+Alaska,AK,2060,ssp245,Medium emissions,2.351094,High impact,3
+Arizona,AZ,2060,ssp245,Medium emissions,0.45300058,Low impact,1
+Arkansas,AR,2060,ssp245,Medium emissions,1.4130493,Medium impact,2
+California,CA,2060,ssp245,Medium emissions,0.71303964,Low impact,1
+Colorado,CO,2060,ssp245,Medium emissions,0.59754336,Low impact,1
+Connecticut,CT,2060,ssp245,Medium emissions,1.930542,Medium impact,2
+Delaware,DE,2060,ssp245,Medium emissions,1.7267609,Medium impact,2
+Florida,FL,2060,ssp245,Medium emissions,0.932639,Low impact,1
+Georgia,GA,2060,ssp245,Medium emissions,1.0485871,Low impact,1
+Hawaii,HI,2060,ssp245,Medium emissions,1.0392914,Low impact,1
+Idaho,ID,2060,ssp245,Medium emissions,1.4575622,Medium impact,2
+Illinois,IL,2060,ssp245,Medium emissions,1.8501565,Medium impact,2
+Indiana,IN,2060,ssp245,Medium emissions,1.9749222,Medium impact,2
+Iowa,IA,2060,ssp245,Medium emissions,1.6365024,Medium impact,2
+Kansas,KS,2060,ssp245,Medium emissions,0.60575867,Low impact,1
+Kentucky,KY,2060,ssp245,Medium emissions,1.6257498,Medium impact,2
+Louisiana,LA,2060,ssp245,Medium emissions,1.542633,Medium impact,2
+Maine,ME,2060,ssp245,Medium emissions,2.44733,High impact,3
+Maryland,MD,2060,ssp245,Medium emissions,1.8511047,Medium impact,2
+Massachusetts,MA,2060,ssp245,Medium emissions,2.0600739,Medium impact,2
+Michigan,MI,2060,ssp245,Medium emissions,2.2763507,Medium impact,2
+Minnesota,MN,2060,ssp245,Medium emissions,2.4265378,High impact,3
+Mississippi,MS,2060,ssp245,Medium emissions,1.2223282,Low impact,1
+Missouri,MO,2060,ssp245,Medium emissions,1.2631146,Low impact,1
+Montana,MT,2060,ssp245,Medium emissions,2.0674496,Medium impact,2
+Nebraska,NE,2060,ssp245,Medium emissions,0.685143,Low impact,1
+Nevada,NV,2060,ssp245,Medium emissions,0.6126137,Low impact,1
+New Hampshire,NH,2060,ssp245,Medium emissions,2.203125,Medium impact,2
+New Jersey,NJ,2060,ssp245,Medium emissions,1.7893677,Medium impact,2
+New Mexico,NM,2060,ssp245,Medium emissions,0.5779431,Low impact,1
+New York,NY,2060,ssp245,Medium emissions,2.070628,Medium impact,2
+North Carolina,NC,2060,ssp245,Medium emissions,1.3929582,Medium impact,2
+North Dakota,ND,2060,ssp245,Medium emissions,3.0172226,High impact,3
+Ohio,OH,2060,ssp245,Medium emissions,2.009143,Medium impact,2
+Oklahoma,OK,2060,ssp245,Medium emissions,0.8109741,Low impact,1
+Oregon,OR,2060,ssp245,Medium emissions,1.8403736,Medium impact,2
+Pennsylvania,PA,2060,ssp245,Medium emissions,1.951622,Medium impact,2
+Rhode Island,RI,2060,ssp245,Medium emissions,1.8859558,Medium impact,2
+South Carolina,SC,2060,ssp245,Medium emissions,1.1369585,Low impact,1
+South Dakota,SD,2060,ssp245,Medium emissions,1.5663774,Medium impact,2
+Tennessee,TN,2060,ssp245,Medium emissions,1.4439225,Medium impact,2
+Texas,TX,2060,ssp245,Medium emissions,1.1059185,Low impact,1
+Utah,UT,2060,ssp245,Medium emissions,0.5152147,Low impact,1
+Vermont,VT,2060,ssp245,Medium emissions,2.324768,High impact,3
+Virginia,VA,2060,ssp245,Medium emissions,1.7050018,Medium impact,2
+Washington,WA,2060,ssp245,Medium emissions,2.4191935,High impact,3
+West Virginia,WV,2060,ssp245,Medium emissions,1.77754,Medium impact,2
+Wisconsin,WI,2060,ssp245,Medium emissions,2.3011692,Medium impact,2
+Wyoming,WY,2060,ssp245,Medium emissions,0.83440655,Low impact,1
+Alabama,AL,2070,ssp245,Medium emissions,2.7886658,High impact,3
+Alaska,AK,2070,ssp245,Medium emissions,2.2444558,Medium impact,2
+Arizona,AZ,2070,ssp245,Medium emissions,1.76297,Medium impact,2
+Arkansas,AR,2070,ssp245,Medium emissions,2.3506927,High impact,3
+California,CA,2070,ssp245,Medium emissions,0.72902817,Low impact,1
+Colorado,CO,2070,ssp245,Medium emissions,1.8437866,Medium impact,2
+Connecticut,CT,2070,ssp245,Medium emissions,1.7672119,Medium impact,2
+Delaware,DE,2070,ssp245,Medium emissions,2.0512085,Medium impact,2
+Florida,FL,2070,ssp245,Medium emissions,2.4270673,High impact,3
+Georgia,GA,2070,ssp245,Medium emissions,2.6832123,High impact,3
+Hawaii,HI,2070,ssp245,Medium emissions,0.68382263,Low impact,1
+Idaho,ID,2070,ssp245,Medium emissions,0.6317261,Low impact,1
+Illinois,IL,2070,ssp245,Medium emissions,1.9147644,Medium impact,2
+Indiana,IN,2070,ssp245,Medium emissions,1.9740067,Medium impact,2
+Iowa,IA,2070,ssp245,Medium emissions,1.8464161,Medium impact,2
+Kansas,KS,2070,ssp245,Medium emissions,2.6375122,High impact,3
+Kentucky,KY,2070,ssp245,Medium emissions,2.2975116,Medium impact,2
+Louisiana,LA,2070,ssp245,Medium emissions,3.172699,High impact,3
+Maine,ME,2070,ssp245,Medium emissions,1.3994955,Medium impact,2
+Maryland,MD,2070,ssp245,Medium emissions,2.1777446,Medium impact,2
+Massachusetts,MA,2070,ssp245,Medium emissions,1.7691803,Medium impact,2
+Michigan,MI,2070,ssp245,Medium emissions,1.8223994,Medium impact,2
+Minnesota,MN,2070,ssp245,Medium emissions,1.6435097,Medium impact,2
+Mississippi,MS,2070,ssp245,Medium emissions,2.8708,High impact,3
+Missouri,MO,2070,ssp245,Medium emissions,2.0077996,Medium impact,2
+Montana,MT,2070,ssp245,Medium emissions,0.5403234,Low impact,1
+Nebraska,NE,2070,ssp245,Medium emissions,2.0634353,Medium impact,2
+Nevada,NV,2070,ssp245,Medium emissions,0.96913403,Low impact,1
+New Hampshire,NH,2070,ssp245,Medium emissions,1.67453,Medium impact,2
+New Jersey,NJ,2070,ssp245,Medium emissions,1.8660889,Medium impact,2
+New Mexico,NM,2070,ssp245,Medium emissions,2.395138,High impact,3
+New York,NY,2070,ssp245,Medium emissions,1.876475,Medium impact,2
+North Carolina,NC,2070,ssp245,Medium emissions,2.3513572,High impact,3
+North Dakota,ND,2070,ssp245,Medium emissions,0.9116731,Low impact,1
+Ohio,OH,2070,ssp245,Medium emissions,2.0970337,Medium impact,2
+Oklahoma,OK,2070,ssp245,Medium emissions,3.042619,High impact,3
+Oregon,OR,2070,ssp245,Medium emissions,0.7718325,Low impact,1
+Pennsylvania,PA,2070,ssp245,Medium emissions,2.029644,Medium impact,2
+Rhode Island,RI,2070,ssp245,Medium emissions,1.6747437,Medium impact,2
+South Carolina,SC,2070,ssp245,Medium emissions,2.438446,High impact,3
+South Dakota,SD,2070,ssp245,Medium emissions,0.91690063,Low impact,1
+Tennessee,TN,2070,ssp245,Medium emissions,2.388375,High impact,3
+Texas,TX,2070,ssp245,Medium emissions,3.2362385,High impact,3
+Utah,UT,2070,ssp245,Medium emissions,1.4365387,Medium impact,2
+Vermont,VT,2070,ssp245,Medium emissions,1.747701,Medium impact,2
+Virginia,VA,2070,ssp245,Medium emissions,2.2802734,Medium impact,2
+Washington,WA,2070,ssp245,Medium emissions,0.5002584,Low impact,1
+West Virginia,WV,2070,ssp245,Medium emissions,2.2994647,Medium impact,2
+Wisconsin,WI,2070,ssp245,Medium emissions,1.7365505,Medium impact,2
+Wyoming,WY,2070,ssp245,Medium emissions,1.0614586,Low impact,1
+Alabama,AL,2080,ssp245,Medium emissions,1.7587374,Medium impact,2
+Alaska,AK,2080,ssp245,Medium emissions,3.0694938,High impact,3
+Arizona,AZ,2080,ssp245,Medium emissions,1.8644608,Medium impact,2
+Arkansas,AR,2080,ssp245,Medium emissions,2.6838899,High impact,3
+California,CA,2080,ssp245,Medium emissions,2.4017756,High impact,3
+Colorado,CO,2080,ssp245,Medium emissions,1.9294876,Medium impact,2
+Connecticut,CT,2080,ssp245,Medium emissions,2.4691162,High impact,3
+Delaware,DE,2080,ssp245,Medium emissions,2.3730469,High impact,3
+Florida,FL,2080,ssp245,Medium emissions,1.3423767,Medium impact,2
+Georgia,GA,2080,ssp245,Medium emissions,1.6984253,Medium impact,2
+Hawaii,HI,2080,ssp245,Medium emissions,0.7967377,Low impact,1
+Idaho,ID,2080,ssp245,Medium emissions,3.382875,High impact,3
+Illinois,IL,2080,ssp245,Medium emissions,2.7241342,High impact,3
+Indiana,IN,2080,ssp245,Medium emissions,2.7161179,High impact,3
+Iowa,IA,2080,ssp245,Medium emissions,3.5980835,High impact,3
+Kansas,KS,2080,ssp245,Medium emissions,2.6008284,High impact,3
+Kentucky,KY,2080,ssp245,Medium emissions,2.2384555,Medium impact,2
+Louisiana,LA,2080,ssp245,Medium emissions,2.1613922,Medium impact,2
+Maine,ME,2080,ssp245,Medium emissions,2.8140292,High impact,3
+Maryland,MD,2080,ssp245,Medium emissions,2.4072978,High impact,3
+Massachusetts,MA,2080,ssp245,Medium emissions,2.4993439,High impact,3
+Michigan,MI,2080,ssp245,Medium emissions,3.4419909,High impact,3
+Minnesota,MN,2080,ssp245,Medium emissions,4.519123,High impact,3
+Mississippi,MS,2080,ssp245,Medium emissions,2.1930695,Medium impact,2
+Missouri,MO,2080,ssp245,Medium emissions,2.6155412,High impact,3
+Montana,MT,2080,ssp245,Medium emissions,4.060697,High impact,3
+Nebraska,NE,2080,ssp245,Medium emissions,3.356745,High impact,3
+Nevada,NV,2080,ssp245,Medium emissions,2.5877178,High impact,3
+New Hampshire,NH,2080,ssp245,Medium emissions,2.572052,High impact,3
+New Jersey,NJ,2080,ssp245,Medium emissions,2.4375,High impact,3
+New Mexico,NM,2080,ssp245,Medium emissions,1.6600647,Medium impact,2
+New York,NY,2080,ssp245,Medium emissions,2.692627,High impact,3
+North Carolina,NC,2080,ssp245,Medium emissions,1.941692,Medium impact,2
+North Dakota,ND,2080,ssp245,Medium emissions,4.8462095,High impact,3
+Ohio,OH,2080,ssp245,Medium emissions,2.747455,High impact,3
+Oklahoma,OK,2080,ssp245,Medium emissions,2.4441435,High impact,3
+Oregon,OR,2080,ssp245,Medium emissions,3.2912278,High impact,3
+Pennsylvania,PA,2080,ssp245,Medium emissions,2.5908165,High impact,3
+Rhode Island,RI,2080,ssp245,Medium emissions,2.44281,High impact,3
+South Carolina,SC,2080,ssp245,Medium emissions,1.7561907,Medium impact,2
+South Dakota,SD,2080,ssp245,Medium emissions,4.5540214,High impact,3
+Tennessee,TN,2080,ssp245,Medium emissions,2.130127,Medium impact,2
+Texas,TX,2080,ssp245,Medium emissions,2.1338153,Medium impact,2
+Utah,UT,2080,ssp245,Medium emissions,2.322893,High impact,3
+Vermont,VT,2080,ssp245,Medium emissions,2.7803142,High impact,3
+Virginia,VA,2080,ssp245,Medium emissions,2.1431198,Medium impact,2
+Washington,WA,2080,ssp245,Medium emissions,3.450364,High impact,3
+West Virginia,WV,2080,ssp245,Medium emissions,2.3305533,High impact,3
+Wisconsin,WI,2080,ssp245,Medium emissions,3.891802,High impact,3
+Wyoming,WY,2080,ssp245,Medium emissions,3.3439915,High impact,3
+Alabama,AL,2090,ssp245,Medium emissions,1.6089289,Medium impact,2
+Alaska,AK,2090,ssp245,Medium emissions,4.2364707,High impact,3
+Arizona,AZ,2090,ssp245,Medium emissions,1.9074402,Medium impact,2
+Arkansas,AR,2090,ssp245,Medium emissions,2.4871125,High impact,3
+California,CA,2090,ssp245,Medium emissions,2.0039628,Medium impact,2
+Colorado,CO,2090,ssp245,Medium emissions,2.0762239,Medium impact,2
+Connecticut,CT,2090,ssp245,Medium emissions,2.3384094,High impact,3
+Delaware,DE,2090,ssp245,Medium emissions,2.2740479,Medium impact,2
+Florida,FL,2090,ssp245,Medium emissions,1.3133305,Medium impact,2
+Georgia,GA,2090,ssp245,Medium emissions,1.661377,Medium impact,2
+Hawaii,HI,2090,ssp245,Medium emissions,1.1873932,Low impact,1
+Idaho,ID,2090,ssp245,Medium emissions,2.3461182,High impact,3
+Illinois,IL,2090,ssp245,Medium emissions,2.5689697,High impact,3
+Indiana,IN,2090,ssp245,Medium emissions,2.6041756,High impact,3
+Iowa,IA,2090,ssp245,Medium emissions,3.089225,High impact,3
+Kansas,KS,2090,ssp245,Medium emissions,2.2476094,Medium impact,2
+Kentucky,KY,2090,ssp245,Medium emissions,2.1665998,Medium impact,2
+Louisiana,LA,2090,ssp245,Medium emissions,1.6936417,Medium impact,2
+Maine,ME,2090,ssp245,Medium emissions,2.860711,High impact,3
+Maryland,MD,2090,ssp245,Medium emissions,2.3435059,High impact,3
+Massachusetts,MA,2090,ssp245,Medium emissions,2.540512,High impact,3
+Michigan,MI,2090,ssp245,Medium emissions,3.0985036,High impact,3
+Minnesota,MN,2090,ssp245,Medium emissions,3.7289348,High impact,3
+Mississippi,MS,2090,ssp245,Medium emissions,1.8374939,Medium impact,2
+Missouri,MO,2090,ssp245,Medium emissions,2.4433513,High impact,3
+Montana,MT,2090,ssp245,Medium emissions,2.8519077,High impact,3
+Nebraska,NE,2090,ssp245,Medium emissions,2.786788,High impact,3
+Nevada,NV,2090,ssp245,Medium emissions,1.880277,Medium impact,2
+New Hampshire,NH,2090,ssp245,Medium emissions,2.828186,High impact,3
+New Jersey,NJ,2090,ssp245,Medium emissions,2.2687225,Medium impact,2
+New Mexico,NM,2090,ssp245,Medium emissions,1.5895605,Medium impact,2
+New York,NY,2090,ssp245,Medium emissions,2.7238736,High impact,3
+North Carolina,NC,2090,ssp245,Medium emissions,1.8177851,Medium impact,2
+North Dakota,ND,2090,ssp245,Medium emissions,3.9905756,High impact,3
+Ohio,OH,2090,ssp245,Medium emissions,2.6236756,High impact,3
+Oklahoma,OK,2090,ssp245,Medium emissions,2.389449,High impact,3
+Oregon,OR,2090,ssp245,Medium emissions,2.5323777,High impact,3
+Pennsylvania,PA,2090,ssp245,Medium emissions,2.456459,High impact,3
+Rhode Island,RI,2090,ssp245,Medium emissions,2.254242,Medium impact,2
+South Carolina,SC,2090,ssp245,Medium emissions,1.7355303,Medium impact,2
+South Dakota,SD,2090,ssp245,Medium emissions,3.4604864,High impact,3
+Tennessee,TN,2090,ssp245,Medium emissions,2.0863204,Medium impact,2
+Texas,TX,2090,ssp245,Medium emissions,1.4976544,Medium impact,2
+Utah,UT,2090,ssp245,Medium emissions,2.378323,High impact,3
+Vermont,VT,2090,ssp245,Medium emissions,2.964854,High impact,3
+Virginia,VA,2090,ssp245,Medium emissions,2.0629807,Medium impact,2
+Washington,WA,2090,ssp245,Medium emissions,3.198527,High impact,3
+West Virginia,WV,2090,ssp245,Medium emissions,2.1492615,Medium impact,2
+Wisconsin,WI,2090,ssp245,Medium emissions,3.469537,High impact,3
+Wyoming,WY,2090,ssp245,Medium emissions,2.5306256,High impact,3
+Alabama,AL,2100,ssp245,Medium emissions,2.359624,High impact,3
+Alaska,AK,2100,ssp245,Medium emissions,2.6978445,High impact,3
+Arizona,AZ,2100,ssp245,Medium emissions,1.9580994,Medium impact,2
+Arkansas,AR,2100,ssp245,Medium emissions,3.091681,High impact,3
+California,CA,2100,ssp245,Medium emissions,1.838255,Medium impact,2
+Colorado,CO,2100,ssp245,Medium emissions,2.3224914,High impact,3
+Connecticut,CT,2100,ssp245,Medium emissions,2.8319855,High impact,3
+Delaware,DE,2100,ssp245,Medium emissions,2.7734833,High impact,3
+Florida,FL,2100,ssp245,Medium emissions,1.7802342,Medium impact,2
+Georgia,GA,2100,ssp245,Medium emissions,2.5149446,High impact,3
+Hawaii,HI,2100,ssp245,Medium emissions,1.8295441,Medium impact,2
+Idaho,ID,2100,ssp245,Medium emissions,2.1926377,Medium impact,2
+Illinois,IL,2100,ssp245,Medium emissions,3.2946079,High impact,3
+Indiana,IN,2100,ssp245,Medium emissions,3.3020096,High impact,3
+Iowa,IA,2100,ssp245,Medium emissions,3.3421602,High impact,3
+Kansas,KS,2100,ssp245,Medium emissions,3.0535464,High impact,3
+Kentucky,KY,2100,ssp245,Medium emissions,3.0263019,High impact,3
+Louisiana,LA,2100,ssp245,Medium emissions,2.6961899,High impact,3
+Maine,ME,2100,ssp245,Medium emissions,2.8930426,High impact,3
+Maryland,MD,2100,ssp245,Medium emissions,2.937907,High impact,3
+Massachusetts,MA,2100,ssp245,Medium emissions,2.8534088,High impact,3
+Michigan,MI,2100,ssp245,Medium emissions,2.9995024,High impact,3
+Minnesota,MN,2100,ssp245,Medium emissions,3.4876115,High impact,3
+Mississippi,MS,2100,ssp245,Medium emissions,2.6371613,High impact,3
+Missouri,MO,2100,ssp245,Medium emissions,3.311297,High impact,3
+Montana,MT,2100,ssp245,Medium emissions,3.0798814,High impact,3
+Nebraska,NE,2100,ssp245,Medium emissions,2.8526306,High impact,3
+Nevada,NV,2100,ssp245,Medium emissions,2.0766437,Medium impact,2
+New Hampshire,NH,2100,ssp245,Medium emissions,2.968933,High impact,3
+New Jersey,NJ,2100,ssp245,Medium emissions,2.800293,High impact,3
+New Mexico,NM,2100,ssp245,Medium emissions,1.9254614,Medium impact,2
+New York,NY,2100,ssp245,Medium emissions,2.9629855,High impact,3
+North Carolina,NC,2100,ssp245,Medium emissions,2.656497,High impact,3
+North Dakota,ND,2100,ssp245,Medium emissions,3.8863704,High impact,3
+Ohio,OH,2100,ssp245,Medium emissions,3.137088,High impact,3
+Oklahoma,OK,2100,ssp245,Medium emissions,3.5733714,High impact,3
+Oregon,OR,2100,ssp245,Medium emissions,2.0180788,Medium impact,2
+Pennsylvania,PA,2100,ssp245,Medium emissions,2.9612389,High impact,3
+Rhode Island,RI,2100,ssp245,Medium emissions,2.7864075,High impact,3
+South Carolina,SC,2100,ssp245,Medium emissions,2.6555176,High impact,3
+South Dakota,SD,2100,ssp245,Medium emissions,3.3340945,High impact,3
+Tennessee,TN,2100,ssp245,Medium emissions,2.791834,High impact,3
+Texas,TX,2100,ssp245,Medium emissions,3.0347462,High impact,3
+Utah,UT,2100,ssp245,Medium emissions,2.3787875,High impact,3
+Vermont,VT,2100,ssp245,Medium emissions,3.0429585,High impact,3
+Virginia,VA,2100,ssp245,Medium emissions,2.780922,High impact,3
+Washington,WA,2100,ssp245,Medium emissions,2.597878,High impact,3
+West Virginia,WV,2100,ssp245,Medium emissions,2.8998282,High impact,3
+Wisconsin,WI,2100,ssp245,Medium emissions,3.21514,High impact,3
+Wyoming,WY,2100,ssp245,Medium emissions,2.6402066,High impact,3
+Alabama,AL,2020,ssp585,High emissions,2.0321631,Medium impact,2
+Alaska,AK,2020,ssp585,High emissions,-2.6423485,Low impact,1
+Arizona,AZ,2020,ssp585,High emissions,1.4880395,Medium impact,2
+Arkansas,AR,2020,ssp585,High emissions,2.3039093,High impact,3
+California,CA,2020,ssp585,High emissions,1.2979368,Medium impact,2
+Colorado,CO,2020,ssp585,High emissions,1.7804291,Medium impact,2
+Connecticut,CT,2020,ssp585,High emissions,0.8851929,Low impact,1
+Delaware,DE,2020,ssp585,High emissions,1.1377106,Low impact,1
+Florida,FL,2020,ssp585,High emissions,1.5818568,Medium impact,2
+Georgia,GA,2020,ssp585,High emissions,2.0194733,Medium impact,2
+Hawaii,HI,2020,ssp585,High emissions,0.34228516,Low impact,1
+Idaho,ID,2020,ssp585,High emissions,0.9399002,Low impact,1
+Illinois,IL,2020,ssp585,High emissions,1.8042734,Medium impact,2
+Indiana,IN,2020,ssp585,High emissions,1.7004967,Medium impact,2
+Iowa,IA,2020,ssp585,High emissions,1.4330139,Medium impact,2
+Kansas,KS,2020,ssp585,High emissions,1.6201376,Medium impact,2
+Kentucky,KY,2020,ssp585,High emissions,1.9090184,Medium impact,2
+Louisiana,LA,2020,ssp585,High emissions,2.6500664,High impact,3
+Maine,ME,2020,ssp585,High emissions,0.29849583,Low impact,1
+Maryland,MD,2020,ssp585,High emissions,1.4045919,Medium impact,2
+Massachusetts,MA,2020,ssp585,High emissions,0.77033997,Low impact,1
+Michigan,MI,2020,ssp585,High emissions,0.9654095,Low impact,1
+Minnesota,MN,2020,ssp585,High emissions,1.01598,Low impact,1
+Mississippi,MS,2020,ssp585,High emissions,2.4563255,High impact,3
+Missouri,MO,2020,ssp585,High emissions,1.918661,Medium impact,2
+Montana,MT,2020,ssp585,High emissions,1.0372387,Low impact,1
+Nebraska,NE,2020,ssp585,High emissions,1.1459961,Low impact,1
+Nevada,NV,2020,ssp585,High emissions,1.3633804,Medium impact,2
+New Hampshire,NH,2020,ssp585,High emissions,0.6358032,Low impact,1
+New Jersey,NJ,2020,ssp585,High emissions,1.0003052,Low impact,1
+New Mexico,NM,2020,ssp585,High emissions,1.8826208,Medium impact,2
+New York,NY,2020,ssp585,High emissions,0.969123,Low impact,1
+North Carolina,NC,2020,ssp585,High emissions,1.8625405,Medium impact,2
+North Dakota,ND,2020,ssp585,High emissions,1.525737,Medium impact,2
+Ohio,OH,2020,ssp585,High emissions,1.5684448,Medium impact,2
+Oklahoma,OK,2020,ssp585,High emissions,2.2742333,Medium impact,2
+Oregon,OR,2020,ssp585,High emissions,0.87815577,Low impact,1
+Pennsylvania,PA,2020,ssp585,High emissions,1.1826363,Low impact,1
+Rhode Island,RI,2020,ssp585,High emissions,0.89276123,Low impact,1
+South Carolina,SC,2020,ssp585,High emissions,2.020281,Medium impact,2
+South Dakota,SD,2020,ssp585,High emissions,1.0428128,Low impact,1
+Tennessee,TN,2020,ssp585,High emissions,2.0678294,Medium impact,2
+Texas,TX,2020,ssp585,High emissions,2.0131915,Medium impact,2
+Utah,UT,2020,ssp585,High emissions,1.5653144,Medium impact,2
+Vermont,VT,2020,ssp585,High emissions,0.77805585,Low impact,1
+Virginia,VA,2020,ssp585,High emissions,1.5995026,Medium impact,2
+Washington,WA,2020,ssp585,High emissions,0.5423197,Low impact,1
+West Virginia,WV,2020,ssp585,High emissions,1.8688791,Medium impact,2
+Wisconsin,WI,2020,ssp585,High emissions,0.97442627,Low impact,1
+Wyoming,WY,2020,ssp585,High emissions,1.0429064,Low impact,1
+Alabama,AL,2030,ssp585,High emissions,0.29771307,Low impact,1
+Alaska,AK,2030,ssp585,High emissions,1.3992422,Medium impact,2
+Arizona,AZ,2030,ssp585,High emissions,1.9220617,Medium impact,2
+Arkansas,AR,2030,ssp585,High emissions,0.7045654,Low impact,1
+California,CA,2030,ssp585,High emissions,1.7501633,Medium impact,2
+Colorado,CO,2030,ssp585,High emissions,1.4884751,Medium impact,2
+Connecticut,CT,2030,ssp585,High emissions,0.624588,Low impact,1
+Delaware,DE,2030,ssp585,High emissions,0.4822235,Low impact,1
+Florida,FL,2030,ssp585,High emissions,0.19045584,Low impact,1
+Georgia,GA,2030,ssp585,High emissions,0.09716797,Low impact,1
+Hawaii,HI,2030,ssp585,High emissions,0.810791,Low impact,1
+Idaho,ID,2030,ssp585,High emissions,1.6698517,Medium impact,2
+Illinois,IL,2030,ssp585,High emissions,0.733296,Low impact,1
+Indiana,IN,2030,ssp585,High emissions,0.712883,Low impact,1
+Iowa,IA,2030,ssp585,High emissions,1.0342491,Low impact,1
+Kansas,KS,2030,ssp585,High emissions,0.6566756,Low impact,1
+Kentucky,KY,2030,ssp585,High emissions,0.344138,Low impact,1
+Louisiana,LA,2030,ssp585,High emissions,0.82403183,Low impact,1
+Maine,ME,2030,ssp585,High emissions,0.78616333,Low impact,1
+Maryland,MD,2030,ssp585,High emissions,0.43569946,Low impact,1
+Massachusetts,MA,2030,ssp585,High emissions,0.5807648,Low impact,1
+Michigan,MI,2030,ssp585,High emissions,0.9206848,Low impact,1
+Minnesota,MN,2030,ssp585,High emissions,1.2747899,Low impact,1
+Mississippi,MS,2030,ssp585,High emissions,0.49724197,Low impact,1
+Missouri,MO,2030,ssp585,High emissions,0.66955245,Low impact,1
+Montana,MT,2030,ssp585,High emissions,1.3797631,Medium impact,2
+Nebraska,NE,2030,ssp585,High emissions,1.0118283,Low impact,1
+Nevada,NV,2030,ssp585,High emissions,2.1236904,Medium impact,2
+New Hampshire,NH,2030,ssp585,High emissions,0.5891113,Low impact,1
+New Jersey,NJ,2030,ssp585,High emissions,0.3179016,Low impact,1
+New Mexico,NM,2030,ssp585,High emissions,1.4064466,Medium impact,2
+New York,NY,2030,ssp585,High emissions,0.67317367,Low impact,1
+North Carolina,NC,2030,ssp585,High emissions,0.08762706,Low impact,1
+North Dakota,ND,2030,ssp585,High emissions,1.4595426,Medium impact,2
+Ohio,OH,2030,ssp585,High emissions,0.60070497,Low impact,1
+Oklahoma,OK,2030,ssp585,High emissions,1.159168,Low impact,1
+Oregon,OR,2030,ssp585,High emissions,1.8072441,Medium impact,2
+Pennsylvania,PA,2030,ssp585,High emissions,0.57748413,Low impact,1
+Rhode Island,RI,2030,ssp585,High emissions,0.58151245,Low impact,1
+South Carolina,SC,2030,ssp585,High emissions,0.050598145,Low impact,1
+South Dakota,SD,2030,ssp585,High emissions,0.9915958,Low impact,1
+Tennessee,TN,2030,ssp585,High emissions,0.1760448,Low impact,1
+Texas,TX,2030,ssp585,High emissions,1.3467016,Medium impact,2
+Utah,UT,2030,ssp585,High emissions,1.9615716,Medium impact,2
+Vermont,VT,2030,ssp585,High emissions,0.7609151,Low impact,1
+Virginia,VA,2030,ssp585,High emissions,0.26288605,Low impact,1
+Washington,WA,2030,ssp585,High emissions,1.6343384,Medium impact,2
+West Virginia,WV,2030,ssp585,High emissions,0.3318089,Low impact,1
+Wisconsin,WI,2030,ssp585,High emissions,1.0558537,Low impact,1
+Wyoming,WY,2030,ssp585,High emissions,1.4288813,Medium impact,2
+Alabama,AL,2040,ssp585,High emissions,1.9611487,Medium impact,2
+Alaska,AK,2040,ssp585,High emissions,1.4254333,Medium impact,2
+Arizona,AZ,2040,ssp585,High emissions,1.6655579,Medium impact,2
+Arkansas,AR,2040,ssp585,High emissions,2.6308684,High impact,3
+California,CA,2040,ssp585,High emissions,1.5801086,Medium impact,2
+Colorado,CO,2040,ssp585,High emissions,1.8622665,Medium impact,2
+Connecticut,CT,2040,ssp585,High emissions,1.0248108,Low impact,1
+Delaware,DE,2040,ssp585,High emissions,1.204071,Low impact,1
+Florida,FL,2040,ssp585,High emissions,1.0906874,Low impact,1
+Georgia,GA,2040,ssp585,High emissions,1.7309844,Medium impact,2
+Hawaii,HI,2040,ssp585,High emissions,1.1522217,Low impact,1
+Idaho,ID,2040,ssp585,High emissions,1.6268082,Medium impact,2
+Illinois,IL,2040,ssp585,High emissions,1.4847194,Medium impact,2
+Indiana,IN,2040,ssp585,High emissions,1.3820534,Medium impact,2
+Iowa,IA,2040,ssp585,High emissions,1.6203891,Medium impact,2
+Kansas,KS,2040,ssp585,High emissions,1.3598226,Medium impact,2
+Kentucky,KY,2040,ssp585,High emissions,1.4078369,Medium impact,2
+Louisiana,LA,2040,ssp585,High emissions,2.441513,High impact,3
+Maine,ME,2040,ssp585,High emissions,1.3168912,Medium impact,2
+Maryland,MD,2040,ssp585,High emissions,1.2586771,Low impact,1
+Massachusetts,MA,2040,ssp585,High emissions,1.253418,Low impact,1
+Michigan,MI,2040,ssp585,High emissions,1.6371201,Medium impact,2
+Minnesota,MN,2040,ssp585,High emissions,1.7938217,Medium impact,2
+Mississippi,MS,2040,ssp585,High emissions,2.441265,High impact,3
+Missouri,MO,2040,ssp585,High emissions,1.6285433,Medium impact,2
+Montana,MT,2040,ssp585,High emissions,1.5762658,Medium impact,2
+Nebraska,NE,2040,ssp585,High emissions,1.0662752,Low impact,1
+Nevada,NV,2040,ssp585,High emissions,1.5929451,Medium impact,2
+New Hampshire,NH,2040,ssp585,High emissions,1.3125305,Medium impact,2
+New Jersey,NJ,2040,ssp585,High emissions,0.946167,Low impact,1
+New Mexico,NM,2040,ssp585,High emissions,1.8264843,Medium impact,2
+New York,NY,2040,ssp585,High emissions,1.4097494,Medium impact,2
+North Carolina,NC,2040,ssp585,High emissions,1.098286,Low impact,1
+North Dakota,ND,2040,ssp585,High emissions,1.6028478,Medium impact,2
+Ohio,OH,2040,ssp585,High emissions,1.2944336,Medium impact,2
+Oklahoma,OK,2040,ssp585,High emissions,2.2669115,Medium impact,2
+Oregon,OR,2040,ssp585,High emissions,1.8801173,Medium impact,2
+Pennsylvania,PA,2040,ssp585,High emissions,1.3100586,Medium impact,2
+Rhode Island,RI,2040,ssp585,High emissions,0.92233276,Low impact,1
+South Carolina,SC,2040,ssp585,High emissions,1.0629752,Low impact,1
+South Dakota,SD,2040,ssp585,High emissions,1.0262994,Low impact,1
+Tennessee,TN,2040,ssp585,High emissions,1.5781388,Medium impact,2
+Texas,TX,2040,ssp585,High emissions,2.1110668,Medium impact,2
+Utah,UT,2040,ssp585,High emissions,1.8936106,Medium impact,2
+Vermont,VT,2040,ssp585,High emissions,1.3519592,Medium impact,2
+Virginia,VA,2040,ssp585,High emissions,1.3016739,Medium impact,2
+Washington,WA,2040,ssp585,High emissions,2.1543274,Medium impact,2
+West Virginia,WV,2040,ssp585,High emissions,1.2400557,Low impact,1
+Wisconsin,WI,2040,ssp585,High emissions,1.7914647,Medium impact,2
+Wyoming,WY,2040,ssp585,High emissions,1.3621203,Medium impact,2
+Alabama,AL,2050,ssp585,High emissions,3.0414052,High impact,3
+Alaska,AK,2050,ssp585,High emissions,2.8529472,High impact,3
+Arizona,AZ,2050,ssp585,High emissions,2.4067912,High impact,3
+Arkansas,AR,2050,ssp585,High emissions,3.5655823,High impact,3
+California,CA,2050,ssp585,High emissions,1.8790274,Medium impact,2
+Colorado,CO,2050,ssp585,High emissions,3.3948638,High impact,3
+Connecticut,CT,2050,ssp585,High emissions,2.3098907,High impact,3
+Delaware,DE,2050,ssp585,High emissions,2.7058258,High impact,3
+Florida,FL,2050,ssp585,High emissions,2.2526639,Medium impact,2
+Georgia,GA,2050,ssp585,High emissions,2.8436432,High impact,3
+Hawaii,HI,2050,ssp585,High emissions,0.92251587,Low impact,1
+Idaho,ID,2050,ssp585,High emissions,2.2135787,Medium impact,2
+Illinois,IL,2050,ssp585,High emissions,3.158663,High impact,3
+Indiana,IN,2050,ssp585,High emissions,3.0877,High impact,3
+Iowa,IA,2050,ssp585,High emissions,3.8433783,High impact,3
+Kansas,KS,2050,ssp585,High emissions,4.6968775,High impact,3
+Kentucky,KY,2050,ssp585,High emissions,3.2175772,High impact,3
+Louisiana,LA,2050,ssp585,High emissions,2.6802826,High impact,3
+Maine,ME,2050,ssp585,High emissions,2.4049785,High impact,3
+Maryland,MD,2050,ssp585,High emissions,2.8339539,High impact,3
+Massachusetts,MA,2050,ssp585,High emissions,2.4939423,High impact,3
+Michigan,MI,2050,ssp585,High emissions,2.9916453,High impact,3
+Minnesota,MN,2050,ssp585,High emissions,3.5673604,High impact,3
+Mississippi,MS,2050,ssp585,High emissions,3.1937447,High impact,3
+Missouri,MO,2050,ssp585,High emissions,3.9948456,High impact,3
+Montana,MT,2050,ssp585,High emissions,2.6241906,High impact,3
+Nebraska,NE,2050,ssp585,High emissions,4.1432853,High impact,3
+Nevada,NV,2050,ssp585,High emissions,2.4765117,High impact,3
+New Hampshire,NH,2050,ssp585,High emissions,2.5119934,High impact,3
+New Jersey,NJ,2050,ssp585,High emissions,2.4730682,High impact,3
+New Mexico,NM,2050,ssp585,High emissions,2.6770618,High impact,3
+New York,NY,2050,ssp585,High emissions,2.675822,High impact,3
+North Carolina,NC,2050,ssp585,High emissions,2.8859892,High impact,3
+North Dakota,ND,2050,ssp585,High emissions,3.7462823,High impact,3
+Ohio,OH,2050,ssp585,High emissions,2.9785798,High impact,3
+Oklahoma,OK,2050,ssp585,High emissions,4.2792735,High impact,3
+Oregon,OR,2050,ssp585,High emissions,1.9516574,Medium impact,2
+Pennsylvania,PA,2050,ssp585,High emissions,2.6767693,High impact,3
+Rhode Island,RI,2050,ssp585,High emissions,2.162384,Medium impact,2
+South Carolina,SC,2050,ssp585,High emissions,2.5243356,High impact,3
+South Dakota,SD,2050,ssp585,High emissions,3.862898,High impact,3
+Tennessee,TN,2050,ssp585,High emissions,3.28517,High impact,3
+Texas,TX,2050,ssp585,High emissions,2.9282317,High impact,3
+Utah,UT,2050,ssp585,High emissions,2.9767134,High impact,3
+Vermont,VT,2050,ssp585,High emissions,2.6647441,High impact,3
+Virginia,VA,2050,ssp585,High emissions,2.9263992,High impact,3
+Washington,WA,2050,ssp585,High emissions,1.9597738,Medium impact,2
+West Virginia,WV,2050,ssp585,High emissions,2.9277692,High impact,3
+Wisconsin,WI,2050,ssp585,High emissions,3.397402,High impact,3
+Wyoming,WY,2050,ssp585,High emissions,3.3746529,High impact,3
+Alabama,AL,2060,ssp585,High emissions,2.6347609,High impact,3
+Alaska,AK,2060,ssp585,High emissions,1.1775402,Low impact,1
+Arizona,AZ,2060,ssp585,High emissions,3.2215505,High impact,3
+Arkansas,AR,2060,ssp585,High emissions,2.8777955,High impact,3
+California,CA,2060,ssp585,High emissions,2.9056935,High impact,3
+Colorado,CO,2060,ssp585,High emissions,2.6090882,High impact,3
+Connecticut,CT,2060,ssp585,High emissions,2.4096985,High impact,3
+Delaware,DE,2060,ssp585,High emissions,2.6433563,High impact,3
+Florida,FL,2060,ssp585,High emissions,2.6616538,High impact,3
+Georgia,GA,2060,ssp585,High emissions,2.6006713,High impact,3
+Hawaii,HI,2060,ssp585,High emissions,1.5131378,Medium impact,2
+Idaho,ID,2060,ssp585,High emissions,2.358162,High impact,3
+Illinois,IL,2060,ssp585,High emissions,2.5664957,High impact,3
+Indiana,IN,2060,ssp585,High emissions,2.7155342,High impact,3
+Iowa,IA,2060,ssp585,High emissions,2.694924,High impact,3
+Kansas,KS,2060,ssp585,High emissions,3.0802002,High impact,3
+Kentucky,KY,2060,ssp585,High emissions,2.7485569,High impact,3
+Louisiana,LA,2060,ssp585,High emissions,2.6253433,High impact,3
+Maine,ME,2060,ssp585,High emissions,2.4832525,High impact,3
+Maryland,MD,2060,ssp585,High emissions,2.783661,High impact,3
+Massachusetts,MA,2060,ssp585,High emissions,2.4867706,High impact,3
+Michigan,MI,2060,ssp585,High emissions,2.6492217,High impact,3
+Minnesota,MN,2060,ssp585,High emissions,2.9616957,High impact,3
+Mississippi,MS,2060,ssp585,High emissions,2.5994072,High impact,3
+Missouri,MO,2060,ssp585,High emissions,2.6990163,High impact,3
+Montana,MT,2060,ssp585,High emissions,2.6067336,High impact,3
+Nebraska,NE,2060,ssp585,High emissions,2.966515,High impact,3
+Nevada,NV,2060,ssp585,High emissions,3.1501465,High impact,3
+New Hampshire,NH,2060,ssp585,High emissions,2.547699,High impact,3
+New Jersey,NJ,2060,ssp585,High emissions,2.4734344,High impact,3
+New Mexico,NM,2060,ssp585,High emissions,2.6863208,High impact,3
+New York,NY,2060,ssp585,High emissions,2.7064176,High impact,3
+North Carolina,NC,2060,ssp585,High emissions,2.7640214,High impact,3
+North Dakota,ND,2060,ssp585,High emissions,3.411858,High impact,3
+Ohio,OH,2060,ssp585,High emissions,2.8674102,High impact,3
+Oklahoma,OK,2060,ssp585,High emissions,2.826836,High impact,3
+Oregon,OR,2060,ssp585,High emissions,2.337462,High impact,3
+Pennsylvania,PA,2060,ssp585,High emissions,2.7171211,High impact,3
+Rhode Island,RI,2060,ssp585,High emissions,2.3893738,High impact,3
+South Carolina,SC,2060,ssp585,High emissions,2.7039316,High impact,3
+South Dakota,SD,2060,ssp585,High emissions,2.9758556,High impact,3
+Tennessee,TN,2060,ssp585,High emissions,2.7379873,High impact,3
+Texas,TX,2060,ssp585,High emissions,2.1155071,Medium impact,2
+Utah,UT,2060,ssp585,High emissions,3.0122783,High impact,3
+Vermont,VT,2060,ssp585,High emissions,2.6786296,High impact,3
+Virginia,VA,2060,ssp585,High emissions,2.7213898,High impact,3
+Washington,WA,2060,ssp585,High emissions,2.1558797,Medium impact,2
+West Virginia,WV,2060,ssp585,High emissions,2.8721793,High impact,3
+Wisconsin,WI,2060,ssp585,High emissions,2.7070248,High impact,3
+Wyoming,WY,2060,ssp585,High emissions,2.5481136,High impact,3
+Alabama,AL,2070,ssp585,High emissions,2.5902357,High impact,3
+Alaska,AK,2070,ssp585,High emissions,5.1765766,High impact,3
+Arizona,AZ,2070,ssp585,High emissions,1.6108621,Medium impact,2
+Arkansas,AR,2070,ssp585,High emissions,2.0216064,Medium impact,2
+California,CA,2070,ssp585,High emissions,1.5566846,Medium impact,2
+Colorado,CO,2070,ssp585,High emissions,1.6560196,Medium impact,2
+Connecticut,CT,2070,ssp585,High emissions,2.9186554,High impact,3
+Delaware,DE,2070,ssp585,High emissions,2.8160706,High impact,3
+Florida,FL,2070,ssp585,High emissions,2.4835248,High impact,3
+Georgia,GA,2070,ssp585,High emissions,2.7291229,High impact,3
+Hawaii,HI,2070,ssp585,High emissions,1.7479095,Medium impact,2
+Idaho,ID,2070,ssp585,High emissions,2.438826,High impact,3
+Illinois,IL,2070,ssp585,High emissions,2.3281817,High impact,3
+Indiana,IN,2070,ssp585,High emissions,2.5254745,High impact,3
+Iowa,IA,2070,ssp585,High emissions,2.4158518,High impact,3
+Kansas,KS,2070,ssp585,High emissions,1.904758,Medium impact,2
+Kentucky,KY,2070,ssp585,High emissions,2.518607,High impact,3
+Louisiana,LA,2070,ssp585,High emissions,2.506096,High impact,3
+Maine,ME,2070,ssp585,High emissions,3.1651983,High impact,3
+Maryland,MD,2070,ssp585,High emissions,2.9210308,High impact,3
+Massachusetts,MA,2070,ssp585,High emissions,3.0318298,High impact,3
+Michigan,MI,2070,ssp585,High emissions,2.515139,High impact,3
+Minnesota,MN,2070,ssp585,High emissions,2.5740743,High impact,3
+Mississippi,MS,2070,ssp585,High emissions,2.4389381,High impact,3
+Missouri,MO,2070,ssp585,High emissions,2.1588776,Medium impact,2
+Montana,MT,2070,ssp585,High emissions,2.3181224,High impact,3
+Nebraska,NE,2070,ssp585,High emissions,2.052589,Medium impact,2
+Nevada,NV,2070,ssp585,High emissions,1.5475082,Medium impact,2
+New Hampshire,NH,2070,ssp585,High emissions,3.1461487,High impact,3
+New Jersey,NJ,2070,ssp585,High emissions,2.774994,High impact,3
+New Mexico,NM,2070,ssp585,High emissions,1.7321997,Medium impact,2
+New York,NY,2070,ssp585,High emissions,3.064477,High impact,3
+North Carolina,NC,2070,ssp585,High emissions,2.8202322,High impact,3
+North Dakota,ND,2070,ssp585,High emissions,2.03947,Medium impact,2
+Ohio,OH,2070,ssp585,High emissions,2.7892456,High impact,3
+Oklahoma,OK,2070,ssp585,High emissions,2.248028,Medium impact,2
+Oregon,OR,2070,ssp585,High emissions,2.430761,High impact,3
+Pennsylvania,PA,2070,ssp585,High emissions,2.9016228,High impact,3
+Rhode Island,RI,2070,ssp585,High emissions,2.9100342,High impact,3
+South Carolina,SC,2070,ssp585,High emissions,2.7207031,High impact,3
+South Dakota,SD,2070,ssp585,High emissions,1.8186594,Medium impact,2
+Tennessee,TN,2070,ssp585,High emissions,2.497983,High impact,3
+Texas,TX,2070,ssp585,High emissions,2.3351965,High impact,3
+Utah,UT,2070,ssp585,High emissions,1.5244039,Medium impact,2
+Vermont,VT,2070,ssp585,High emissions,3.28008,High impact,3
+Virginia,VA,2070,ssp585,High emissions,2.916542,High impact,3
+Washington,WA,2070,ssp585,High emissions,3.0095906,High impact,3
+West Virginia,WV,2070,ssp585,High emissions,2.8609881,High impact,3
+Wisconsin,WI,2070,ssp585,High emissions,2.5341012,High impact,3
+Wyoming,WY,2070,ssp585,High emissions,1.7723389,Medium impact,2
+Alabama,AL,2080,ssp585,High emissions,3.5658782,High impact,3
+Alaska,AK,2080,ssp585,High emissions,3.1983922,High impact,3
+Arizona,AZ,2080,ssp585,High emissions,3.1862452,High impact,3
+Arkansas,AR,2080,ssp585,High emissions,3.676422,High impact,3
+California,CA,2080,ssp585,High emissions,2.8293467,High impact,3
+Colorado,CO,2080,ssp585,High emissions,3.8503861,High impact,3
+Connecticut,CT,2080,ssp585,High emissions,3.840454,High impact,3
+Delaware,DE,2080,ssp585,High emissions,4.189163,High impact,3
+Florida,FL,2080,ssp585,High emissions,3.2824292,High impact,3
+Georgia,GA,2080,ssp585,High emissions,3.8519807,High impact,3
+Hawaii,HI,2080,ssp585,High emissions,2.2789307,Medium impact,2
+Idaho,ID,2080,ssp585,High emissions,3.6122634,High impact,3
+Illinois,IL,2080,ssp585,High emissions,4.2729754,High impact,3
+Indiana,IN,2080,ssp585,High emissions,4.2775803,High impact,3
+Iowa,IA,2080,ssp585,High emissions,4.7738924,High impact,3
+Kansas,KS,2080,ssp585,High emissions,4.6891427,High impact,3
+Kentucky,KY,2080,ssp585,High emissions,3.9513767,High impact,3
+Louisiana,LA,2080,ssp585,High emissions,3.0253181,High impact,3
+Maine,ME,2080,ssp585,High emissions,3.4451938,High impact,3
+Maryland,MD,2080,ssp585,High emissions,4.367167,High impact,3
+Massachusetts,MA,2080,ssp585,High emissions,3.9645844,High impact,3
+Michigan,MI,2080,ssp585,High emissions,4.603086,High impact,3
+Minnesota,MN,2080,ssp585,High emissions,5.504372,High impact,3
+Mississippi,MS,2080,ssp585,High emissions,3.3556213,High impact,3
+Missouri,MO,2080,ssp585,High emissions,4.249968,High impact,3
+Montana,MT,2080,ssp585,High emissions,3.9987729,High impact,3
+Nebraska,NE,2080,ssp585,High emissions,5.0166035,High impact,3
+Nevada,NV,2080,ssp585,High emissions,2.8930588,High impact,3
+New Hampshire,NH,2080,ssp585,High emissions,3.8755188,High impact,3
+New Jersey,NJ,2080,ssp585,High emissions,4.0616455,High impact,3
+New Mexico,NM,2080,ssp585,High emissions,3.0523522,High impact,3
+New York,NY,2080,ssp585,High emissions,4.19223,High impact,3
+North Carolina,NC,2080,ssp585,High emissions,3.800415,High impact,3
+North Dakota,ND,2080,ssp585,High emissions,5.1424203,High impact,3
+Ohio,OH,2080,ssp585,High emissions,4.3149047,High impact,3
+Oklahoma,OK,2080,ssp585,High emissions,4.2778955,High impact,3
+Oregon,OR,2080,ssp585,High emissions,3.0082827,High impact,3
+Pennsylvania,PA,2080,ssp585,High emissions,4.376274,High impact,3
+Rhode Island,RI,2080,ssp585,High emissions,3.7338562,High impact,3
+South Carolina,SC,2080,ssp585,High emissions,3.7705646,High impact,3
+South Dakota,SD,2080,ssp585,High emissions,4.5898876,High impact,3
+Tennessee,TN,2080,ssp585,High emissions,3.769337,High impact,3
+Texas,TX,2080,ssp585,High emissions,2.8397186,High impact,3
+Utah,UT,2080,ssp585,High emissions,3.6120825,High impact,3
+Vermont,VT,2080,ssp585,High emissions,3.9391682,High impact,3
+Virginia,VA,2080,ssp585,High emissions,4.079193,High impact,3
+Washington,WA,2080,ssp585,High emissions,3.7146544,High impact,3
+West Virginia,WV,2080,ssp585,High emissions,4.2291083,High impact,3
+Wisconsin,WI,2080,ssp585,High emissions,5.0994177,High impact,3
+Wyoming,WY,2080,ssp585,High emissions,4.0058913,High impact,3
+Alabama,AL,2090,ssp585,High emissions,4.1323314,High impact,3
+Alaska,AK,2090,ssp585,High emissions,5.4105573,High impact,3
+Arizona,AZ,2090,ssp585,High emissions,4.168958,High impact,3
+Arkansas,AR,2090,ssp585,High emissions,4.7984743,High impact,3
+California,CA,2090,ssp585,High emissions,3.4891043,High impact,3
+Colorado,CO,2090,ssp585,High emissions,4.6946273,High impact,3
+Connecticut,CT,2090,ssp585,High emissions,5.656906,High impact,3
+Delaware,DE,2090,ssp585,High emissions,4.8397675,High impact,3
+Florida,FL,2090,ssp585,High emissions,3.4612164,High impact,3
+Georgia,GA,2090,ssp585,High emissions,4.2464113,High impact,3
+Hawaii,HI,2090,ssp585,High emissions,2.5235443,High impact,3
+Idaho,ID,2090,ssp585,High emissions,4.4095793,High impact,3
+Illinois,IL,2090,ssp585,High emissions,4.935006,High impact,3
+Indiana,IN,2090,ssp585,High emissions,5.133713,High impact,3
+Iowa,IA,2090,ssp585,High emissions,6.0288835,High impact,3
+Kansas,KS,2090,ssp585,High emissions,5.443778,High impact,3
+Kentucky,KY,2090,ssp585,High emissions,4.6316137,High impact,3
+Louisiana,LA,2090,ssp585,High emissions,3.8641663,High impact,3
+Maine,ME,2090,ssp585,High emissions,5.537347,High impact,3
+Maryland,MD,2090,ssp585,High emissions,4.872996,High impact,3
+Massachusetts,MA,2090,ssp585,High emissions,5.786972,High impact,3
+Michigan,MI,2090,ssp585,High emissions,5.6115065,High impact,3
+Minnesota,MN,2090,ssp585,High emissions,6.4533772,High impact,3
+Mississippi,MS,2090,ssp585,High emissions,4.147846,High impact,3
+Missouri,MO,2090,ssp585,High emissions,5.2087755,High impact,3
+Montana,MT,2090,ssp585,High emissions,5.446463,High impact,3
+Nebraska,NE,2090,ssp585,High emissions,5.814279,High impact,3
+Nevada,NV,2090,ssp585,High emissions,3.9371693,High impact,3
+New Hampshire,NH,2090,ssp585,High emissions,6.0097046,High impact,3
+New Jersey,NJ,2090,ssp585,High emissions,5.211731,High impact,3
+New Mexico,NM,2090,ssp585,High emissions,4.455421,High impact,3
+New York,NY,2090,ssp585,High emissions,5.4889255,High impact,3
+North Carolina,NC,2090,ssp585,High emissions,4.4458203,High impact,3
+North Dakota,ND,2090,ssp585,High emissions,6.4355865,High impact,3
+Ohio,OH,2090,ssp585,High emissions,5.1962037,High impact,3
+Oklahoma,OK,2090,ssp585,High emissions,5.1597714,High impact,3
+Oregon,OR,2090,ssp585,High emissions,3.9857872,High impact,3
+Pennsylvania,PA,2090,ssp585,High emissions,5.213318,High impact,3
+Rhode Island,RI,2090,ssp585,High emissions,5.591675,High impact,3
+South Carolina,SC,2090,ssp585,High emissions,4.399671,High impact,3
+South Dakota,SD,2090,ssp585,High emissions,6.1629825,High impact,3
+Tennessee,TN,2090,ssp585,High emissions,4.417375,High impact,3
+Texas,TX,2090,ssp585,High emissions,4.2928796,High impact,3
+Utah,UT,2090,ssp585,High emissions,4.4006753,High impact,3
+Vermont,VT,2090,ssp585,High emissions,5.906718,High impact,3
+Virginia,VA,2090,ssp585,High emissions,4.665161,High impact,3
+Washington,WA,2090,ssp585,High emissions,4.415224,High impact,3
+West Virginia,WV,2090,ssp585,High emissions,4.7369165,High impact,3
+Wisconsin,WI,2090,ssp585,High emissions,5.7818255,High impact,3
+Wyoming,WY,2090,ssp585,High emissions,5.014791,High impact,3
+Alabama,AL,2100,ssp585,High emissions,4.7449574,High impact,3
+Alaska,AK,2100,ssp585,High emissions,5.649028,High impact,3
+Arizona,AZ,2100,ssp585,High emissions,4.753838,High impact,3
+Arkansas,AR,2100,ssp585,High emissions,4.6769776,High impact,3
+California,CA,2100,ssp585,High emissions,4.5019584,High impact,3
+Colorado,CO,2100,ssp585,High emissions,4.5443373,High impact,3
+Connecticut,CT,2100,ssp585,High emissions,5.157379,High impact,3
+Delaware,DE,2100,ssp585,High emissions,4.899994,High impact,3
+Florida,FL,2100,ssp585,High emissions,4.092998,High impact,3
+Georgia,GA,2100,ssp585,High emissions,4.6043825,High impact,3
+Hawaii,HI,2100,ssp585,High emissions,2.9712982,High impact,3
+Idaho,ID,2100,ssp585,High emissions,4.6668396,High impact,3
+Illinois,IL,2100,ssp585,High emissions,5.0213647,High impact,3
+Indiana,IN,2100,ssp585,High emissions,5.0335045,High impact,3
+Iowa,IA,2100,ssp585,High emissions,5.74454,High impact,3
+Kansas,KS,2100,ssp585,High emissions,5.1916165,High impact,3
+Kentucky,KY,2100,ssp585,High emissions,4.6018677,High impact,3
+Louisiana,LA,2100,ssp585,High emissions,4.7522316,High impact,3
+Maine,ME,2100,ssp585,High emissions,5.4960566,High impact,3
+Maryland,MD,2100,ssp585,High emissions,4.897756,High impact,3
+Massachusetts,MA,2100,ssp585,High emissions,5.245346,High impact,3
+Michigan,MI,2100,ssp585,High emissions,5.912053,High impact,3
+Minnesota,MN,2100,ssp585,High emissions,6.469034,High impact,3
+Mississippi,MS,2100,ssp585,High emissions,4.6387634,High impact,3
+Missouri,MO,2100,ssp585,High emissions,4.858209,High impact,3
+Montana,MT,2100,ssp585,High emissions,5.5172257,High impact,3
+Nebraska,NE,2100,ssp585,High emissions,5.657356,High impact,3
+Nevada,NV,2100,ssp585,High emissions,4.5295815,High impact,3
+New Hampshire,NH,2100,ssp585,High emissions,5.4223022,High impact,3
+New Jersey,NJ,2100,ssp585,High emissions,4.963516,High impact,3
+New Mexico,NM,2100,ssp585,High emissions,4.6555786,High impact,3
+New York,NY,2100,ssp585,High emissions,5.359887,High impact,3
+North Carolina,NC,2100,ssp585,High emissions,4.7123246,High impact,3
+North Dakota,ND,2100,ssp585,High emissions,6.805716,High impact,3
+Ohio,OH,2100,ssp585,High emissions,5.0929656,High impact,3
+Oklahoma,OK,2100,ssp585,High emissions,5.4514394,High impact,3
+Oregon,OR,2100,ssp585,High emissions,4.6233425,High impact,3
+Pennsylvania,PA,2100,ssp585,High emissions,5.007721,High impact,3
+Rhode Island,RI,2100,ssp585,High emissions,5.128601,High impact,3
+South Carolina,SC,2100,ssp585,High emissions,4.4726996,High impact,3
+South Dakota,SD,2100,ssp585,High emissions,6.3286185,High impact,3
+Tennessee,TN,2100,ssp585,High emissions,4.5796285,High impact,3
+Texas,TX,2100,ssp585,High emissions,5.174125,High impact,3
+Utah,UT,2100,ssp585,High emissions,4.458869,High impact,3
+Vermont,VT,2100,ssp585,High emissions,5.564097,High impact,3
+Virginia,VA,2100,ssp585,High emissions,4.813713,High impact,3
+Washington,WA,2100,ssp585,High emissions,4.79479,High impact,3
+West Virginia,WV,2100,ssp585,High emissions,4.6244593,High impact,3
+Wisconsin,WI,2100,ssp585,High emissions,6.0868793,High impact,3
+Wyoming,WY,2100,ssp585,High emissions,5.027266,High impact,3
