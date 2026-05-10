@@ -87,7 +87,7 @@ main {
   margin: 0;
   color: var(--muted);
   line-height: 1.55;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .step-label {
@@ -150,9 +150,6 @@ select {
   align-items: end;
   padding: 16px;
   margin-bottom: 16px;
-  position: sticky;
-  top: 10px;
-  z-index: 20;
 }
 
 .control-group {
@@ -276,6 +273,12 @@ input[type="range"] { width: 280px; }
   margin-bottom: 7px;
   color: var(--muted);
   font-weight: 800;
+}
+
+.legend-title small {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
 }
 
 .legend-row {

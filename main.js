@@ -40,6 +40,8 @@ const storyTitle = d3.select('#story-title');
 const storyText = d3.select('#story-text');
 const stepLabel = d3.select('#step-label');
 const scenarioChoice = d3.select('#story-scenario-choice');
+const controlsPanel = d3.select('.controls');
+const mapCard = d3.select('.map-card');
 
 let width = 960;
 let height = 640;
@@ -69,6 +71,8 @@ const fmtChange = d => Number.isFinite(d) ? `${d >= 0 ? '+' : ''}${d.toFixed(2)}
 
 let colorScale = d3.scaleDiverging([-1, 0, 1], t => d3.interpolateRdBu(1 - t));
 let currentColorLimit = 1;
+let globalStateColorLimit = 1;
+let globalCountyColorLimit = 1;
 
 Promise.all([
   d3.json(FILES.statesGeo),
@@ -139,6 +143,19 @@ function setupData() {
   stateByKey = d3.rollup(stateRows, v => v[0], d => stateKey(d.state, d.year, d.scenario));
   countyByKey = d3.rollup(countyRows, v => v[0], d => countyKey(d.county_fips, d.year, d.scenario));
   stateFeatureByName = new Map(statesGeo.features.map(f => [normalizeStateName(getStateName(f)), f]));
+
+  globalStateColorLimit = getGlobalColorLimit(stateRows);
+  globalCountyColorLimit = getGlobalColorLimit(countyRows);
+}
+
+function getGlobalColorLimit(rows) {
+  const values = rows
+    .map(d => d.temp_change_from_2025_c)
+    .filter(Number.isFinite)
+    .map(Math.abs)
+    .sort(d3.ascending);
+
+  return Math.max(0.15, d3.quantile(values, 0.95) || d3.max(values) || 1);
 }
 
 function setupMap() {
@@ -153,6 +170,10 @@ function setupMap() {
   window.addEventListener('resize', () => {
     resizeSvg();
     updateMap();
+  });
+
+  window.addEventListener('scroll', () => {
+    hideTooltip();
   });
 
   statesLayer.selectAll('path')
@@ -207,7 +228,13 @@ countiesLayer.selectAll('path')
   resetButton.on('click', () => resetZoom());
 
   continueButton.on('click', () => {
+    if (storyStep > 6) {
+      restartStory();
+      return;
+    }
+
     if (storyStep === 2 && !userPickedScenario) return;
+
     updateStoryStep(storyStep + 1);
   });
 
@@ -217,9 +244,16 @@ countiesLayer.selectAll('path')
     currentScenario = scenario;
     scenarioSelect.property('value', scenario);
     setScenarioChoiceActive(scenario);
+
+    controlsPanel.classed('hidden', false);
+    mapCard.classed('hidden', false);
+
     updateMap();
     updateLegend();
-    continueButton.text('Continue');
+
+    continueButton
+      .text('Continue')
+      .property('disabled', false);
   });
 }
 
@@ -246,73 +280,167 @@ function setScenarioChoiceActive(scenario) {
   });
 }
 
+function scrollToMap() {
+  hideTooltip();
+
+  const map = document.querySelector('#map');
+  if (!map) return;
+
+  const mapRect = map.getBoundingClientRect();
+
+  const y =
+    mapRect.top +
+    window.scrollY +
+    mapRect.height / 2 -
+    window.innerHeight / 2;
+
+  window.scrollTo({
+    top: y,
+    behavior: 'smooth'
+  });
+}
+
+function scrollToStory() {
+  hideTooltip();
+
+  const storyCard = document.querySelector('.story-card');
+  if (!storyCard) return;
+
+  const y = storyCard.getBoundingClientRect().top + window.scrollY - 20;
+
+  window.scrollTo({
+    top: y,
+    behavior: 'smooth'
+  });
+}
+
+function restartStory() {
+  stopYearLoop();
+
+  currentScenario = 'ssp585';
+  currentYear = 2026;
+  selectedState = null;
+  userPickedScenario = false;
+
+  scenarioSelect.property('value', currentScenario);
+  yearSlider.property('value', currentYear);
+  yearLabel.text(currentYear);
+
+  scenarioChoice.selectAll('button').classed('active', false);
+
+  setControlsEnabled(false);
+  resetZoom({ quiet: true });
+  setYear(2026);
+  updateStoryStep(0);
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
 function updateStoryStep(nextStep) {
   stopYearLoop();
   storyStep = nextStep;
   clearHighlights();
 
   if (storyStep === 0) {
+    controlsPanel.classed('hidden', true);
+    mapCard.classed('hidden', true);
+
     setControlsEnabled(false);
     scenarioChoice.classed('hidden', true);
     continueButton.text('Continue').property('disabled', false);
     stepLabel.text('Step 1');
     storyTitle.text('2025 just passed...');
-    storyText.text('...and I experienced a colder winter. How would temperature look this year? And what could change within a decade?');
+    storyText.text('2025 gives us a real starting point. What does temperature look like now, and how might it change over the next decade?');
     setYear(2026);
     resetZoom({ quiet: true });
   } else if (storyStep === 1) {
+    controlsPanel.classed('hidden', true);
+    mapCard.classed('hidden', true);
+
     stepLabel.text('Step 2');
     storyTitle.text('We start from a real baseline.');
     storyText.text('The map uses observed 2025 county temperature as the local starting point, then applies CMIP6 projected change from that baseline.');
     setYear(2026);
     resetZoom({ quiet: true });
   } else if (storyStep === 2) {
-    stepLabel.text('Step 3');
-    storyTitle.text('What emissions pathway should we expect in the near future?');
-    storyText.text('Choose one pathway to follow through the story. You can change it later when exploration opens.');
-    scenarioChoice.classed('hidden', false);
-    userPickedScenario = false;
-    setScenarioChoiceActive(currentScenario);
-    continueButton.text('Choose a pathway').property('disabled', false);
+  controlsPanel.classed('hidden', true);
+  mapCard.classed('hidden', true);
+
+  stepLabel.text('Step 3');
+  storyTitle.text('Choose a future emissions pathway');
+  storyText.text('Pick a scenario to see how warming patterns may unfold across U.S. states.');
+  scenarioChoice.classed('hidden', false);
+
+  controlsPanel.classed('hidden', true);
+  mapCard.classed('hidden', true);
+
+  userPickedScenario = false;
+
+  // Clear default active pathway
+  scenarioChoice.selectAll('button').classed('active', false);
+
+  continueButton
+    .text('Choose a pathway')
+    .property('disabled', true);
   } else if (storyStep === 3) {
-    scenarioChoice.classed('hidden', true);
-    stepLabel.text('Step 4');
-    storyTitle.text('First, watch the decade unfold.');
-    storyText.text(`Following ${scenarioLabels[currentScenario]}, the map first loops across the U.S., then zooms into Texas and loops again through county-level change.`);
-    loopYearsThenTexas();
-  } else if (storyStep === 4) {
+  controlsPanel.classed('hidden', false);
+  mapCard.classed('hidden', false);
+  scenarioChoice.classed('hidden', true);
+  stepLabel.text('Step 4');
+  storyTitle.text('First, watch the decade unfold.');
+  storyText.text(`Following ${scenarioLabels[currentScenario]}, the map first loops across the U.S., then zooms into Texas and loops again through county-level change.`);
+
+  scrollToMap();
+
+  loopYearsThenTexas(() => {
+    scrollToStory();
+  });
+}
+    else if (storyStep === 4) {
     const target = storyTargets[currentScenario].increase;
     stepLabel.text('Step 5');
     storyTitle.text('Where does projected warming stand out most?');
     storyText.text(`${target} appears as the largest increase example for the selected pathway. The color shows projected temperature change since 2025.`);
+    scrollToMap();
     zoomToNamedState(target, { highlight: true });
+
+    d3.timeout(() => {
+      scrollToStory();
+    }, 1800);
   } else if (storyStep === 5) {
     const target = storyTargets[currentScenario].decrease;
     stepLabel.text('Step 6');
     storyTitle.text('A warmer future is not uniform everywhere.');
     storyText.text(`${target} appears as the largest decrease or coolest-change example for the selected pathway. Hover to compare all three emissions for the same year.`);
+    scrollToMap();
     zoomToNamedState(target, { highlight: true });
+
+    d3.timeout(() => {
+      scrollToStory();
+    }, 1800);
   } else if (storyStep === 6) {
     stepLabel.text('Takeaway');
     storyTitle.text('The finding: future change is spatially uneven.');
-    storyText.text('The same emission pathway can produce warming in some places and smaller increases, or even cooling, in others. Hover comparisons show how the three pathways differ for the same year and location.');
+    storyText.text('Projected change is not uniform. Even under the same emissions pathway, some places may warm more while others show smaller increases or short-term cooling. Hover to compare pathways for the same year and location.');
     resetZoom({ quiet: true });
     setYear(2035);
   } else {
     stepLabel.text('Explore');
     storyTitle.text('Now explore your county and interested year.');
     storyText.text('Use the controls to choose a year and emission pathway. Click a state to zoom into counties, then hover for local values and same-year pathway comparisons.');
-    continueButton.text('Story complete');
+    continueButton.text('Restart story').property('disabled', false);
     setControlsEnabled(true);
     resetZoom({ quiet: true });
   }
 }
 
-function loopYearsThenTexas() {
+function loopYearsThenTexas(onComplete) {
   setControlsEnabled(false);
   resetZoom({ quiet: true });
 
-  // First show the national pattern changing through the decade.
   let y = 2026;
   setYear(y);
 
@@ -323,15 +451,16 @@ function loopYearsThenTexas() {
     if (y >= 2035) {
       stopYearLoop();
 
-      // Then zoom into Texas and loop the same decade again at the county level.
-      // Because selectedState is set inside zoomToState(), updateMap() will recolor counties.
       zoomToNamedState('Texas', { highlight: true });
-      d3.timeout(() => loopYearsWithinSelectedState(2026, 2035), 900);
+
+      d3.timeout(() => {
+        loopYearsWithinSelectedState(2026, 2035, onComplete);
+      }, 900);
     }
   }, 520);
 }
 
-function loopYearsWithinSelectedState(startYear = 2026, endYear = 2035) {
+function loopYearsWithinSelectedState(startYear = 2026, endYear = 2035, onComplete) {
   let y = startYear;
   setYear(y);
 
@@ -342,6 +471,10 @@ function loopYearsWithinSelectedState(startYear = 2026, endYear = 2035) {
     if (y >= endYear) {
       stopYearLoop();
       setYear(endYear);
+
+      if (typeof onComplete === 'function') {
+        d3.timeout(onComplete, 900);
+      }
     }
   }, 520);
 }
@@ -380,16 +513,12 @@ function updateMap() {
 }
 
 function updateColorScale() {
-  let rows;
-  if (selectedState) {
-    rows = countyRows.filter(d => d.state === selectedState && d.year === currentYear && d.scenario === currentScenario);
-  } else {
-    rows = stateRows.filter(d => d.year === currentYear && d.scenario === currentScenario);
-  }
-  const values = rows.map(d => d.temp_change_from_2025_c).filter(Number.isFinite).map(Math.abs).sort(d3.ascending);
-  const p95 = d3.quantile(values, 0.95);
-  currentColorLimit = Math.max(0.15, p95 || d3.max(values) || 1);
-  colorScale = d3.scaleDiverging([-currentColorLimit, 0, currentColorLimit], t => d3.interpolateRdBu(1 - t));
+  currentColorLimit = selectedState ? globalCountyColorLimit : globalStateColorLimit;
+
+  colorScale = d3.scaleDiverging(
+    [-currentColorLimit, 0, currentColorLimit],
+    t => d3.interpolateRdBu(1 - t)
+  );
 }
 
 function colorFor(row) {
@@ -401,11 +530,14 @@ function colorFor(row) {
 function updateLegend() {
   const steps = d3.range(0, 1.01, 0.05).map(t => colorScale(-currentColorLimit + t * currentColorLimit * 2));
   d3.select('#legend').html(`
-    <span class="legend-title">Projected change since 2025</span>
+    <span class="legend-title">
+    Projected change since 2025<br>
+    <small>colors clipped to 95% range</small>
+    </span>
     <div class="legend-row">
-      <span>${fmtChange(-currentColorLimit)}</span>
+      <span>≤ ${fmtChange(-currentColorLimit)}</span>
       <div class="legend-gradient" style="background: linear-gradient(to right, ${steps.join(',')});"></div>
-      <span>${fmtChange(currentColorLimit)}</span>
+      <span>≥ ${fmtChange(currentColorLimit)}</span>
     </div>
   `);
 }
@@ -439,6 +571,8 @@ function zoomToState(feature, opts = {}) {
 }
 
 function resetZoom(options = {}) {
+  hideTooltip();
+
   selectedState = null;
   clearHighlights();
   g.transition().duration(options.quiet ? 0 : 720).attr('transform', null);
@@ -477,8 +611,7 @@ function tooltipHtml(name, row, level, comparisonRows) {
   const comparisonHtml = ['ssp126', 'ssp245', 'ssp585'].map(scenario => {
     const d = comparisonRows.get(scenario);
     const value = d ? fmtChange(d.temp_change_from_2025_c) : '—';
-    const active = scenario === currentScenario ? ' ← current' : '';
-    return `<div>${scenarioShort[scenario]}: <strong>${value}</strong>${active}</div>`;
+    return `<div>${scenarioShort[scenario]}: <strong>${value}</strong></div>`;
   }).join('');
 
   return `

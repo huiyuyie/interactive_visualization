@@ -19,7 +19,7 @@
       <p class="step-label" id="step-label">Step 1</p>
       <h2 id="story-title">2025 just passed...</h2>
       <p id="story-text">
-        ...and I experienced a colder winter. How would temperature look this year? And what could change within a decade?
+        2025 gives us a real starting point. What does temperature look like now, and how might it change over the next decade?
       </p>
       <div class="scenario-choice hidden" id="story-scenario-choice">
         <button data-scenario="ssp126">Lower emissions</button>
@@ -29,31 +29,32 @@
       <button id="continue-button" class="primary-button">Continue</button>
     </section>
 
-    <section class="controls" id="controls">
-      <div class="control-group">
-        <label for="scenario-select">Emission pathway</label>
-        <select id="scenario-select" disabled>
-          <option value="ssp126">SSP126 · lower emissions</option>
-          <option value="ssp245">SSP245 · middle pathway</option>
-          <option value="ssp585" selected>SSP585 · higher emissions</option>
-        </select>
-      </div>
-      <div class="control-group year-control">
-        <label for="year-slider">Year: <span id="year-label">2035</span></label>
-        <input id="year-slider" type="range" min="2026" max="2035" step="1" value="2035" disabled />
-      </div>
-      <button id="reset-button" class="secondary-button hidden">Back to U.S.</button>
-    </section>
-
     <section class="map-card">
       <div class="map-header">
         <div>
-          <h2 id="map-title">Projected temperature change since 2025</h2>
-          <p id="map-caption">Blue indicates cooler than the 2025 baseline; red indicates warmer. Hover to compare the same year across all emission pathways.</p>
+          <h2 id="map-title">Projected change since 2025, clipped at 95th percentile</h2>
+          <p id="map-caption">Blue indicates projected cooling relative to the 2025 model baseline; red indicates projected warming. Hover to compare the same year across all emission pathways.</p>
         </div>
         <div id="legend" class="legend"></div>
       </div>
+
       <svg id="map" aria-label="Map of projected temperature change across U.S. counties and states"></svg>
+
+      <section class="controls" id="controls">
+        <div class="control-group">
+          <label for="scenario-select">Emission pathway</label>
+          <select id="scenario-select" disabled>
+            <option value="ssp126">SSP126 · lower emissions</option>
+            <option value="ssp245">SSP245 · middle pathway</option>
+            <option value="ssp585" selected>SSP585 · higher emissions</option>
+          </select>
+        </div>
+        <div class="control-group year-control">
+          <label for="year-slider">Year: <span id="year-label">2035</span></label>
+          <input id="year-slider" type="range" min="2026" max="2035" step="1" value="2035" disabled />
+        </div>
+        <button id="reset-button" class="secondary-button hidden">Back to U.S.</button>
+      </section>
     </section>
   </main>
 
