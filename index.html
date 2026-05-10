@@ -3,59 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>U.S. Climate Impact Categories</title>
+  <title>Warmer Future or Cooler Future</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 </head>
-
 <body>
-  <header>
-    <h1>U.S. Climate Impact Category Shifts</h1>
-    <p class="question">
-      How do U.S. states shift between low-, medium-, and high-climate-impact categories
-      over time under different greenhouse gas emissions scenarios?
-    </p>
+  <header class="hero">
+    <p class="eyebrow">DSC 106 Project 3 · Climate Story Map</p>
+    <h1>Warmer Future or Cooler Future: Visualizing predicted change in Temperature</h1>
+    <p class="subtitle">Discover the surprising truths about temperature by emission across the United States.</p>
   </header>
 
   <main>
-    <section class="controls">
-      <label>
-        Emissions Scenario
-        <select id="scenario-select">
-          <option value="ssp126">Low emissions</option>
-          <option value="ssp245">Medium emissions</option>
-          <option value="ssp585">High emissions</option>
-        </select>
-      </label>
-
-      <label>
-        Year: <span id="year-label">2020</span>
-        <input id="year-slider" type="range" min="2020" max="2100" step="10" value="2020" />
-      </label>
+    <section class="story-card" id="story-card">
+      <p class="step-label" id="step-label">Step 1</p>
+      <h2 id="story-title">2025 just passed...</h2>
+      <p id="story-text">
+        ...and I experienced a colder winter. How would temperature look this year? And what could change within a decade?
+      </p>
+      <div class="scenario-choice hidden" id="story-scenario-choice">
+        <button data-scenario="ssp126">Lower emissions</button>
+        <button data-scenario="ssp245">Middle pathway</button>
+        <button data-scenario="ssp585">Higher emissions</button>
+      </div>
+      <button id="continue-button" class="primary-button">Continue</button>
     </section>
 
-    <section class="layout">
-      <section class="map-card">
-        <h2>Climate Impact Map</h2>
-        <p class="hint">Hover over a state for details. Click a state to inspect it.</p>
-        <svg id="map"></svg>
-      </section>
+    <section class="controls" id="controls">
+      <div class="control-group">
+        <label for="scenario-select">Emission pathway</label>
+        <select id="scenario-select" disabled>
+          <option value="ssp126">SSP126 · lower emissions</option>
+          <option value="ssp245">SSP245 · middle pathway</option>
+          <option value="ssp585" selected>SSP585 · higher emissions</option>
+        </select>
+      </div>
+      <div class="control-group year-control">
+        <label for="year-slider">Year: <span id="year-label">2035</span></label>
+        <input id="year-slider" type="range" min="2026" max="2035" step="1" value="2035" disabled />
+      </div>
+      <button id="reset-button" class="secondary-button hidden">Back to U.S.</button>
+    </section>
 
-      <aside class="side-panel">
-        <h2>Selected State</h2>
-        <div id="state-info">
-          <p class="placeholder">Click a state to see details.</p>
+    <section class="map-card">
+      <div class="map-header">
+        <div>
+          <h2 id="map-title">Projected temperature change since 2025</h2>
+          <p id="map-caption">Blue indicates cooler than the 2025 baseline; red indicates warmer. Hover to compare the same year across all emission pathways.</p>
         </div>
-
-        <h2>Category Distribution</h2>
-        <div id="summary-bars"></div>
-      </aside>
+        <div id="legend" class="legend"></div>
+      </div>
+      <svg id="map" aria-label="Map of projected temperature change across U.S. counties and states"></svg>
     </section>
   </main>
 
-  <div id="tooltip"></div>
-
-  <script src="main.js"></script>
+  <div id="tooltip" class="tooltip"></div>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
