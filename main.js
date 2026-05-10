@@ -105,7 +105,7 @@ function normalizeRows(rows, level) {
     d.scenario = String(row.scenario || '').trim();
     d.observed_temp_2025_c = getNumber(row, ['observed_temp_2025_c', 'observed_temp_c', 'observed_2025_c', 'temp_2025_c']);
     d.projected_temp_c = getNumber(row, ['adjusted_projected_temp_c', 'projected_temp_c', 'projected_temp', 'temp_c']);
-    d.temp_change_from_2025_c = getNumber(row, ['cmip6_delta_from_2025_c', 'temp_change_from_2025_c', 'projected_change_from_2025_c', 'warming_since_2025_c']);
+    d.temp_change_from_2025_c = getNumber(row, ['temp_change_from_2025_c', 'cmip6_delta_from_2025_c', 'projected_change_from_2025_c', 'warming_since_2025_c']);
 
     if (!Number.isFinite(d.temp_change_from_2025_c) && Number.isFinite(d.projected_temp_c) && Number.isFinite(d.observed_temp_2025_c)) {
       d.temp_change_from_2025_c = d.projected_temp_c - d.observed_temp_2025_c;
@@ -142,6 +142,13 @@ function setupData() {
 
 function setupMap() {
   resizeSvg();
+
+  svg.on('click', (event) => {
+    if (event.target === svg.node() && selectedState) {
+      resetZoom();
+    }
+  });
+
   window.addEventListener('resize', () => {
     resizeSvg();
     updateMap();
@@ -155,7 +162,14 @@ function setupMap() {
     .on('mouseenter', handleStateMouseEnter)
     .on('mousemove', moveTooltip)
     .on('mouseleave', hideTooltip)
-    .on('click', (event, d) => zoomToState(d, { updateStory: false }));
+    .on('click', (event, d) => {
+      const stateName = getStateName(d);
+      if (selectedState === stateName) {
+        resetZoom();
+      } else {
+        zoomToState(d, { updateStory: false });
+      }
+    });
 
   countiesLayer.selectAll('path')
     .data(countiesGeo.features)
@@ -164,7 +178,10 @@ function setupMap() {
     .attr('d', path)
     .on('mouseenter', handleCountyMouseEnter)
     .on('mousemove', moveTooltip)
-    .on('mouseleave', hideTooltip);
+    .on('mouseleave', hideTooltip)
+    .on('click', (event) => {
+      event.stopPropagation();
+  });
 
   scenarioSelect.on('change', event => {
     currentScenario = event.target.value;
