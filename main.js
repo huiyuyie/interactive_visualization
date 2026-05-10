@@ -160,7 +160,10 @@ function setupMap() {
     .join('path')
     .attr('class', 'state')
     .attr('d', path)
-    .on('mouseenter', handleStateMouseEnter)
+    .on('mouseenter', function(event, d) {
+      d3.select(this).raise();
+      handleStateMouseEnter(event, d);
+    })
     .on('mousemove', moveTooltip)
     .on('mouseleave', hideTooltip)
     .on('click', (event, d) => {
@@ -172,16 +175,19 @@ function setupMap() {
       }
     });
 
-  countiesLayer.selectAll('path')
-    .data(countiesGeo.features)
-    .join('path')
-    .attr('class', 'county hidden-county')
-    .attr('d', path)
-    .on('mouseenter', handleCountyMouseEnter)
-    .on('mousemove', moveTooltip)
-    .on('mouseleave', hideTooltip)
-    .on('click', (event) => {
-      event.stopPropagation();
+countiesLayer.selectAll('path')
+  .data(countiesGeo.features)
+  .join('path')
+  .attr('class', 'county hidden-county')
+  .attr('d', path)
+  .on('mouseenter', function(event, d) {
+    d3.select(this).raise();
+    handleCountyMouseEnter(event, d);
+  })
+  .on('mousemove', moveTooltip)
+  .on('mouseleave', hideTooltip)
+  .on('click', (event) => {
+    event.stopPropagation();
   });
 
   scenarioSelect.on('change', event => {
