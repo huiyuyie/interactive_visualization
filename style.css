@@ -296,7 +296,7 @@ input[type="range"] { width: 280px; }
   font-size: 0.86rem;
   line-height: 1.42;
   max-width: 310px;
-  z-index: 50;
+  z-index: 9999;
   box-shadow: 0 14px 30px rgba(0,0,0,0.24);
 }
 

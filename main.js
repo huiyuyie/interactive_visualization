@@ -49,6 +49,7 @@ let selectedState = null;
 let storyStep = 0;
 let userPickedScenario = false;
 let animationTimer = null;
+let tooltipAnchor = null;
 
 const projection = d3.geoAlbersUsa();
 const path = d3.geoPath(projection);
@@ -261,7 +262,7 @@ function updateStoryStep(nextStep) {
     resetZoom({ quiet: true });
   } else if (storyStep === 2) {
     stepLabel.text('Step 3');
-    storyTitle.text('How should we expect emissions in the near future?');
+    storyTitle.text('What emissions pathway should we expect in the near future?');
     storyText.text('Choose one pathway to follow through the story. You can change it later when exploration opens.');
     scenarioChoice.classed('hidden', false);
     userPickedScenario = false;
@@ -453,11 +454,13 @@ function clearHighlights() {
 }
 
 function handleStateMouseEnter(event, feature) {
+  tooltipAnchor = event.currentTarget;
   const row = getStateRow(feature);
   showTooltip(event, tooltipHtml(getStateName(feature), row, 'State', getStateComparisonRows(feature)));
 }
 
 function handleCountyMouseEnter(event, feature) {
+  tooltipAnchor = event.currentTarget;
   const row = getCountyRow(feature);
   const name = `${getCountyName(feature)}, ${getCountyStateName(feature)}`;
   showTooltip(event, tooltipHtml(name, row, 'County', getCountyComparisonRows(feature)));
@@ -489,10 +492,46 @@ function showTooltip(event, html) {
   tooltip.html(html).style('opacity', 1);
   moveTooltip(event);
 }
+
 function moveTooltip(event) {
-  tooltip.style('left', `${event.clientX + 14}px`).style('top', `${event.clientY + 14}px`);
+  if (!tooltipAnchor) return;
+
+  const padding = 18;
+  const gap = 18;
+
+  const anchorRect = tooltipAnchor.getBoundingClientRect();
+  const tooltipNode = tooltip.node();
+  const tooltipRect = tooltipNode.getBoundingClientRect();
+
+  const anchorCenterY = anchorRect.top + anchorRect.height / 2;
+
+  const spaceRight = window.innerWidth - anchorRect.right;
+  const spaceLeft = anchorRect.left;
+
+  let left;
+
+  // Prefer the side with more space, so the tooltip avoids covering the selected state/county.
+  if (spaceRight >= tooltipRect.width + gap || spaceRight >= spaceLeft) {
+    left = anchorRect.right + gap;
+  } else {
+    left = anchorRect.left - tooltipRect.width - gap;
+  }
+
+  let top = anchorCenterY - tooltipRect.height / 2;
+
+  // Keep tooltip inside the browser window.
+  left = Math.max(padding, Math.min(left, window.innerWidth - tooltipRect.width - padding));
+  top = Math.max(padding, Math.min(top, window.innerHeight - tooltipRect.height - padding));
+
+  tooltip
+    .style('left', `${left}px`)
+    .style('top', `${top}px`);
 }
-function hideTooltip() { tooltip.style('opacity', 0); }
+
+function hideTooltip() {
+  tooltip.style('opacity', 0);
+  tooltipAnchor = null;
+}
 
 function getStateComparisonRows(feature) {
   const state = getStateName(feature);
