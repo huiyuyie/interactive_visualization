@@ -229,6 +229,7 @@ input[type="range"] { width: 280px; }
 .county {
   stroke: #fffdf8;
   stroke-width: 0.65;
+  vector-effect: non-scaling-stroke;
   cursor: pointer;
   transition: opacity 0.18s ease, stroke-width 0.18s ease;
 }
@@ -248,8 +249,11 @@ input[type="range"] { width: 280px; }
 
 .selected-outline {
   fill: none;
-  stroke: #201713;
-  stroke-width: 2.6;
+  stroke: #2a211c;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
   pointer-events: none;
 }
 
@@ -295,7 +299,7 @@ input[type="range"] { width: 280px; }
   border-radius: 14px;
   font-size: 0.86rem;
   line-height: 1.42;
-  max-width: 310px;
+  max-width: 360px;
   z-index: 50;
   box-shadow: 0 14px 30px rgba(0,0,0,0.24);
 }
@@ -327,3 +331,14 @@ input[type="range"] { width: 280px; }
   .map-header { flex-direction: column; }
   #map { min-height: 470px; }
 }
+
+
+
+
+.current-tag {
+  color: #d7d0c7;
+  font-size: 0.85em;
+  font-weight: 500;
+}
+
+

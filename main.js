@@ -468,7 +468,7 @@ function tooltipHtml(name, row, level, comparisonRows) {
   const comparisonHtml = ['ssp126', 'ssp245', 'ssp585'].map(scenario => {
     const d = comparisonRows.get(scenario);
     const value = d ? fmtChange(d.temp_change_from_2025_c) : '—';
-    const active = scenario === currentScenario ? ' ← current' : '';
+    const active = scenario === currentScenario ? ' <span class="current-tag">(current selection)</span>' : '';
     return `<div>${scenarioShort[scenario]}: <strong>${value}</strong>${active}</div>`;
   }).join('');
 
