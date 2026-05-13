@@ -219,13 +219,13 @@ function setupMap() {
 
   continueButton.on('click', () => {
     if (continueButton.property('disabled')) return;
-    if (storyStep === 3 && !userPickedScenario) return;
-    if (storyStep === 11 || storyStep === 12) {
+    if (storyStep === 4 && !userPickedScenario) return;
+    if (storyStep === 12 || storyStep === 13) {
       handleComparisonContinue();
       return;
     }
     updateStoryStep(storyStep + 1);
-  });
+});
 
   scenarioChoice.selectAll('button').on('click', event => {
     currentScenario = event.currentTarget.dataset.scenario;
@@ -241,10 +241,10 @@ function setupMap() {
   compareChoice.selectAll('button').on('click', event => {
     const action = event.currentTarget.dataset.action;
     if (action === 'back') {
-      updateStoryStep(3);
+      updateStoryStep(4);
     } else {
       comparisonIndex = 0;
-      updateStoryStep(11);
+      updateStoryStep(12);
     }
   });
 }
@@ -276,7 +276,7 @@ function setScenarioChoiceActive(scenario) {
 function setStoryMode(mode) {
   storyCard.classed('full', mode === 'full');
   storyCard.classed('side', mode === 'side');
-  d3.select('body').classed('story-full-active', mode === 'full');
+  d3.select('body').classed('story-full-active', false);
 }
 
 function setDataMapVisible(visible) {
@@ -297,34 +297,45 @@ function updateStoryStep(nextStep) {
 
   if (!loaded) return;
 
-  const shouldShowDataMap = storyStep >= 4 && Boolean(currentScenario);
+  const shouldShowDataMap = storyStep >= 5 && Boolean(currentScenario);
   setDataMapVisible(shouldShowDataMap);
 
   if (storyStep === 0) {
-    setStoryMode('full');
+    setStoryMode('side');
     setControlsEnabled(false);
     stepLabel.text('Before the story');
-    storyTitle.html('Warmer Future or Cooler Future?<br><span class="title-subline">Projected U.S. Temperature Change Under Different Emission Pathways</span>');
-    storyText.text('A decade-scale look at projected temperature change from a 2025 observed baseline.');
+    storyTitle.html('Today’s Emissions Shape Tomorrow’s Temperature Change');
+    storyText.text('A decade-scale look at projected U.S. temperature change from a 2025 observed baseline.');
     setYear(2035);
     resetZoom({ quiet: true });
+
   } else if (storyStep === 1) {
-    setStoryMode('full');
+    setStoryMode('side');
     stepLabel.text('Step 1');
-    storyTitle.text('2025 just passed...');
-    storyText.text('Before looking far into the future, let’s start with the near term: what could temperature change look like this year, and how might it shift within the next decade?');
+    storyTitle.text('Today’s emissions are already high.');
+    storyText.text('2025 emissions are already at 38.1 GtCO₂. The question is no longer only how much we emit, but where those emissions may reshape temperature change next.');
     setYear(2026);
     resetZoom({ quiet: true });
+
   } else if (storyStep === 2) {
-    setStoryMode('full');
+    setStoryMode('side');
     stepLabel.text('Step 2');
+    storyTitle.text('Every fraction of warming matters.');
+    storyText.text('Even small increases in average temperature can make extremes and risks larger. IPCC notes that each additional 0.1°C of global warming can increase the intensity and frequency of temperature and precipitation extremes, as well as drought risks in some regions.');
+    setYear(2026);
+    resetZoom({ quiet: true });
+
+  } else if (storyStep === 3) {
+    setStoryMode('side');
+    stepLabel.text('Step 3');
     storyTitle.text('We start from a real baseline.');
     storyText.text('The map uses observed 2025 temperature as the starting point. Using a delta-change method, we calculate how much each model changes from its own 2025 prediction, then apply that change to the observed 2025 baseline. Color represents change since 2025, not raw temperature.');
     setYear(2026);
     resetZoom({ quiet: true });
-  } else if (storyStep === 3) {
-    setStoryMode('full');
-    stepLabel.text('Step 3');
+
+  } else if (storyStep === 4) {
+    setStoryMode('side');
+    stepLabel.text('Step 4');
     storyTitle.text('How should we expect emissions in the near future?');
     storyText.text('Choose one pathway to follow through the story. SSP126, SSP245, and SSP585 represent low, medium, and high emissions futures, with 2.6, 4.5, and 8.5 W/m² radiative forcing by 2100. The main story follows your chosen pathway; later, you can explore other pathways yourself.');
     scenarioChoice.classed('hidden', false);
@@ -336,60 +347,67 @@ function updateStoryStep(nextStep) {
     scenarioSelect.property('value', '');
     setScenarioChoiceActive(null);
     continueButton.text('Choose a pathway').property('disabled', true);
-  } else if (storyStep === 4) {
+
+  } else if (storyStep === 5) {
     if (!currentScenario) {
       setDataMapVisible(false);
-      updateStoryStep(3);
+      updateStoryStep(4);
       return;
     }
     setDataMapVisible(true);
     setStoryMode('side');
-    stepLabel.text('Step 4');
+    stepLabel.text('Step 5');
     storyTitle.text('First, watch the decade unfold.');
     storyText.text(`Following ${scenarioLabels[currentScenario]}, the map loops from 2026 to 2035 to show how projected temperature change evolves. ${scenarioExplain[currentScenario]}`);
     continueButton.text('Playing...').property('disabled', true);
     loopYearsNationalOnly();
-  } else if (storyStep === 5) {
+
+  } else if (storyStep === 6) {
     setStoryMode('side');
     const target = storyTargets[currentScenario][2035].increase;
-    stepLabel.text('Step 5');
+    stepLabel.text('Step 6');
     storyTitle.text('By 2035, where is the largest projected increase?');
     setYear(2035);
     zoomToNamedState(target, { highlight: true });
     storyText.text(`${target} is the largest projected increase example under ${scenarioLabels[currentScenario]} in 2035. This highlights where the end-of-decade warming signal stands out most in the selected pathway.`);
-  } else if (storyStep === 6) {
+
+  } else if (storyStep === 7) {
     setStoryMode('side');
     const target = storyTargets[currentScenario][2035].decrease;
-    stepLabel.text('Step 6');
+    stepLabel.text('Step 7');
     storyTitle.text('By 2035, where is the largest projected decrease?');
     setYear(2035);
     zoomToNamedState(target, { highlight: true });
     storyText.text(`${target} is the largest projected decrease example under ${scenarioLabels[currentScenario]} in 2035. The map shows that projected change can move in different directions across geography.`);
-  } else if (storyStep === 7) {
+
+  } else if (storyStep === 8) {
     setStoryMode('side');
-    stepLabel.text('Step 7');
+    stepLabel.text('Step 8');
     storyTitle.text('How about projected change this year?');
     storyText.text('Now the map returns to 2026, the first projected year in this decade window, to compare the start of the decade with the 2035 pattern.');
     setYear(2026);
     resetZoom({ quiet: true });
-  } else if (storyStep === 8) {
+
+  } else if (storyStep === 9) {
     setStoryMode('side');
     const target = storyTargets[currentScenario][2026].increase;
-    stepLabel.text('Step 8');
+    stepLabel.text('Step 9');
     storyTitle.text('In 2026, where is the largest projected increase?');
     setYear(2026);
     zoomToNamedState(target, { highlight: true });
     storyText.text(`${target} is the largest projected increase example in 2026 under ${scenarioLabels[currentScenario]}. Comparing this with 2035 shows whether the strongest increase location stays the same or shifts over the decade.`);
-  } else if (storyStep === 9) {
+
+  } else if (storyStep === 10) {
     setStoryMode('side');
     const target = storyTargets[currentScenario][2026].decrease;
-    stepLabel.text('Step 9');
+    stepLabel.text('Step 10');
     storyTitle.text('In 2026, where is the largest projected decrease?');
     setYear(2026);
     zoomToNamedState(target, { highlight: true });
     storyText.text(`${target} is the largest projected decrease example in 2026 under ${scenarioLabels[currentScenario]}. This gives a start-of-decade comparison to the 2035 decrease example.`);
-  } else if (storyStep === 10) {
-    setStoryMode('full');
+
+  } else if (storyStep === 11) {
+    setStoryMode('side');
     stepLabel.text('Compare pathways');
     storyTitle.text('Compare the other pathways?');
     storyText.text('Go back to choose a different emission pathway, or continue to compare the 2026 and 2035 largest increase/decrease examples for the two pathways you did not follow.');
@@ -397,31 +415,34 @@ function updateStoryStep(nextStep) {
     resetZoom({ quiet: true });
     compareChoice.classed('hidden', false);
     continueButton.classed('hidden', true);
-  } else if (storyStep === 11) {
-    setStoryMode('side');
-    comparisonIndex = 0;
-    showOtherEmissionFinding(getOtherScenarios()[comparisonIndex], 2026, 'Step 11');
+
   } else if (storyStep === 12) {
     setStoryMode('side');
     comparisonIndex = 0;
-    showOtherEmissionFinding(getOtherScenarios()[comparisonIndex], 2035, 'Step 12');
+    showOtherEmissionFinding(getOtherScenarios()[comparisonIndex], 2026, 'Step 12');
+
   } else if (storyStep === 13) {
-    setStoryMode('full');
+    setStoryMode('side');
+    comparisonIndex = 0;
+    showOtherEmissionFinding(getOtherScenarios()[comparisonIndex], 2035, 'Step 13');
+
+  } else if (storyStep === 14) {
+    setStoryMode('side');
     stepLabel.text('Finding');
     storyTitle.text('Emission pathways reshape regional temperature change over time.');
     storyText.text('Beyond the highlighted states, the map shows a broader regional shift: from 2026 to 2035, different emission pathways change where warming and cooling appear across the U.S.');
     setYear(2035);
     resetZoom({ quiet: true });
-  } else if (storyStep === 14) {
-    setStoryMode('full');
+
+  } else if (storyStep === 15) {
+    setStoryMode('side');
     stepLabel.text('Explore');
     storyTitle.text('Now explore your county and interested year.');
     storyText.text('Use the controls to choose a year and emission pathway. Click a state to zoom into counties, then hover for local Low, Medium, and High emission comparisons.');
     continueButton.text('Let me explore');
     setControlsEnabled(false);
+
   } else {
-    // When the reader enters explore mode, return to the pathway they originally chose,
-    // not the temporary pathway used during the comparison steps.
     currentScenario = followedScenario || currentScenario || 'ssp245';
     scenarioSelect.property('value', currentScenario);
     setScenarioChoiceActive(currentScenario);
@@ -445,14 +466,14 @@ function handleComparisonContinue() {
   const otherScenarios = getOtherScenarios();
   if (comparisonIndex === 0) {
     comparisonIndex = 1;
-    const year = storyStep === 11 ? 2026 : 2035;
+    const year = storyStep === 12 ? 2026 : 2035;
     showOtherEmissionFinding(otherScenarios[comparisonIndex], year, `Step ${storyStep}`);
-  } else if (storyStep === 11) {
-    comparisonIndex = 0;
-    updateStoryStep(12);
-  } else {
+  } else if (storyStep === 12) {
     comparisonIndex = 0;
     updateStoryStep(13);
+  } else {
+    comparisonIndex = 0;
+    updateStoryStep(14);
   }
 }
 
@@ -676,10 +697,12 @@ function clearHighlights() {
 }
 
 function handleStateMouseEnter(event, feature) {
+  d3.select(event.currentTarget).raise();
   showTooltip(event, tooltipHtml(getStateName(feature), 'State', getStateComparisonRows(feature)));
 }
 
 function handleCountyMouseEnter(event, feature) {
+  d3.select(event.currentTarget).raise();
   const name = `${getCountyName(feature)}, ${getCountyStateName(feature)}`;
   showTooltip(event, tooltipHtml(name, 'County', getCountyComparisonRows(feature)));
 }

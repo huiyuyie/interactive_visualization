@@ -200,10 +200,16 @@ input[type="range"]::-moz-range-thumb {
   transition: opacity 0.18s ease, stroke-width 0.18s ease;
 }
 
-.state:hover,
+.state:hover {
+  stroke: var(--orange) !important;
+  stroke-width: 3px !important;
+  filter: drop-shadow(0 0 5px rgba(255, 138, 31, 0.75));
+}
+
 .county:hover {
   stroke: var(--orange) !important;
-  stroke-width: 2 !important;
+  stroke-width: 4px !important;
+  filter: drop-shadow(0 0 6px rgba(255, 138, 31, 0.85));
 }
 
 .county.hidden-county { display: none; }
@@ -221,8 +227,8 @@ input[type="range"]::-moz-range-thumb {
 
 .story-highlight {
   stroke: var(--orange) !important;
-  stroke-width: 3 !important;
-  filter: drop-shadow(0 0 8px rgba(255, 138, 31, 0.82));
+  stroke-width: 4px !important;
+  filter: drop-shadow(0 0 8px rgba(255, 138, 31, 0.9));
 }
 
 .story-overlay {
@@ -284,12 +290,22 @@ input[type="range"]::-moz-range-thumb {
 
 .story-overlay.side .story-panel {
   position: absolute;
-  left: clamp(18px, 2.6vw, 42px);
-  top: 30%;
-  transform: translateY(-50%);
-  width: min(305px, 21.5vw);
-  padding: 15px 16px;
-  border-radius: 20px;
+  left: clamp(18px, 2.2vw, 40px);
+  bottom: clamp(128px, 16vh, 170px);
+
+  width: clamp(220px, 16vw, 260px);
+  min-height: clamp(360px, 48vh, 500px);
+  max-height: 58vh;
+
+  padding: clamp(18px, 2vw, 24px);
+  border-radius: 22px;
+  transform: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  overflow: auto;
 }
 
 .step-label {
@@ -309,8 +325,8 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .story-overlay.side .story-panel h2 {
-  font-size: clamp(0.98rem, 1.16vw, 1.24rem);
-  line-height: 1.05;
+  font-size: clamp(0.95rem, 1.05vw, 1.15rem);
+  line-height: 1.12;
   letter-spacing: -0.035em;
 }
 
@@ -326,7 +342,11 @@ input[type="range"]::-moz-range-thumb {
   font-size: 1rem;
 }
 
-.story-overlay.side .story-panel p { font-size: 0.80rem; line-height: 1.38; }
+.story-overlay.side .story-panel p {
+  font-size: 0.78rem;
+  line-height: 1.48;
+  margin-bottom: 18px;
+}
 
 .primary-button {
   padding: 12px 18px;
@@ -382,7 +402,15 @@ input[type="range"]::-moz-range-thumb {
   .page-title h1, .page-title p { white-space: normal; }
   .map-shell { margin-left: 20px; margin-right: 20px; }
   .bottom-ui { grid-template-columns: 1fr; height: auto; min-height: 120px; padding-bottom: 10px; }
-  .story-overlay.side .story-panel { left: 16px; top: 28%; width: min(430px, 82vw); }
+  .story-overlay.side .story-panel {
+    left: 16px;
+    right: 16px;
+    bottom: 132px;
+    width: auto;
+    max-width: 430px;
+    top: auto;
+    transform: none;
+  }
 }
 
 .compare-choice {

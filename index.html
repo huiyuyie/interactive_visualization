@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 </head>
-<body class="story-full-active">
+<body>
   <header class="page-title">
     <h1><span class="accent-word">Emission</span> Level and Projected Temperature Change in the U.S. (2026–2035)</h1>
     <p>Choose an emission pathway and year to compare projected change from the 2025 observed baseline.</p>
@@ -37,11 +37,11 @@
     <div id="legend" class="legend"></div>
   </section>
 
-  <section class="story-overlay full" id="story-card" aria-live="polite">
+  <section class="story-overlay side" id="story-card" aria-live="polite">
     <div class="story-panel">
       <p class="step-label" id="step-label">Before the story</p>
-      <h2 id="story-title">Warmer Future or Cooler Future?<br><span class="title-subline">Projected U.S. Temperature Change Under Different Emission Pathways</span></h2>
-      <p id="story-text">A decade-scale look at projected temperature change from a 2025 observed baseline.</p>
+      <h2 id="story-title">Today’s Emissions Shape Tomorrow’s Temperature Change</h2>
+      <p id="story-text">A decade-scale look at projected U.S. temperature change from a 2025 observed baseline.</p>
       <div class="scenario-choice hidden" id="story-scenario-choice">
         <button data-scenario="ssp126">Low emissions</button>
         <button data-scenario="ssp245">Medium emissions</button>
