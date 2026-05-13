@@ -22,9 +22,10 @@
       <div class="control-group">
         <label for="scenario-select">Emission pathway</label>
         <select id="scenario-select" disabled>
-          <option value="ssp126">SSP126 · lower emissions</option>
+          <option value="" selected disabled>Select a pathway</option>
+          <option value="ssp126">SSP126 · low emissions</option>
           <option value="ssp245">SSP245 · medium emissions</option>
-          <option value="ssp585" selected>SSP585 · higher emissions</option>
+          <option value="ssp585">SSP585 · high emissions</option>
         </select>
       </div>
       <div class="control-group year-control">
@@ -42,9 +43,9 @@
       <h2 id="story-title">Warmer Future or Cooler Future?<br><span class="title-subline">Projected U.S. Temperature Change Under Different Emission Pathways</span></h2>
       <p id="story-text">A decade-scale look at projected temperature change from a 2025 observed baseline.</p>
       <div class="scenario-choice hidden" id="story-scenario-choice">
-        <button data-scenario="ssp126">Lower emissions</button>
+        <button data-scenario="ssp126">Low emissions</button>
         <button data-scenario="ssp245">Medium emissions</button>
-        <button data-scenario="ssp585">Higher emissions</button>
+        <button data-scenario="ssp585">High emissions</button>
       </div>
       <div class="compare-choice hidden" id="story-compare-choice">
         <button data-action="back">Choose a different pathway</button>
