@@ -18,9 +18,9 @@ const scenarioLabels = {
 };
 
 const scenarioExplain = {
-  ssp126: 'SSP126 represents a lower-emissions pathway with stronger climate mitigation.',
-  ssp245: 'SSP245 represents a medium-emissions pathway between lower and higher futures.',
-  ssp585: 'SSP585 represents a higher-emissions pathway with continued strong greenhouse gas emissions.',
+  ssp126: 'SSP126 represents a lower-emissions pathway with low greenhouse gas emissions.',
+  ssp245: 'SSP245 represents a medium-emissions pathway with moderate greenhouse gas emissions.',
+  ssp585: 'SSP585 represents a higher-emissions pathway with continued high greenhouse gas emissions.',
 };
 
 const scenarioShort = {
@@ -569,7 +569,13 @@ function updateMap() {
 }
 
 function updateColorScale() {
-  const rows = [...stateRows, ...countyRows];
+  let rows;
+
+  if (selectedState) {
+    rows = countyRows.filter(d => d.state === selectedState);
+  } else {
+    rows = stateRows;
+  }
 
   const values = rows
     .map(d => d.temp_change_from_2025_c)
@@ -606,7 +612,7 @@ function updateLegend() {
   const steps = d3.range(0, 1.01, 0.05).map(t => colorScale(-currentColorLimit + t * currentColorLimit * 2));
   const leftLabel = `≤ ${fmtChange(-currentColorLimit)}`;
   const rightLabel = `≥ ${fmtChange(currentColorLimit)}`;
-  const endpointNote = 'Color endpoints show the displayed range; values beyond the endpoints use the endpoint color.';
+  const endpointNote = 'Scale is centered at 0°C. State view shares one scale across all years and pathways; county view shares one scale across all years and pathways within the selected state. Values beyond endpoints are clipped.';
 
   d3.select('#legend').html(`
     <span class="legend-title">Projected change since 2025</span>
@@ -615,7 +621,7 @@ function updateLegend() {
       <div class="legend-gradient" style="background: linear-gradient(to right, ${steps.join(',')});"></div>
       <span>${rightLabel}</span>
     </div>
-    <div class="legend-note">Average temperature by year</div>
+    <div class="legend-note">Change from 2025 baseline</div>
     <div class="legend-note endpoint-note">${endpointNote}</div>
   `);
 }
