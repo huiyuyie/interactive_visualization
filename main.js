@@ -12,15 +12,15 @@ const CONUS_EXCLUDE = new Set([
 ]);
 
 const scenarioLabels = {
-  ssp126: 'SSP126 · lower emissions',
+  ssp126: 'SSP126 · low emissions',
   ssp245: 'SSP245 · medium emissions',
-  ssp585: 'SSP585 · higher emissions',
+  ssp585: 'SSP585 · high emissions',
 };
 
 const scenarioExplain = {
-  ssp126: 'SSP126 represents a lower-emissions pathway with stronger climate mitigation.',
-  ssp245: 'SSP245 represents a medium-emissions pathway between lower and higher futures.',
-  ssp585: 'SSP585 represents a higher-emissions pathway with continued strong greenhouse gas emissions.',
+  ssp126: 'SSP126 represents a low-emissions pathway with stronger climate mitigation.',
+  ssp245: 'SSP245 represents a medium-emissions pathway between low and high futures.',
+  ssp585: 'SSP585 represents a high-emissions pathway with continued strong greenhouse gas emissions.',
 };
 
 const scenarioShort = {
@@ -60,12 +60,12 @@ const compareChoice = d3.select('#story-compare-choice');
 
 let width = 960;
 let height = 640;
-let currentScenario = 'ssp585';
-let followedScenario = 'ssp585';
+let currentScenario = null;
+let followedScenario = null;
 let currentYear = 2035;
 let selectedState = null;
 let storyStep = 0;
-let userPickedScenario = true;
+let userPickedScenario = false;
 let animationTimer = null;
 let loaded = false;
 let comparisonIndex = 0;
@@ -91,8 +91,9 @@ let stateFeatureByName = new Map();
 const fmtTemp = d => Number.isFinite(d) ? `${d.toFixed(1)}°C` : '—';
 const fmtChange = d => Number.isFinite(d) ? `${d >= 0 ? '+' : ''}${d.toFixed(2)}°C` : '—';
 
-let colorScale = d3.scaleDiverging([-1, 0, 1], t => divergingColor(t));
-let currentColorLimit = 1;
+const FIXED_COLOR_LIMIT = 3.5;
+let currentColorLimit = FIXED_COLOR_LIMIT;
+let colorScale = d3.scaleDiverging([-FIXED_COLOR_LIMIT, 0, FIXED_COLOR_LIMIT], t => divergingColor(t));
 
 Promise.all([
   d3.json(FILES.statesGeo),
@@ -197,6 +198,7 @@ function setupMap() {
     });
 
   scenarioSelect.on('change', event => {
+    if (!event.target.value) return;
     currentScenario = event.target.value;
     setScenarioChoiceActive(currentScenario);
     updateMap();
@@ -295,7 +297,8 @@ function updateStoryStep(nextStep) {
 
   if (!loaded) return;
 
-  setDataMapVisible(storyStep >= 4);
+  const shouldShowDataMap = storyStep >= 4 && Boolean(currentScenario);
+  setDataMapVisible(shouldShowDataMap);
 
   if (storyStep === 0) {
     setStoryMode('full');
@@ -309,27 +312,37 @@ function updateStoryStep(nextStep) {
     setStoryMode('full');
     stepLabel.text('Step 1');
     storyTitle.text('2025 just passed...');
-    storyText.text('...and I experienced a colder winter. What could temperature change look like this year, and within a decade?');
+    storyText.text('Before looking far into the future, let’s start with the near term: what could temperature change look like this year, and how might it shift within the next decade?');
     setYear(2026);
     resetZoom({ quiet: true });
   } else if (storyStep === 2) {
     setStoryMode('full');
     stepLabel.text('Step 2');
     storyTitle.text('We start from a real baseline.');
-    storyText.text('The map uses observed 2025 temperature as the local starting point, then applies CMIP6 projected change from that baseline. The color shows change since 2025, not raw temperature.');
+    storyText.text('The map uses observed 2025 temperature as the starting point. Using a delta-change method, we calculate how much each model changes from its own 2025 prediction, then apply that change to the observed 2025 baseline. Color represents change since 2025, not raw temperature.');
     setYear(2026);
     resetZoom({ quiet: true });
   } else if (storyStep === 3) {
     setStoryMode('full');
     stepLabel.text('Step 3');
     storyTitle.text('How should we expect emissions in the near future?');
-    storyText.text('Choose one pathway to follow through the story. The main story follows your chosen pathway; later, you can explore other pathways yourself.');
+    storyText.text('Choose one pathway to follow through the story. SSP126, SSP245, and SSP585 represent low, medium, and high emissions futures, with 2.6, 4.5, and 8.5 W/m² radiative forcing by 2100. The main story follows your chosen pathway; later, you can explore other pathways yourself.');
     scenarioChoice.classed('hidden', false);
-    userPickedScenario = true;
-    followedScenario = currentScenario;
-    setScenarioChoiceActive(currentScenario);
-    continueButton.text('Continue');
+    userPickedScenario = false;
+    currentScenario = null;
+    followedScenario = null;
+    setDataMapVisible(false);
+    hideTooltip();
+    scenarioSelect.property('value', '');
+    setScenarioChoiceActive(null);
+    continueButton.text('Choose a pathway').property('disabled', true);
   } else if (storyStep === 4) {
+    if (!currentScenario) {
+      setDataMapVisible(false);
+      updateStoryStep(3);
+      return;
+    }
+    setDataMapVisible(true);
     setStoryMode('side');
     stepLabel.text('Step 4');
     storyTitle.text('First, watch the decade unfold.');
@@ -409,7 +422,7 @@ function updateStoryStep(nextStep) {
   } else {
     // When the reader enters explore mode, return to the pathway they originally chose,
     // not the temporary pathway used during the comparison steps.
-    currentScenario = followedScenario;
+    currentScenario = followedScenario || currentScenario || 'ssp245';
     scenarioSelect.property('value', currentScenario);
     setScenarioChoiceActive(currentScenario);
 
@@ -528,7 +541,7 @@ function zoomToNamedState(name, options = {}) {
 }
 
 function updateMap() {
-  if (!showDataMap) {
+  if (!showDataMap || !currentScenario) {
     statesLayer.selectAll('path')
       .attr('fill', '#e8dfd4')
       .classed('outside-state', false);
@@ -550,15 +563,7 @@ function updateMap() {
 }
 
 function updateColorScale() {
-  let rows;
-  if (selectedState) {
-    rows = countyRows.filter(d => d.state === selectedState && d.year === currentYear && d.scenario === currentScenario);
-  } else {
-    rows = stateRows.filter(d => d.year === currentYear && d.scenario === currentScenario);
-  }
-  const values = rows.map(d => d.temp_change_from_2025_c).filter(Number.isFinite).map(Math.abs).sort(d3.ascending);
-  const p90 = d3.quantile(values, 0.90);
-  currentColorLimit = Math.max(0.18, p90 || d3.max(values) || 1);
+  currentColorLimit = FIXED_COLOR_LIMIT;
   colorScale = d3.scaleDiverging([-currentColorLimit, 0, currentColorLimit], t => divergingColor(t));
 }
 
@@ -573,7 +578,7 @@ function colorFor(row) {
 }
 
 function updateLegend() {
-  if (!showDataMap) {
+  if (!showDataMap || !currentScenario) {
     d3.select('#legend').html('');
     return;
   }
