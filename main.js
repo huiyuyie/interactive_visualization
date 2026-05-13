@@ -589,7 +589,11 @@ function updateColorScale() {
 }
 
 function divergingColor(t) {
-  return d3.interpolateRgbBasis(['#225ea8', '#f7f2e8', '#b2182b'])(t);
+  if (t < 0.5) {
+    return d3.interpolateRgb('#2166ac', '#ffffff')(t * 2);
+  } else {
+    return d3.interpolateRgb('#ffffff', '#b2182b')((t - 0.5) * 2);
+  }
 }
 
 function colorFor(row) {
