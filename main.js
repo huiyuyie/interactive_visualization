@@ -82,6 +82,8 @@ const g = svg.append('g');
 const statesLayer = g.append('g').attr('class', 'states-layer');
 const countiesLayer = g.append('g').attr('class', 'counties-layer');
 const outlineLayer = g.append('g').attr('class', 'outline-layer');
+const storyHighlightLayer = g.append('g').attr('class', 'story-highlight-layer');
+const hoverOutlineLayer = g.append('g').attr('class', 'hover-outline-layer');
 
 let statesGeo, countiesGeo, stateRows, countyRows;
 let stateByKey = new Map();
@@ -173,9 +175,15 @@ function setupMap() {
     .join('path')
     .attr('class', 'state')
     .attr('d', path)
-    .on('mouseenter', handleStateMouseEnter)
+    .on('mouseenter', (event, d) => {
+      showHoverOutline(d);
+      handleStateMouseEnter(event, d);
+    })
     .on('mousemove', moveTooltip)
-    .on('mouseleave', hideTooltip)
+    .on('mouseleave', () => {
+      clearHoverOutline();
+      hideTooltip();
+    })
     .on('click', (event, d) => {
       if (isStoryActive() || animationTimer) return;
       const stateName = getStateName(d);
@@ -188,9 +196,15 @@ function setupMap() {
     .join('path')
     .attr('class', 'county hidden-county')
     .attr('d', path)
-    .on('mouseenter', handleCountyMouseEnter)
+    .on('mouseenter', (event, d) => {
+      showHoverOutline(d);
+      handleCountyMouseEnter(event, d);
+    })
     .on('mousemove', moveTooltip)
-    .on('mouseleave', hideTooltip)
+    .on('mouseleave', () => {
+      clearHoverOutline();
+      hideTooltip();
+    })
     .on('click', event => {
       event.stopPropagation();
       if (isStoryActive() || animationTimer) return;
@@ -258,6 +272,8 @@ function resizeSvg() {
   statesLayer.selectAll('path').attr('d', path);
   countiesLayer.selectAll('path').attr('d', path);
   outlineLayer.selectAll('path').attr('d', path);
+  storyHighlightLayer.selectAll('path').attr('d', path);
+  hoverOutlineLayer.selectAll('path').attr('d', path);
 }
 
 function setControlsEnabled(enabled) {
@@ -267,7 +283,7 @@ function setControlsEnabled(enabled) {
 
 function setScenarioChoiceActive(scenario) {
   scenarioChoice.selectAll('button').classed('active', function () {
-    return this.dataset.scenario === scenario;
+    return scenario && this.dataset.scenario === scenario;
   });
 }
 
@@ -325,10 +341,13 @@ function updateStoryStep(nextStep) {
     storyTitle.text('How should we expect emissions in the near future?');
     storyText.text('Choose one pathway to follow through the story. The main story follows your chosen pathway; later, you can explore other pathways yourself.');
     scenarioChoice.classed('hidden', false);
-    userPickedScenario = true;
-    followedScenario = currentScenario;
-    setScenarioChoiceActive(currentScenario);
-    continueButton.text('Continue');
+
+    userPickedScenario = false;
+    followedScenario = null;
+    currentScenario = null;
+
+    setScenarioChoiceActive(null);
+    continueButton.text('Continue').property('disabled', true);
   } else if (storyStep === 4) {
     setStoryMode('side');
     stepLabel.text('Step 4');
@@ -550,16 +569,22 @@ function updateMap() {
 }
 
 function updateColorScale() {
-  let rows;
-  if (selectedState) {
-    rows = countyRows.filter(d => d.state === selectedState && d.year === currentYear && d.scenario === currentScenario);
-  } else {
-    rows = stateRows.filter(d => d.year === currentYear && d.scenario === currentScenario);
-  }
-  const values = rows.map(d => d.temp_change_from_2025_c).filter(Number.isFinite).map(Math.abs).sort(d3.ascending);
+  const rows = [...stateRows, ...countyRows];
+
+  const values = rows
+    .map(d => d.temp_change_from_2025_c)
+    .filter(Number.isFinite)
+    .map(Math.abs)
+    .sort(d3.ascending);
+
   const p90 = d3.quantile(values, 0.90);
+
   currentColorLimit = Math.max(0.18, p90 || d3.max(values) || 1);
-  colorScale = d3.scaleDiverging([-currentColorLimit, 0, currentColorLimit], t => divergingColor(t));
+
+  colorScale = d3.scaleDiverging(
+    [-currentColorLimit, 0, currentColorLimit],
+    t => divergingColor(t)
+  );
 }
 
 function divergingColor(t) {
@@ -630,7 +655,6 @@ function zoomToState(feature, opts = {}) {
     .attr('transform', `translate(${translate[0]},${translate[1]}) scale(${scale})`)
     .on('end', () => {
       updateMap();
-      if (opts.highlight) highlightState(selectedState);
     });
 
   outlineLayer.selectAll('path')
@@ -646,6 +670,7 @@ function zoomToState(feature, opts = {}) {
 function resetZoom(options = {}) {
   selectedState = null;
   clearHighlights();
+  clearHoverOutline();
   g.transition().duration(options.quiet ? 0 : 650).attr('transform', null);
   outlineLayer.selectAll('*').remove();
   resetButton.classed('hidden', true);
@@ -659,15 +684,29 @@ function highlightState(stateName) {
 
 function highlightStates(stateNames, blink = false) {
   clearHighlights();
+
   const targetSet = new Set(stateNames.map(normalizeStateName));
-  statesLayer.selectAll('path')
-    .classed('story-highlight', d => targetSet.has(normalizeStateName(getStateName(d))))
-    .classed('blinking-highlight', d => blink && targetSet.has(normalizeStateName(getStateName(d))));
+  const features = statesGeo.features.filter(d =>
+    targetSet.has(normalizeStateName(getStateName(d)))
+  );
+
+  storyHighlightLayer.selectAll('path')
+    .data(features, d => getStateName(d))
+    .join('path')
+    .attr('class', blink ? 'story-highlight blinking-highlight' : 'story-highlight')
+    .attr('d', path);
 }
 
 function clearHighlights() {
-  statesLayer.selectAll('path').classed('story-highlight', false).classed('blinking-highlight', false);
-  countiesLayer.selectAll('path').classed('story-highlight', false).classed('blinking-highlight', false);
+  statesLayer.selectAll('path')
+    .classed('story-highlight', false)
+    .classed('blinking-highlight', false);
+
+  countiesLayer.selectAll('path')
+    .classed('story-highlight', false)
+    .classed('blinking-highlight', false);
+
+  storyHighlightLayer.selectAll('*').remove();
 }
 
 function handleStateMouseEnter(event, feature) {
@@ -703,6 +742,18 @@ function moveTooltip(event) {
   tooltip.style('left', `${event.clientX + 14}px`).style('top', `${event.clientY + 14}px`);
 }
 function hideTooltip() { tooltip.style('opacity', 0); }
+
+function showHoverOutline(feature) {
+  hoverOutlineLayer.selectAll('path')
+    .data([feature])
+    .join('path')
+    .attr('class', 'hover-outline')
+    .attr('d', path);
+}
+
+function clearHoverOutline() {
+  hoverOutlineLayer.selectAll('*').remove();
+}
 
 function getStateComparisonRows(feature) {
   const state = getStateName(feature);

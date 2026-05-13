@@ -193,36 +193,29 @@ input[type="range"]::-moz-range-thumb {
 
 .state,
 .county {
-  stroke: #000;
-  stroke-width: 0.65;
+  stroke: rgba(0, 0, 0, 0.55);
+  stroke-width: 0.65px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
   vector-effect: non-scaling-stroke;
   cursor: pointer;
-  transition: opacity 0.18s ease, stroke-width 0.18s ease;
-}
-
-.state:hover,
-.county:hover {
-  stroke: var(--orange) !important;
-  stroke-width: 2 !important;
+  transition: opacity 0.18s ease;
 }
 
 .county.hidden-county { display: none; }
 .outside-state { opacity: 0.08; pointer-events: none; }
 
-.selected-outline {
+.selected-outline,
+.hover-outline,
+.story-highlight {
   fill: none;
-  stroke: #000;
-  stroke-width: 1.2px;
+  stroke: var(--orange) !important;
+  stroke-width: 3.2px !important;
   stroke-linejoin: round;
   stroke-linecap: round;
   vector-effect: non-scaling-stroke;
   pointer-events: none;
-}
-
-.story-highlight {
-  stroke: var(--orange) !important;
-  stroke-width: 3 !important;
-  filter: drop-shadow(0 0 8px rgba(255, 138, 31, 0.82));
+  filter: none;
 }
 
 .story-overlay {
@@ -408,9 +401,14 @@ input[type="range"]::-moz-range-thumb {
 .blinking-highlight {
   animation: pulseOutline 0.9s ease-in-out infinite alternate;
 }
+
 @keyframes pulseOutline {
-  from { stroke-width: 2.4px; filter: drop-shadow(0 0 4px rgba(255, 138, 31, 0.45)); }
-  to { stroke-width: 5px; filter: drop-shadow(0 0 13px rgba(255, 138, 31, 0.95)); }
+  from {
+    stroke-opacity: 0.45;
+  }
+  to {
+    stroke-opacity: 1;
+  }
 }
 
 body.story-full-active .page-title { opacity: 0; pointer-events: none; }
