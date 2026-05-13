@@ -520,7 +520,7 @@ function loopYearsNationalOnly() {
     if (y >= 2035) {
       stopYearLoop();
       setYear(2035);
-      if (storyStep === 4) {
+      if (storyStep === 5) {
         continueButton.text('Continue').property('disabled', false);
       }
     }
