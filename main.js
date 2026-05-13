@@ -29,6 +29,21 @@ const scenarioShort = {
   ssp585: 'High',
 };
 
+const scenarioTakeaways = {
+  ssp126: {
+    title: 'Low emissions show gradual central U.S. change.',
+    text: 'By 2035, projected change remains relatively gradual across the central U.S.'
+  },
+  ssp245: {
+    title: 'Medium emissions create a more uneven central U.S.',
+    text: 'By 2035, projected change becomes more mixed across the central U.S.'
+  },
+  ssp585: {
+    title: 'High emissions make increases stronger and more spread out.',
+    text: 'By 2035, projected increases become stronger and more spread out across the central U.S.'
+  }
+};
+
 const storyTargets = {
   ssp126: {
     2035: { increase: 'North Dakota', decrease: 'Tennessee' },
@@ -55,6 +70,8 @@ const storyCard = d3.select('#story-card');
 const storyTitle = d3.select('#story-title');
 const storyText = d3.select('#story-text');
 const stepLabel = d3.select('#step-label');
+const pageTitle = d3.select('.page-title h1');
+const pageSubtitle = d3.select('.page-title p');
 const scenarioChoice = d3.select('#story-scenario-choice');
 const compareChoice = d3.select('#story-compare-choice');
 
@@ -279,6 +296,11 @@ function setStoryMode(mode) {
   d3.select('body').classed('story-full-active', false);
 }
 
+function setPageHeader(title, subtitle = 'Choose an emission pathway and year to compare projected change from the 2025 observed baseline.') {
+  pageTitle.html(title);
+  pageSubtitle.text(subtitle);
+}
+
 function setDataMapVisible(visible) {
   showDataMap = visible;
   if (loaded) {
@@ -303,12 +325,13 @@ function updateStoryStep(nextStep) {
   if (storyStep === 0) {
     setStoryMode('side');
     setControlsEnabled(false);
+    setPageHeader('<span class="accent-word">Emission</span> Level and Projected Temperature Change in the U.S. (2026–2035)');
+
     stepLabel.text('Before the story');
     storyTitle.html('Today’s Emissions Shape Tomorrow’s Temperature Change');
     storyText.text('A decade-scale look at projected U.S. temperature change from a 2025 observed baseline.');
     setYear(2035);
     resetZoom({ quiet: true });
-
   } else if (storyStep === 1) {
     setStoryMode('side');
     stepLabel.text('Step 1');
@@ -428,26 +451,57 @@ function updateStoryStep(nextStep) {
 
   } else if (storyStep === 14) {
     setStoryMode('side');
-    stepLabel.text('Finding');
-    storyTitle.text('Emission pathways reshape regional temperature change over time.');
-    storyText.text('Beyond the highlighted states, the map shows a broader regional shift: from 2026 to 2035, different emission pathways change where warming and cooling appear across the U.S.');
-    setYear(2035);
-    resetZoom({ quiet: true });
 
-  } else if (storyStep === 15) {
-    setStoryMode('side');
-    stepLabel.text('Explore');
-    storyTitle.text('Now explore your county and interested year.');
-    storyText.text('Use the controls to choose a year and emission pathway. Click a state to zoom into counties, then hover for local Low, Medium, and High emission comparisons.');
-    continueButton.text('Let me explore');
-    setControlsEnabled(false);
+    const selectedScenario = followedScenario || currentScenario || 'ssp245';
+    const takeaway = scenarioTakeaways[selectedScenario];
 
-  } else {
-    currentScenario = followedScenario || currentScenario || 'ssp245';
+    currentScenario = selectedScenario;
     scenarioSelect.property('value', currentScenario);
     setScenarioChoiceActive(currentScenario);
 
-    storyCard.classed('hidden', true);
+    setPageHeader(takeaway.title, takeaway.text);
+
+    stepLabel.text('Finding');
+    storyTitle.text(takeaway.title);
+    storyText.text(takeaway.text);
+
+    setYear(2035);
+    resetZoom({ quiet: true });
+  } else if (storyStep === 15) {
+    setStoryMode('side');
+
+    const selectedScenario = followedScenario || currentScenario || 'ssp245';
+    const takeaway = scenarioTakeaways[selectedScenario];
+
+    currentScenario = selectedScenario;
+    scenarioSelect.property('value', currentScenario);
+    setScenarioChoiceActive(currentScenario);
+
+    setPageHeader(takeaway.title, takeaway.text);
+
+    stepLabel.text('Explore');
+    storyTitle.text(takeaway.title);
+    storyText.text(takeaway.text);
+
+    continueButton.text('Let me explore');
+    setControlsEnabled(false);
+  } else {
+    currentScenario = followedScenario || currentScenario || 'ssp245';
+    const takeaway = scenarioTakeaways[currentScenario];
+
+    scenarioSelect.property('value', currentScenario);
+    setScenarioChoiceActive(currentScenario);
+
+    setPageHeader(takeaway.title, takeaway.text);
+
+    storyCard.classed('hidden', false);
+    setStoryMode('side');
+
+    stepLabel.text('Takeaway');
+    storyTitle.text(takeaway.title);
+    storyText.text(takeaway.text);
+    continueButton.classed('hidden', true);
+
     d3.select('body').classed('story-full-active', false);
     setControlsEnabled(true);
     resetZoom({ quiet: true });
