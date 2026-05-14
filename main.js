@@ -349,7 +349,7 @@ function updateStoryStep(nextStep) {
 
     stepLabel.text('Step 1');
     storyTitle.text('Emissions are already high today.');
-    storyText.text('2025 emissions are already at 38.1 GtCO₂. The question is no longer only how much we emit, but where those emissions may reshape temperature change next.');
+    storyText.text('2025 emissions are already at 38.1 GtCO₂ (gigatonne of carbon dioxide). The question is no longer only how much we emit, but where those emissions may reshape temperature change next.');
     setYear(2026);
     resetZoom({ quiet: true });
 
@@ -357,10 +357,15 @@ function updateStoryStep(nextStep) {
     setStoryMode('side');
 
     stepLabel.text('Step 2');
-    storyTitle.text('And every fraction of warming matters.');
-    storyText.text('Even small increases in average temperature can make extremes and risks larger. IPCC notes that each additional 0.1°C of global warming can increase the intensity and frequency of temperature and precipitation extremes, as well as drought risks in some regions.');
-    setYear(2026);
-    resetZoom({ quiet: true });
+    storyTitle.html('Even <span class="title-highlight">0.1°C</span> can matter.');
+    storyText.html(`
+      <span class="fact-emphasis">Small increases can make risks larger.</span>
+      <br><br>
+      IPCC notes that each additional <strong>0.1°C of global warming</strong> can increase the intensity and frequency of temperature extremes, precipitation extremes, and drought risks in some regions.
+    `);
+
+  setYear(2026);
+  resetZoom({ quiet: true });
 
   } else if (storyStep === 3) {
     setStoryMode('side');
@@ -405,7 +410,7 @@ function updateStoryStep(nextStep) {
     storyTitle.text('First, start with 2026.');
     setYear(2026);
     zoomToNamedState(target, { highlight: true });
-    storyText.text(`The map begins with the first projected year. Under ${emissionLabels[currentScenario]}, ${target} has the largest projected warming in 2026, giving us a starting point before the decade unfolds.`);
+    storyText.text(`Under ${emissionLabels[currentScenario]}, ${target} has the largest projected warming in 2026, giving us a starting point before the decade unfolds.`);
 
   } else if (storyStep === 6) {
     setDataMapVisible(true);

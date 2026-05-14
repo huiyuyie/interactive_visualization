@@ -387,6 +387,27 @@ input[type="range"]::-moz-range-thumb {
   margin-bottom: 18px;
 }
 
+.title-highlight {
+  color: var(--accent);
+  font-weight: 950;
+}
+
+.fact-emphasis {
+  display: block;
+  padding: 10px 12px;
+  border-left: 4px solid var(--accent);
+  background: rgba(217, 107, 43, 0.10);
+  color: var(--ink);
+  font-weight: 900;
+  line-height: 1.25;
+  border-radius: 10px;
+}
+
+.story-panel strong {
+  color: var(--ink);
+  font-weight: 900;
+}
+
 .primary-button {
   padding: 12px 18px;
   background: var(--accent);
