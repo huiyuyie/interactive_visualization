@@ -37,8 +37,8 @@ const scenarioShort = {
 
 const scenarioTakeaways = {
   ssp126: {
-    title: 'Low emissions: gradual central U.S. change.',
-    text: 'By 2035, projected change remains relatively gradual across the central U.S.'
+    title: 'Low emissions: gradually warming across central U.S.',
+    text: 'By 2035, projected warming remains relatively gradual across the central U.S.'
   },
   ssp245: {
   title: 'Medium emissions: warming fluctuates more across the central U.S.',
