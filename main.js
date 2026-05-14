@@ -505,7 +505,7 @@ function updateStoryStep(nextStep) {
 
     stepLabel.text('Finding');
     storyTitle.text(takeaway.title);
-    storyText.text(`Click a state to zoom into counties, then hover to compare Low, Medium, and High emissions locally. ${takeaway.text}`);
+    storyText.html(`Click a state to zoom into counties, then hover to compare Low, Medium, and High emissions locally.<br><br>${takeaway.text}`);
     continueButton.classed('hidden', true);
 
     d3.select('body').classed('story-full-active', false);
