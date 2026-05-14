@@ -37,15 +37,15 @@ const scenarioShort = {
 
 const scenarioTakeaways = {
   ssp126: {
-    title: 'Low emissions show gradual central U.S. change.',
+    title: 'Finding under Low emissions: gradual central U.S. change.',
     text: 'By 2035, projected change remains relatively gradual across the central U.S.'
   },
   ssp245: {
-    title: 'Medium emissions show mixed central U.S. change.',
+    title: 'Finding under Medium emissions: mixed central U.S. change.',
     text: 'By 2035, projected change becomes more mixed across the central U.S.'
   },
   ssp585: {
-    title: 'High emissions make increases stronger and more spread out.',
+    title: 'Finding under High emissions: stronger and more spread-out increases.',
     text: 'By 2035, projected increases become stronger and more spread out across the central U.S.'
   }
 };
@@ -91,11 +91,12 @@ let storyStep = 0;
 let userPickedScenario = false;
 let animationTimer = null;
 let loaded = false;
-let comparisonIndex = 0;
 let showDataMap = false;
 
 function isStoryActive() {
-  return !storyCard.classed('hidden');
+  // During final free exploration, storyStep is past 12. The takeaway card stays visible,
+  // but the map should still be clickable.
+  return !storyCard.classed('hidden') && storyStep <= 12;
 }
 
 const projection = d3.geoAlbersUsa();
@@ -165,6 +166,7 @@ function normalizeRows(rows, level) {
       d.state = row.state || row.state_name || row.NAME || row.name || '';
       d.state_abbr = row.state_abbr || row.STUSPS || '';
     }
+
     return d;
   });
 }
@@ -203,26 +205,18 @@ function setupMap() {
     .on('mouseleave', hideTooltip)
     .on('click', (event, d) => {
       if (isStoryActive() || animationTimer) return;
+
       const stateName = getStateName(d);
       if (selectedState === stateName) resetZoom();
       else zoomToState(d, { updateStory: false });
     });
 
-  countiesLayer.selectAll('path')
-    .data(countiesGeo.features)
-    .join('path')
-    .attr('class', 'county hidden-county')
-    .attr('d', path)
-    .on('mouseenter', handleCountyMouseEnter)
-    .on('mousemove', moveTooltip)
-    .on('mouseleave', hideTooltip)
-    .on('click', event => {
-      event.stopPropagation();
-      if (isStoryActive() || animationTimer) return;
-    });
+  // Counties are rendered lazily only after a state is selected.
+  // This keeps the initial map and story animation much faster.
 
   scenarioSelect.on('change', event => {
     if (!event.target.value) return;
+
     currentScenario = event.target.value;
     setScenarioChoiceActive(currentScenario);
     updateMap();
@@ -252,22 +246,28 @@ function setupMap() {
     currentScenario = event.currentTarget.dataset.scenario;
     followedScenario = currentScenario;
     userPickedScenario = true;
+
     scenarioSelect.property('value', currentScenario);
     setScenarioChoiceActive(currentScenario);
     updateMap();
     updateLegend();
+
     continueButton.text('Continue').property('disabled', false);
   });
 
-  compareChoice.selectAll('button').on('click', event => {
-    const action = event.currentTarget.dataset.action;
+  compareChoice.selectAll('button')
+    .text(function () {
+      return this.dataset.action === 'back' ? 'Choose a new pathway' : 'Continue to finding';
+    })
+    .on('click', event => {
+      const action = event.currentTarget.dataset.action;
 
-    if (action === 'back') {
-      updateStoryStep(4);
-    } else {
-      updateStoryStep(11);
-    }
-  });
+      if (action === 'back') {
+        updateStoryStep(4);
+      } else {
+        updateStoryStep(11);
+      }
+    });
 }
 
 function resizeSvg() {
@@ -346,22 +346,25 @@ function updateStoryStep(nextStep) {
 
   } else if (storyStep === 1) {
     setStoryMode('side');
+
     stepLabel.text('Step 1');
-    storyTitle.text('Today’s emissions are already high.');
+    storyTitle.text('Emissions are already high today.');
     storyText.text('2025 emissions are already at 38.1 GtCO₂. The question is no longer only how much we emit, but where those emissions may reshape temperature change next.');
     setYear(2026);
     resetZoom({ quiet: true });
 
   } else if (storyStep === 2) {
     setStoryMode('side');
+
     stepLabel.text('Step 2');
-    storyTitle.text('Every fraction of warming matters.');
+    storyTitle.text('And every fraction of warming matters.');
     storyText.text('Even small increases in average temperature can make extremes and risks larger. IPCC notes that each additional 0.1°C of global warming can increase the intensity and frequency of temperature and precipitation extremes, as well as drought risks in some regions.');
     setYear(2026);
     resetZoom({ quiet: true });
 
   } else if (storyStep === 3) {
     setStoryMode('side');
+
     stepLabel.text('Step 3');
     storyTitle.text('So we measure change from a real baseline.');
     storyText.text('The map uses observed 2025 temperature as the starting point. Using a delta-change method, we calculate how much each model changes from its own 2025 prediction, then apply that change to the observed 2025 baseline. Color represents change since 2025, not raw temperature.');
@@ -370,6 +373,7 @@ function updateStoryStep(nextStep) {
 
   } else if (storyStep === 4) {
     setStoryMode('side');
+
     stepLabel.text('Step 4');
     storyTitle.text('Now choose an emissions future to see how warming may unfold.');
     storyText.text('Choose one pathway to follow through the story. In this visualization, Low, Medium, and High emissions correspond to SSP126, SSP245, and SSP585, with 2.6, 4.5, and 8.5 W/m² radiative forcing by 2100. Later, you can compare the other pathways.');
@@ -378,6 +382,7 @@ function updateStoryStep(nextStep) {
     userPickedScenario = false;
     currentScenario = null;
     followedScenario = null;
+
     setDataMapVisible(false);
     hideTooltip();
     scenarioSelect.property('value', '');
@@ -425,10 +430,11 @@ function updateStoryStep(nextStep) {
     zoomToNamedState(endTarget, { highlight: true });
 
     storyText.text(
-      changedTarget
-        ? `After the decade unfolds, the map moves to the 2035 standout state. Under ${emissionLabels[currentScenario]}, ${endTarget} becomes the largest projected warming example, shifting from ${startTarget} in 2026.`
-        : `After the decade unfolds, the map moves to the 2035 standout state. Under ${emissionLabels[currentScenario]}, ${endTarget} remains the largest projected warming example from 2026 to 2035.`
-    );
+    changedTarget
+      ? `Under ${emissionLabels[currentScenario]}, ${endTarget} becomes the largest projected warming example, shifting from ${startTarget} in 2026.`
+      : `Under ${emissionLabels[currentScenario]}, ${endTarget} remains the largest projected warming example from 2026 to 2035.`
+  );
+
   } else if (storyStep === 8) {
     setStoryMode('side');
 
@@ -440,15 +446,6 @@ function updateStoryStep(nextStep) {
     resetZoom({ quiet: true });
     compareChoice.classed('hidden', false);
     continueButton.classed('hidden', true);
-  } else if (storyStep === 9) {
-    setStoryMode('side');
-    comparisonIndex = 0;
-    showOtherEmissionFinding(getOtherScenarios()[comparisonIndex], 2026, 'Step 9');
-
-  } else if (storyStep === 10) {
-    setStoryMode('side');
-    comparisonIndex = 0;
-    showOtherEmissionFinding(getOtherScenarios()[comparisonIndex], 2035, 'Step 10');
 
   } else if (storyStep === 11) {
     setStoryMode('side');
@@ -481,9 +478,9 @@ function updateStoryStep(nextStep) {
 
     setPageHeader(takeaway.title, takeaway.text);
 
-    stepLabel.text('Explore');
+    stepLabel.text('Finding');
     storyTitle.text(takeaway.title);
-    storyText.text('Use the controls to change year or pathway. Click a state to zoom into counties, then hover to compare Low, Medium, and High emissions locally.');
+    storyText.text(`${takeaway.text} Use the controls to change year or pathway. Click a state to zoom into counties, then hover to compare Low, Medium, and High emissions locally.`);
 
     continueButton.text('Let me explore');
     setControlsEnabled(false);
@@ -500,7 +497,7 @@ function updateStoryStep(nextStep) {
     storyCard.classed('hidden', false);
     setStoryMode('side');
 
-    stepLabel.text('Takeaway');
+    stepLabel.text('Finding');
     storyTitle.text(takeaway.title);
     storyText.text(takeaway.text);
     continueButton.classed('hidden', true);
@@ -512,51 +509,6 @@ function updateStoryStep(nextStep) {
     updateMap();
     updateLegend();
   }
-}
-
-function getOtherScenarios() {
-  return ['ssp126', 'ssp245', 'ssp585'].filter(scenario => scenario !== followedScenario);
-}
-
-function handleComparisonContinue() {
-  const otherScenarios = getOtherScenarios();
-
-  if (comparisonIndex === 0) {
-    comparisonIndex = 1;
-    const year = storyStep === 9 ? 2026 : 2035;
-    showOtherEmissionFinding(otherScenarios[comparisonIndex], year, `Step ${storyStep}`);
-
-  } else if (storyStep === 9) {
-    comparisonIndex = 0;
-    updateStoryStep(10);
-
-  } else {
-    comparisonIndex = 0;
-    updateStoryStep(11);
-  }
-}
-
-function showOtherEmissionFinding(scenario, year, stepLabelText) {
-  const increaseState = storyTargets[scenario][year].increase;
-  const label = scenarioReadableLabel(scenario);
-  const isFirstOther = comparisonIndex === 0;
-
-  currentScenario = scenario;
-  scenarioSelect.property('value', scenario);
-  setScenarioChoiceActive(scenario);
-  setYear(year);
-  resetZoom({ quiet: true });
-
-  d3.timeout(() => highlightStates([increaseState], true), 80);
-
-  stepLabel.text(stepLabelText);
-  storyTitle.text(`${year}: ${label}`);
-  storyText.text(`${label}: ${increaseState} has the largest projected warming. The blinking orange outline highlights this state. ${isFirstOther ? 'Click Continue to compare the second pathway you did not follow.' : (year === 2026 ? 'Click Continue to compare the same idea at the end of the decade.' : 'Click Continue to see the final finding.')}`);
-  continueButton.text(isFirstOther ? 'Next pathway' : (year === 2026 ? 'Next: 2035 comparison' : 'Continue to finding'));
-}
-
-function scenarioReadableLabel(scenario) {
-  return emissionLabels[scenario] || scenario;
 }
 
 function loopYearsNationalOnly() {
@@ -617,16 +569,41 @@ function zoomToNamedState(name, options = {}) {
   zoomToState(feature, { updateStory: false, highlight: options.highlight });
 }
 
+function renderSelectedStateCounties() {
+  if (!selectedState) {
+    countiesLayer.selectAll('path').remove();
+    return;
+  }
+
+  const selectedCounties = countiesGeo.features.filter(
+    d => getCountyStateName(d) === selectedState
+  );
+
+  countiesLayer.selectAll('path')
+    .data(selectedCounties, d => getCountyFips(d))
+    .join(
+      enter => enter.append('path')
+        .attr('class', 'county')
+        .attr('d', path)
+        .on('mouseenter', handleCountyMouseEnter)
+        .on('mousemove', moveTooltip)
+        .on('mouseleave', hideTooltip)
+        .on('click', event => {
+          event.stopPropagation();
+          if (isStoryActive() || animationTimer) return;
+        }),
+      update => update.attr('d', path),
+      exit => exit.remove()
+    );
+}
+
 function updateMap() {
   if (!showDataMap || !currentScenario) {
     statesLayer.selectAll('path')
       .attr('fill', '#e8dfd4')
       .classed('outside-state', false);
 
-    countiesLayer.selectAll('path')
-      .classed('hidden-county', true)
-      .attr('fill', '#e8dfd4');
-
+    countiesLayer.selectAll('path').remove();
     return;
   }
 
@@ -636,9 +613,12 @@ function updateMap() {
     .attr('fill', d => colorFor(getStateRow(d)))
     .classed('outside-state', d => selectedState && getStateName(d) !== selectedState);
 
-  countiesLayer.selectAll('path')
-    .classed('hidden-county', d => !selectedState || getCountyStateName(d) !== selectedState)
-    .attr('fill', d => colorFor(getCountyRow(d)));
+  renderSelectedStateCounties();
+
+  if (selectedState) {
+    countiesLayer.selectAll('path')
+      .attr('fill', d => colorFor(getCountyRow(d)));
+  }
 }
 
 function updateColorScale() {
@@ -727,6 +707,7 @@ function zoomToState(feature, opts = {}) {
     .duration(760)
     .attr('transform', `translate(${translate[0]},${translate[1]}) scale(${scale})`)
     .on('end', () => {
+      renderSelectedStateCounties();
       updateMap();
       if (opts.highlight) highlightState(selectedState);
     });
@@ -744,6 +725,8 @@ function zoomToState(feature, opts = {}) {
 function resetZoom(options = {}) {
   selectedState = null;
   clearHighlights();
+
+  countiesLayer.selectAll('path').remove();
 
   g.transition()
     .duration(options.quiet ? 0 : 650)
