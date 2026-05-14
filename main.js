@@ -41,7 +41,7 @@ const scenarioTakeaways = {
     text: 'By 2035, projected change remains relatively gradual across the central U.S.'
   },
   ssp245: {
-    title: 'Medium emissions create a more uneven central U.S.',
+    title: 'Medium emissions show mixed central U.S. change.',
     text: 'By 2035, projected change becomes more mixed across the central U.S.'
   },
   ssp585: {
@@ -245,11 +245,6 @@ function setupMap() {
     if (continueButton.property('disabled')) return;
     if (storyStep === 4 && !userPickedScenario) return;
 
-    if (storyStep === 9 || storyStep === 10) {
-      handleComparisonContinue();
-      return;
-    }
-
     updateStoryStep(storyStep + 1);
   });
 
@@ -266,11 +261,11 @@ function setupMap() {
 
   compareChoice.selectAll('button').on('click', event => {
     const action = event.currentTarget.dataset.action;
+
     if (action === 'back') {
       updateStoryStep(4);
     } else {
-      comparisonIndex = 0;
-      updateStoryStep(9);
+      updateStoryStep(11);
     }
   });
 }
@@ -420,26 +415,31 @@ function updateStoryStep(nextStep) {
   } else if (storyStep === 7) {
     setStoryMode('side');
 
-    const target = storyTargets[currentScenario][2035].increase;
+    const startTarget = storyTargets[currentScenario][2026].increase;
+    const endTarget = storyTargets[currentScenario][2035].increase;
+    const changedTarget = startTarget !== endTarget;
 
     stepLabel.text('Step 7');
     storyTitle.text('By 2035, where does warming stand out most?');
     setYear(2035);
-    zoomToNamedState(target, { highlight: true });
-    storyText.text(`${target} is the largest projected warming example in 2035 for ${emissionLabels[currentScenario]}. Comparing it with 2026 shows whether the strongest warming location stays the same or shifts over the decade.`);
+    zoomToNamedState(endTarget, { highlight: true });
 
+    storyText.text(
+      changedTarget
+        ? `After the decade unfolds, the map moves to the 2035 standout state. Under ${emissionLabels[currentScenario]}, ${endTarget} becomes the largest projected warming example, shifting from ${startTarget} in 2026.`
+        : `After the decade unfolds, the map moves to the 2035 standout state. Under ${emissionLabels[currentScenario]}, ${endTarget} remains the largest projected warming example from 2026 to 2035.`
+    );
   } else if (storyStep === 8) {
     setStoryMode('side');
 
-    stepLabel.text('Compare pathways');
-    storyTitle.text('Compare the other pathways?');
-    storyText.text('Go back to choose a different emission pathway, or continue to compare the 2026 and 2035 largest warming examples for the two pathways you did not follow.');
+    stepLabel.text('Step 8');
+    storyTitle.text('Follow another pathway or continue?');
+    storyText.text('Choose a new emissions future to replay the story, or continue to the finding from this pathway.');
 
-    setYear(2026);
+    setYear(2035);
     resetZoom({ quiet: true });
     compareChoice.classed('hidden', false);
     continueButton.classed('hidden', true);
-
   } else if (storyStep === 9) {
     setStoryMode('side');
     comparisonIndex = 0;
