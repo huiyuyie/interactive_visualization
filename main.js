@@ -96,7 +96,7 @@ let showDataMap = false;
 function isStoryActive() {
   // During final free exploration, storyStep is past 12. The takeaway card stays visible,
   // but the map should still be clickable.
-  return !storyCard.classed('hidden') && storyStep <= 12;
+  return !storyCard.classed('hidden') && storyStep < 12;
 }
 
 const projection = d3.geoAlbersUsa();
