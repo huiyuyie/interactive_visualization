@@ -368,6 +368,7 @@ function updateStoryStep(nextStep) {
 
     setYear(2026);
     resetZoom({ quiet: true });
+
   } else if (storyStep === 3) {
     setStoryMode('side');
 
@@ -436,9 +437,9 @@ function updateStoryStep(nextStep) {
     zoomToNamedState(endTarget, { highlight: true });
 
     storyText.text(
-    changedTarget
-      ? `Under ${emissionLabels[currentScenario]}, ${endTarget} becomes the largest projected warming example in 2035, shifting from ${startTarget} in 2026.`
-      : `Under ${emissionLabels[currentScenario]}, ${endTarget} is also the largest projected warming example in 2035, matching the 2026 standout state.`
+      changedTarget
+        ? `Under ${emissionLabels[currentScenario]}, ${endTarget} becomes the largest projected warming example in 2035, shifting from ${startTarget} in 2026.`
+        : `Under ${emissionLabels[currentScenario]}, ${endTarget} is also the largest projected warming example in 2035, matching the 2026 standout state.`
     );
 
   } else if (storyStep === 8) {
@@ -468,30 +469,12 @@ function updateStoryStep(nextStep) {
     stepLabel.text('Finding');
     storyTitle.text(takeaway.title);
     storyText.text(takeaway.text);
+    continueButton.text('Let me explore');
 
     setYear(2035);
     resetZoom({ quiet: true });
 
-    } else if (storyStep === 12) {
-    setStoryMode('side');
-
-    const selectedScenario = followedScenario || currentScenario || 'ssp245';
-    const takeaway = scenarioTakeaways[selectedScenario];
-
-    currentScenario = selectedScenario;
-    scenarioSelect.property('value', currentScenario);
-    setScenarioChoiceActive(currentScenario);
-
-    setPageHeader(takeaway.title, takeaway.text);
-
-    stepLabel.text('Finding');
-    storyTitle.text(takeaway.title);
-    storyText.text(`${takeaway.text} Use the controls to change year or pathway.`);
-
-    continueButton.text('Let me explore');
-    setControlsEnabled(false);
-
-  } else {
+  } else if (storyStep === 12) {
     currentScenario = followedScenario || currentScenario || 'ssp245';
     const takeaway = scenarioTakeaways[currentScenario];
 
@@ -505,7 +488,7 @@ function updateStoryStep(nextStep) {
 
     stepLabel.text('Finding');
     storyTitle.text(takeaway.title);
-    storyText.html(`Click a state to zoom into counties, then hover to compare Low, Medium, and High emissions locally.<br><br>${takeaway.text}`);
+    storyText.html(`${takeaway.text}<br><br>Click a state to zoom into counties, then hover to compare Low, Medium, and High emissions locally.`);
     continueButton.classed('hidden', true);
 
     d3.select('body').classed('story-full-active', false);
