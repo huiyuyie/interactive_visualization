@@ -195,6 +195,15 @@ function setupMap() {
     updateMap();
   });
 
+  // Click the empty map background to return to the full U.S. view.
+  svg.on('click', event => {
+    if (isStoryActive() || animationTimer) return;
+
+    if (event.target === svg.node() && selectedState) {
+      resetZoom();
+    }
+  });
+
   statesLayer.selectAll('path')
     .data(statesGeo.features)
     .join('path')
@@ -204,6 +213,8 @@ function setupMap() {
     .on('mousemove', moveTooltip)
     .on('mouseleave', hideTooltip)
     .on('click', (event, d) => {
+      event.stopPropagation();
+
       if (isStoryActive() || animationTimer) return;
 
       const stateName = getStateName(d);
