@@ -722,7 +722,7 @@ function resetZoom(options = {}) {
     .attr('transform', null);
 
   outlineLayer.selectAll('*').remove();
-  resetButton.classed('hidden', true);
+  resetButton.classed('hidden', isStoryActive());
 
   updateMap();
   updateLegend();
