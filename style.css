@@ -374,20 +374,9 @@ input[type="range"]::-moz-range-thumb {
   font-size: 0.62em;
 }
 
-.story-panel p {
-  margin: 0 0 16px;
-  color: var(--muted);
-  line-height: 1.55;
-  font-size: 1rem;
-}
-
-.story-overlay.side .story-panel p {
-  font-size: 0.78rem;
-  line-height: 1.48;
-  margin-bottom: 18px;
-}
-
-.title-highlight {
+/* Step 2 emphasis styles */
+.title-highlight,
+.temp-highlight {
   color: var(--accent);
   font-weight: 950;
 }
@@ -403,9 +392,29 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 10px;
 }
 
+.risk-line {
+  display: block;
+  color: var(--accent-dark);
+  font-weight: 950;
+  letter-spacing: -0.01em;
+}
+
 .story-panel strong {
   color: var(--ink);
   font-weight: 900;
+}
+
+.story-panel p {
+  margin: 0 0 16px;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 1rem;
+}
+
+.story-overlay.side .story-panel p {
+  font-size: 0.78rem;
+  line-height: 1.48;
+  margin-bottom: 18px;
 }
 
 .primary-button {
