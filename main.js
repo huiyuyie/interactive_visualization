@@ -472,7 +472,7 @@ function updateStoryStep(nextStep) {
     setYear(2035);
     resetZoom({ quiet: true });
 
-  } else if (storyStep === 12) {
+    } else if (storyStep === 12) {
     setStoryMode('side');
 
     const selectedScenario = followedScenario || currentScenario || 'ssp245';
@@ -486,7 +486,7 @@ function updateStoryStep(nextStep) {
 
     stepLabel.text('Finding');
     storyTitle.text(takeaway.title);
-    storyText.text(`${takeaway.text} Use the controls to change year or pathway. Click a state to zoom into counties, then hover to compare Low, Medium, and High emissions locally.`);
+    storyText.text(`${takeaway.text} Use the controls to change year or pathway.`);
 
     continueButton.text('Let me explore');
     setControlsEnabled(false);
@@ -505,7 +505,7 @@ function updateStoryStep(nextStep) {
 
     stepLabel.text('Finding');
     storyTitle.text(takeaway.title);
-    storyText.text(takeaway.text);
+    storyText.text(`Click a state to zoom into counties, then hover to compare Low, Medium, and High emissions locally. ${takeaway.text}`);
     continueButton.classed('hidden', true);
 
     d3.select('body').classed('story-full-active', false);
