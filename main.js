@@ -361,8 +361,7 @@ function updateStoryStep(nextStep) {
     storyText.html(`
       <span class="fact-emphasis">Small increases can make risks larger.</span>
       <br><br>
-      <strong>IPCC</strong> notes that each <strong>additional</strong>
-      <strong class="temp-highlight">0.1°C</strong> of global warming can increase the intensity and frequency of temperature extremes, precipitation extremes, and drought risks in some regions.
+      <strong>IPCC</strong> notes that each additional 0.1°C of global warming can increase the intensity and frequency of temperature extremes, precipitation extremes, and drought risks in some regions.
       <br><br>
       <span class="risk-line">More warming → higher climate risk.</span>
     `);
