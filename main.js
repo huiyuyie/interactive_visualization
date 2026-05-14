@@ -37,16 +37,16 @@ const scenarioShort = {
 
 const scenarioTakeaways = {
   ssp126: {
-    title: 'Finding under Low emissions: gradual central U.S. change.',
+    title: 'Low emissions: gradual central U.S. change.',
     text: 'By 2035, projected change remains relatively gradual across the central U.S.'
   },
   ssp245: {
-    title: 'Finding under Medium emissions: mixed central U.S. change.',
-    text: 'By 2035, projected change becomes more mixed across the central U.S.'
+  title: 'Medium emissions: warming fluctuates more across the central U.S.',
+  text: 'By 2035, the central U.S. still leans warmer overall, but the warming pattern is less even across the central U.S.'
   },
   ssp585: {
-    title: 'Finding under High emissions: stronger and more spread-out increases.',
-    text: 'By 2035, projected increases become stronger and more spread out across the central U.S.'
+    title: 'High emissions: stronger and more spread-out increases across the central U.S.',
+    text: 'By 2035, projected increases become stronger and more spread out from the central U.S.'
   }
 };
 
@@ -382,7 +382,7 @@ function updateStoryStep(nextStep) {
 
     stepLabel.text('Step 4');
     storyTitle.text('Now choose an emissions future to see how warming may unfold.');
-    storyText.text('Choose one pathway to follow through the story. In this visualization, Low, Medium, and High emissions correspond to SSP126, SSP245, and SSP585, with 2.6, 4.5, and 8.5 W/m² radiative forcing by 2100. Later, you can compare the other pathways.');
+    storyText.text('Choose one pathway to follow through the story. In this visualization, Low, Medium, and High emissions refer to SSP126, SSP245, and SSP585: scenario pathways that represent increasingly stronger greenhouse-gas emissions and heat-trapping influence by 2100.');
 
     scenarioChoice.classed('hidden', false);
     userPickedScenario = false;
@@ -437,9 +437,9 @@ function updateStoryStep(nextStep) {
 
     storyText.text(
     changedTarget
-      ? `Under ${emissionLabels[currentScenario]}, ${endTarget} becomes the largest projected warming example, shifting from ${startTarget} in 2026.`
-      : `Under ${emissionLabels[currentScenario]}, ${endTarget} remains the largest projected warming example from 2026 to 2035.`
-  );
+      ? `Under ${emissionLabels[currentScenario]}, ${endTarget} becomes the largest projected warming example in 2035, shifting from ${startTarget} in 2026.`
+      : `Under ${emissionLabels[currentScenario]}, ${endTarget} is also the largest projected warming example in 2035, matching the 2026 standout state.`
+    );
 
   } else if (storyStep === 8) {
     setStoryMode('side');
