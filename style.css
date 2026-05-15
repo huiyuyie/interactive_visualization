@@ -618,3 +618,17 @@ body.story-full-active .map-shell {
 .writeup-link:hover {
   background: var(--accent);
 }
+
+
+
+
+.source-link {
+  color: var(--accent-dark);
+  font-weight: 850;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.source-link:hover {
+  color: var(--accent);
+}
