@@ -360,13 +360,7 @@ function updateStoryStep(nextStep) {
 
     stepLabel.text('Step 1');
     storyTitle.text('Emissions are already high today.');
-    storyText.html(`
-      2025 emissions are already at 38.1 GtCO₂ (gigatonne of carbon dioxide). The question is no longer only how much we emit, but where those emissions may reshape temperature change next.
-      <br><br>
-      <a class="source-link" href="https://www.statista.com/statistics/276629/global-co2-emissions/?srsltid=AfmBOopBesN2ty1WX13HlwLBBFj3OqPVNA1K4TudqFaq5UzNVc9rC46H#google_vignette" target="_blank" rel="noopener">
-        Source: Statista
-      </a>
-    `);
+    storyText.text('2025 emissions are already at 38.1 GtCO₂ (gigatonne of carbon dioxide). The question is no longer only how much we emit, but where those emissions may reshape temperature change next.');
     setYear(2026);
     resetZoom({ quiet: true });
 
@@ -381,10 +375,6 @@ function updateStoryStep(nextStep) {
       <strong>IPCC</strong> notes that each additional 0.1°C of global warming can increase the intensity and frequency of temperature extremes, precipitation extremes, and drought risks in some regions.
       <br><br>
       <span class="risk-line">More warming → higher climate risk.</span>
-      <br><br>
-      <a class="source-link" href="https://www.dkrz.de/en/communication/climate-simulations/cmip6-en/the-ssp-scenarios" target="_blank" rel="noopener">
-        Source: DKRZ / IPCC SSP Scenarios
-      </a>
     `);
 
     setYear(2026);
