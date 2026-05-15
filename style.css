@@ -589,3 +589,32 @@ body.story-full-active .map-shell {
     transform: none;
   }
 }
+
+
+
+
+
+
+
+
+.writeup-link {
+  position: fixed;
+  right: 28px;
+  bottom: 24px;
+  z-index: 80;
+
+  padding: 10px 16px;
+  border-radius: 999px;
+
+  background: #1f1b17;
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 850;
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.writeup-link:hover {
+  background: var(--accent);
+}
